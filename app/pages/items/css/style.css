@@ -1,0 +1,14 @@
+.cristal-button {
+  background: rgba(126, 125, 125, 0.359);
+  position: absolute;
+}
+
+.buttons {
+  position: relative;
+}
+
+.lamp {
+  position: absolute;
+  border-radius: 3px solid #7d1f1f;
+}
+/*# sourceMappingURL=style.css.map */
