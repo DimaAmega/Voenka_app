@@ -28,8 +28,9 @@
             var style = this.elem.style;
             //задание размеров и позиционирования
             [style.top, style.left, style.height, style.width] = [top + 'px', left + 'px', height + 'px', width + 'px'];
+            this.elem.number = settings.number;
         };
-        this.number = settings.number;//получаем номер виджета
+        this.elem = settings.number;//получаем номер виджета
         this.elem = elem;
         this.createElement = createElement;
     };
@@ -49,8 +50,10 @@
         // this.deskNumber = settings.deskNumber;//номер пульта
 
         function setMode(mode){
-            this.elem.setAttribute('src', `images/buttons/Lamp${this.number}_mode_${mode}.png`);
-            // this.elem.setAttribute('src', `/images/buttons/Lamp${0}_mode_${0}.png`);
+            // правильно
+                // this.elem.setAttribute('src', `images/buttons/Lamp${this.number}_mode_${mode}.png`);
+            // не правильно
+            this.elem.setAttribute('src', `images/buttons/Lamp0_mode_${mode}.png`);
         };
 
         this.setMode = setMode;
