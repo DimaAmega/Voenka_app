@@ -4,9 +4,12 @@
     box-sizing: border-box;
 }
 
-body{
+body{ 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
+}
+#main img {
+	width: 600px;
 }
 
 

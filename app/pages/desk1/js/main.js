@@ -1,28 +1,26 @@
-;(
-    function(){
-    //     var a = document.getElementById('pointer1');
-    //     var a1 = document.getElementById('pointer2');
-    //     var [angle1,angle2] = [0,0];
-    //     var rotateId1,rotateId2;
-    //     document.getElementById('but').addEventListener('mousedown',function(){
 
-    //         rotateId1 = setInterval(function(){
-    //             angle1 += 1;
-    //             a.style.transform = `rotate(${angle1}deg)`;
-    //             console.log(angle1);
-    //         },10);
+var elem = new Speedo(
+    {
+        geometry:"210,44,100,100",
+        path:"images/buttons/Pointer.png",
+        startAngle:180,
+        parametrsOfMoving:
+        {
+            OnRight:1, 
+            speed:1,
+        }
+    });
+var elem2 = new Speedo(
+    {
+        geometry:"349,44,100,100",
+        path:"images/buttons/Pointer.png",
+        startAngle:40,
+        parametrsOfMoving:
+        {
+            OnRight:1, //step
+            speed:2, //fps
+        }
+    });
 
-    //         rotateId2 = setInterval(function(){
-    //             angle2 += 1;
-    //             a1.style.transform = `rotate(${angle2}deg)`;
-    //             console.log(angle2);
-    //         },20);
-            
-    //     });
-
-    //     document.getElementById('but').addEventListener('mouseup',function(){
-    //         clearInterval(rotateId1);
-    //         clearInterval(rotateId2);
-    //   });
-    }
-)();
+    document.getElementById("main").appendChild(elem.getElem());
+    document.getElementById("main").appendChild(elem2.getElem());
