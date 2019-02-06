@@ -1,5 +1,8 @@
 
-var elem = new Speedo(
+;(
+    function(){
+
+    var elem = new Speedo(
     {
         geometry:"210,44,100,100",
         path:"images/buttons/Pointer.png",
@@ -10,7 +13,7 @@ var elem = new Speedo(
             speed:1,
         }
     });
-var elem2 = new Speedo(
+    var elem2 = new Speedo(
     {
         geometry:"349,44,100,100",
         path:"images/buttons/Pointer.png",
@@ -24,3 +27,37 @@ var elem2 = new Speedo(
 
     document.getElementById("main").appendChild(elem.getElem());
     document.getElementById("main").appendChild(elem2.getElem());
+
+        //кнопки
+        buttons = сreateAndPlantElem({
+            parentElem:{
+                tagName:'div',
+                idName:'buttons',
+                className:''
+            },
+            childElem:{
+                tagName:'button',
+                className:'cristal-button',
+                constructor:buttonClass,
+            },
+            coords: coords.cristalButtons,
+        });
+
+        //лампы
+        lamps = сreateAndPlantElem({
+            parentElem:{
+                tagName:'div',
+                idName:'lamps',
+                className:'',
+            },
+            childElem:{
+                tagName:'img',
+                className:'lamp',
+                mode:'0',
+                constructor:variationPictureClass,
+            },
+            coords:coords.lamps,
+        });
+    }
+)();
+

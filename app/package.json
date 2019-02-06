@@ -1,4 +1,13 @@
 {
   "name": "helloworld",
-  "main": "index.html"
+  "main": "index.html",
+  "fullscreen":true,
+  "show_in_taskbar":true,
+  "window": {
+    "title": "node-webkit demo",
+    "icon": "link.png",
+    "width": 1200,
+    "height": 800
+  }
+  
 }
