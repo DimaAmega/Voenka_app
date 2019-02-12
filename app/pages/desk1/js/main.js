@@ -95,29 +95,6 @@
                     nameEvent:'onclick',
                     // спидометры если нужно удерживать
                 },
-                // {
-                //     butNumber: 9,
-                //     arrLamps: [
-                //         {
-                //             lampNum: 5,
-                //             mode: 1
-                //         },
-                //         {
-                //             lampNum: 1,
-                //             mode: 2
-                //         },
-                //         {
-                //             lampNum: 7,
-                //             mode: 2
-                //         },
-                //         {
-                //             lampNum: 11,
-                //             mode: 0
-                //         },
-                //     ],
-                //     nameEvent: 'onmousedown',
-                //     // спидометры если нужно удерживать
-                // },
                 {
                     butNumber:9,
                     arrSpedometrs:[
