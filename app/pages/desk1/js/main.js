@@ -60,7 +60,7 @@
         });
 
         var seq1 = new sequence({
-            elements:{
+            elements:{              //массивы всех эллементов, которые будут меняться
                 speedometrs: [
                     speed1,
                     speed2
@@ -71,7 +71,7 @@
                     lamps,
                 // тумберы наковальни
             },
-            queue:[
+            queue:[    //массив объектов последовательности, в которыъ то, что надо поменять
                 {
                     butNumber:5,
                     arrLamps:[
@@ -93,31 +93,20 @@
                         },
                     ],
                     nameEvent:'onclick',
-                    // спидометры если нужно удерживать
                 },
-                // {
-                //     butNumber: 9,
-                //     arrLamps: [
-                //         {
-                //             lampNum: 5,
-                //             mode: 1
-                //         },
-                //         {
-                //             lampNum: 1,
-                //             mode: 2
-                //         },
-                //         {
-                //             lampNum: 7,
-                //             mode: 2
-                //         },
-                //         {
-                //             lampNum: 11,
-                //             mode: 0
-                //         },
-                //     ],
-                //     nameEvent: 'onmousedown',
-                //     // спидометры если нужно удерживать
-                // },
+                {
+                    butNumber:15,
+                    arrLamps:[],
+                    arrSpedometrs:[
+                        {
+                            speedNumber:0,
+                            endAngle: 70,
+                            speed:20,
+                            OnRight:0.3,
+                        }
+                    ],
+                    nameEvent:'onclick',
+                },
                 {
                     butNumber:9,
                     arrSpedometrs:[
@@ -164,14 +153,12 @@
                             endAngle: 0,
                             speed: 40,
                             OnRight: -0.4,
-                            isReturn: false
                         },
-                        {
+                            {
                             speedNumber: 1,
                             endAngle: 180,
                             speed: 120,
                             OnRight: -0.4,
-                            isReturn: true,
                         },
                     ],
                     nameEvent: 'onmouseup',
@@ -197,7 +184,6 @@
                         },
                     ],
                     nameEvent: 'onclick',
-                    // спидометры если нужно удерживать
                 },
             ],
 
