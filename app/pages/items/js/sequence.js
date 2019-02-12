@@ -1,5 +1,92 @@
 ;(function (){
 
+
+
+
+    function Sequence(settings){
+        var parentElement = document.getElementById('parentElement');
+        var currentIteration = 0;
+        var allButtons = settings.elements.buttons;
+        var allLamps = settings.elements.lamps;
+        var queue = settings.queue;
+        var allSpedometers = settings.elements.speedometrs;
+        
+    /////////////////////////////////////////////////////////////
+    //Служебные функции для обработки очереди в последовательности
+    //////////////////////////////////////////////////////////////
+        function setModeForLamps(currentIteration) {
+            var currentLamps = [];
+            if (queue[currentIteration].changeObject.arrLamps) currentLamps = queue[currentIteration].changeObject.arrLamps;
+
+            for (var i = 0; i < currentLamps.length; i++) {
+                allLamps[currentLamps[i].num].setMode(currentLamps[i].mode);
+            }
+        };
+
+        function activateSpeedo(currentIteration) {
+            var currentSpeedometers = [];
+
+            if (queue[currentIteration].changeObject.arrSpedometrs) currentSpeedometers = queue[currentIteration].changeObject.arrSpedometrs;
+
+            for (var i = 0; i < currentSpeedometers.length; i++) {
+                allSpedometers[currentSpeedometers[i].speedNumber].endRotation().setParametrsOfMoving({
+                    speed: currentSpeedometers[i].speed,
+                    OnRight: currentSpeedometers[i].OnRight,
+                    endAngle: currentSpeedometers[i].endAngle,
+                }).startRotation();
+            }
+        };
+
+
+        for(var i=0;i < allButtons.length;i++){
+            allButtons[i].elem.onclick = function(event){
+                var event = new Event('myEvent', { 'bubbles': true, cancelable:false});
+
+                this.dispatchEvent(event);
+
+            }
+        }
+        parentElement.addEventListener('myEvent', function(event){
+            console.log()
+            if (queue[currentIteration].number == event.target.number && queue[currentIteration].eventObject == event.target.objectName){
+                // console.log('СУКА РАБОТАЕТ!');
+                setModeForLamps(currentIteration);
+                activateSpeedo(currentIteration);
+                ++currentIteration;
+            }
+            else alert(`Неправильно`);
+        });
+
+    };
+
+    window.Sequence = Sequence;
+    
+
+    // function Sequence(settings) {
+    //     var currentIteration = 0;
+    //     var allButtons = settings.elements.buttons;
+    //     var allSpedometers = settings.elements.speedometrs;
+    //     var allLamps = settings.elements.lamps;
+    //     var Queue = settings.queue;
+    //     var IsNext = true;
+
+    //     window.Events = document.getElementById('buttons');
+    //     Events.addEventListener("GoNextiterarion",function(e){
+        
+    //         Queue[currentIteration]
+    //     })
+    // };
+
+
+
+
+
+
+
+
+
+
+
     //////////////////////////////////////////////////////////////
     //Функция создания последовательности
     //////////////////////////////////////////////////////////////
@@ -66,7 +153,7 @@
         function handler() {  //обработчик
             //do action
 
-            setModeForLamps(currentButtonNum); 
+            setModeForLamps(currentButtonNum);
             activateSpeedo(currentButtonNum);
 
 

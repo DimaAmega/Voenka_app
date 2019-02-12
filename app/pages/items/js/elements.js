@@ -29,6 +29,7 @@
             //задание размеров и позиционирования
             [style.top, style.left, style.height, style.width] = [top + 'px', left + 'px', height + 'px', width + 'px'];
             this.elem.number = settings.number;
+            this.elem.objectName = settings.objectName;
         };
         this.elem = settings.number;//получаем номер виджета
         this.elem = elem;

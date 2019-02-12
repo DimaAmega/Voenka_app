@@ -16,7 +16,9 @@
 		}
 		this.create = function (options) {
 			elem = document.createElement("img");
+			elem.objectName = 'speedo';
 			elem.src = options.path;
+			elem.number = options.number;
 			var geometry = options.geometry.split(",");
 			elem.style = `	position:absolute;
 						z-index = 1;
@@ -37,11 +39,12 @@
 		this.startRotation = function () {
 			var self = this;
 			idRotation = setInterval(function () {
-				console.log(endAngle);
 				angle += OnRight;
 				elem.style.transform = `rotate(${angle}deg)`;
-				if (angle >= endAngle && OnRight > 0 || angle <= endAngle && OnRight < 0) self.endRotation();
-				else console.log("not true");
+				if (angle >= endAngle && OnRight > 0 || angle <= endAngle && OnRight < 0) {
+				self.endRotation();
+					elem.dispatchEvent(new Event('myEvent', { 'bubbles': true, cancelable: false }));
+				}
 			}, 1000 / speed);
 			return this;
 		}
