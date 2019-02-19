@@ -1,8 +1,6 @@
 ;(function (){
 
 
-
-
     function Sequence(settings){
         var parentElement = document.getElementById('parentElement');
         var currentIteration = 0;
@@ -23,6 +21,19 @@
             }
         };
 
+        function showVideo(currentIteration) {
+            var video;
+            if (queue[currentIteration].changeObject.video) video = queue[currentIteration].changeObject.video;
+
+            if (video) {
+                var v_obj = new Video(video.options);
+                document.getElementById('videos').appendChild(v_obj.getElem());
+                v_obj.setPosition();
+                v_obj.play();
+            }
+            
+        }
+
         function activateSpeedo(currentIteration) {
             var currentSpeedometers = [];
 
@@ -41,20 +52,23 @@
         for(var i=0;i < allButtons.length;i++){
             allButtons[i].elem.onclick = function(event){
                 var event = new Event('myEvent', { 'bubbles': true, cancelable:false});
-
                 this.dispatchEvent(event);
-
             }
         }
         parentElement.addEventListener('myEvent', function(event){
-            console.log()
-            if (queue[currentIteration].number == event.target.number && queue[currentIteration].eventObject == event.target.objectName){
-                // console.log('СУКА РАБОТАЕТ!');
+            console.log(currentIteration);
+            console.log(event.target.objectName);
+
+            if (queue[currentIteration].number == event.target.number &&
+             queue[currentIteration].eventObject == event.target.objectName){
+
                 setModeForLamps(currentIteration);
                 activateSpeedo(currentIteration);
+                showVideo(currentIteration);
                 ++currentIteration;
+
             }
-            else alert(`Неправильно`);
+            else  alert(`Неправильно, номер кнопки ${event.target.number}`);
         });
 
     };

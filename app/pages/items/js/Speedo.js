@@ -42,7 +42,7 @@
 				angle += OnRight;
 				elem.style.transform = `rotate(${angle}deg)`;
 				if (angle >= endAngle && OnRight > 0 || angle <= endAngle && OnRight < 0) {
-				self.endRotation();
+					self.endRotation();
 					elem.dispatchEvent(new Event('myEvent', { 'bubbles': true, cancelable: false }));
 				}
 			}, 1000 / speed);

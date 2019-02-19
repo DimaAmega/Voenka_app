@@ -40,9 +40,14 @@
                 }
             });
 
+        // var videoOpen = new Video({
+        //     src : 'videos/videoOpen.mp4',
+        // });
+
         document.getElementById("speedometers").appendChild(speed1.getElem());
         document.getElementById("speedometers").appendChild(speed2.getElem());
         document.getElementById("speedometers").appendChild(speed3.getElem());
+
         //кнопки
         var buttons = сreateAndPlantElem({
             parentElem:{
@@ -237,6 +242,24 @@
                     },
                     {
                         eventObject:'button',
+                        number: 18,
+                        changeObject:{
+                        video:{
+                            options:{
+                                src:'videos/videoOpen.mp4',
+                                width:500,
+                                height:500,
+                            },
+                        }
+                     }
+                    },
+                    {
+                        eventObject:'video',
+                        changeObject:{},
+                        number: 0,
+                    },
+                    {
+                        eventObject:'button',
                         number: 17,
                         changeObject:{
                             arrSpedometrs:[
@@ -411,6 +434,10 @@
             }
 
             var  seq2 = new Sequence(settings);
+
+
     }
+
+
 )();
 
