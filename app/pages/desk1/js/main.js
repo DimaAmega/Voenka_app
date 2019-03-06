@@ -334,8 +334,7 @@ var settings_true = {
         {
             eventObject:'button',
             number: 5,
-            changeObject:{
-            }
+            changeObject:{ }
         },
         {
             eventObject:'button',

@@ -71,7 +71,6 @@
                 activateSpeedo(currentIteration);
                 showVideo(currentIteration);
                 ++currentIteration;
-
             }
             else  alert(`Неправильно, номер кнопки ${event.target.number}`);
         });
