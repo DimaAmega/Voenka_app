@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="main_styles.css">
+    <!-- <link rel="stylesheet" href="pages/items/css/style.css"> -->
 </head>
 <body>
     <div class='menu' id ='menu'>
-        <div class="field" >
+        <div class="field" id='field1' >
             <div class="content">
                 <form action="pages/desk1/desk1.html" method="get">
-                    <p class='skewX25'>Пульт 3</p>
+                    <p class='skewX25'>Пульт 1</p>
                     <span class='skewX25'>Выберите режим</span>
                     <select name="mode1" id="" class='skewX25'>
                         <option value="1">Режим 1</option>
@@ -31,7 +32,7 @@
             </div>
         </div>
 
-        <div class="field">
+        <div class="field" id='field2'>
             <div class="content">
                 <form action="" method="post">
                     <p class='skewX25'>Пульт 3</p>
@@ -43,17 +44,17 @@
                     </select>
                     <br>
                     <span class='skewX25'>Тренировка</span>
-                    <input type="radio" name="mode" id="" class='skewX25'>
+                    <input type="radio" name="option" id="" class='skewX25'>
                     <br>
                     <span class='skewX25'>Экзамен</span>
-                    <input type="radio" name="mode" id="" class='skewX25'>
+                    <input type="radio" name="option" id="" class='skewX25'>
                     <br>
                     <button type="submit" class='skewX25'>Начать выполение</button>
                 </form>
             </div>
         </div>
 
-        <div class="field">
+        <div class="field" id='field3'>
             <div class="content">
                 <form action="" method="post">
                     <p class='skewX25'>Пульт 3</p>
@@ -75,5 +76,6 @@
             </div>
         </div>
     </div>
+    <script src="pages/items/js/menu.js"></script>
 </body>
 </html>

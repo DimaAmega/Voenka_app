@@ -25,7 +25,14 @@ div.menu{
 }
 
 .field .content{
+    height: 0;
+    overflow: hidden;
     margin: auto;
+    transition: height 0.5s ease-in-out 1s;
+}
+
+.field:hover .content{
+    height: 50%;
 }
 
 .skewX25{
