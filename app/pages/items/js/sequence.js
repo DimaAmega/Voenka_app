@@ -8,6 +8,10 @@
         var allLamps = settings.elements.lamps;
         var queue = settings.queue;
         var allSpedometers = settings.elements.speedometrs;
+        var ListPointsOfMark = settings.ListPointsOfMark;
+        var PointsForError = settings.PointsForError;
+        var timer = new Timer();
+        var check = new Check(ListPointsOfMark);
         
     ///////////////////////////////////////////////////////////////
     //Служебные функции для обработки очереди в последовательности
@@ -61,8 +65,6 @@
     //Сам обработчик - сердце програмым
     //////////////////////////////////////////////////////////
         parentElement.addEventListener('myEvent', function(event){
-            console.log(currentIteration);
-            console.log(event.target.objectName);
 
             if (queue[currentIteration].number == event.target.number &&
              queue[currentIteration].eventObject == event.target.objectName){
@@ -70,9 +72,26 @@
                 setModeForLamps(currentIteration);
                 activateSpeedo(currentIteration);
                 showVideo(currentIteration);
+
+                
+                if(currentIteration==0) timer.startTimer();
+                if(currentIteration==queue.length-1) {
+                    var messege = `Молодцы, ваше время -  ${timer.stopTimer()} секунды\n
+                    Ваша оценка - ${check.getMark()}\n
+                    Вы совершили  - ${check.getMistake()} ошибок \n`;
+                    
+                    $('#dialog').dialog({
+                        modal:true,
+                        draggable:false,
+                        buttons: [{text: "Спасибо", click:function() {$(this).dialog("close")}}]
+                    }).html(messege);
+                };
+
                 ++currentIteration;
             }
-            else  alert(`Неправильно, номер кнопки ${event.target.number}`);
+            else{
+                check.addMistake(PointsForError[currentIteration]);
+            }  
         });
 
     };

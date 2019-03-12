@@ -10,7 +10,7 @@
         function updateTimer(){
             timer +=0.1;
             timer = Number(timer.toFixed(2));
-            console.log(timer);
+            // console.log(timer);
         }
         ///////////
         ///public
@@ -20,7 +20,9 @@
         };
         this.stopTimer = function() {  
             clearTimeout(timerId);
-            return Number((timer - 0.1).toFixed(2));
+            var res = Number((timer - 0.1).toFixed(2));
+            console.log(res);
+            return res;
         };
     }
      window.Timer = timer;
