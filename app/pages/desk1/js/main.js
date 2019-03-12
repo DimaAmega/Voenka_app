@@ -344,209 +344,209 @@ var settings_true = {
             changeObject:{
                 arrLamps:[{num:9,mode:2}],
             }
-        // },
-        // {
-        //     eventObject:'button',
-        //     number: 20,
-        //     changeObject:{
-        //         video:{
-        //             options:{
-        //                 src:'videos/videoOpen.mp4',
-        //                 width:500,
-        //                 height:500,
-        //             },
-        //         }
-        //     }
-        // },
-        // {
-        //     eventObject:'video',
-        //     changeObject:{
-        //         arrLamps:[{num:8,mode:2}],
-        //     },
-        //     number: 0,
-        // },
-        // {
-        //     eventObject:'button',
-        //     number: 18,
-        //     changeObject:{
-        //     arrLamps:[{num:8,mode:0}],
-        //     video:{
-        //         options:{
-        //             src:'videos/videoOpen.mp4',
-        //             width:500,
-        //             height:500,
-        //         },
-        //     }
+        },
+        {
+            eventObject:'button',
+            number: 20,
+            changeObject:{
+                video:{
+                    options:{
+                        src:'videos/videoOpen.mp4',
+                        width:500,
+                        height:500,
+                    },
+                }
+            }
+        },
+        {
+            eventObject:'video',
+            changeObject:{
+                arrLamps:[{num:8,mode:2}],
+            },
+            number: 0,
+        },
+        {
+            eventObject:'button',
+            number: 18,
+            changeObject:{
+            arrLamps:[{num:8,mode:0}],
+            video:{
+                options:{
+                    src:'videos/videoOpen.mp4',
+                    width:500,
+                    height:500,
+                },
+            }
 
-        //     }
-        // },
-        // {
-        //     eventObject:'video',
-        //     changeObject:{
-        //         arrLamps:[{num:13,mode:2}],
-        //     },
-        //     number: 0,
-        // },
-        // {
-        //     eventObject:'button',
-        //     number: 17,
-        //     changeObject:{
-        //         arrSpedometrs:[
-        //             {
-        //                 speedNumber: 0,
-        //                 endAngle: 70,
-        //                 speed: 20,
-        //                 OnRight: 0.7,
-        //             }
-        //         ],
-        //     },
-        // },
-        // {
-        //     eventObject:'speedo',
-        //     number: 0,
-        //     changeObject: { }
-        // },
-        // {
-        //     eventObject:'button',
-        //     number:16,
-        //     changeObject: {
-        //         arrSpedometrs: [
-        //             {
-        //                 speedNumber: 0,
-        //                 endAngle: 0,
-        //                 speed: 20,
-        //                 OnRight: -0.7,
-        //             }
-        //         ],
-        //     },
-        // },
-        // {
-        //     eventObject: 'speedo',
-        //     number: 0,
-        //     changeObject: { }
-        // },
-        // {
-        // eventObject: 'button',
-        // number: 15,
-        // changeObject: {
-        //     arrSpedometrs: [
-        //         {
-        //             speedNumber: 0,
-        //             endAngle: 285,
-        //             speed: 20,
-        //             OnRight: 1,
-        //         },
-        //         {
-        //             speedNumber: 1,
-        //             endAngle: 270,
-        //             speed: 20,
-        //             OnRight: 0.8,
-        //         }
-        //     ],
-        // },
-        // },
-        // {
-        //     eventObject: 'speedo',
-        //     number: 1,
-        //     changeObject: {
-        //     }
-        // },
-        // {
-        //     eventObject: 'speedo',
-        //     number: 0,
-        //     changeObject: {
-        //         arrLamps: [
-        //             {
-        //                 num: 14,
-        //                 mode: 2,
-        //             },
-        //             {
-        //                 num: 15,
-        //                 mode: 2,
-        //             },
-        //         ],
-        //     }
-        // },
-        // {
-        //     eventObject: 'button',
-        //     number: 25,
-        //     changeObject: {
-        //         arrSpedometrs: [
-        //             {
-        //                 speedNumber: 2,
-        //                 endAngle: 360,
-        //                 speed: 120,
-        //                 OnRight:4,
-        //             },
-        //         ],
+            }
+        },
+        {
+            eventObject:'video',
+            changeObject:{
+                arrLamps:[{num:13,mode:2}],
+            },
+            number: 0,
+        },
+        {
+            eventObject:'button',
+            number: 17,
+            changeObject:{
+                arrSpedometrs:[
+                    {
+                        speedNumber: 0,
+                        endAngle: 70,
+                        speed: 20,
+                        OnRight: 0.7,
+                    }
+                ],
+            },
+        },
+        {
+            eventObject:'speedo',
+            number: 0,
+            changeObject: { }
+        },
+        {
+            eventObject:'button',
+            number:16,
+            changeObject: {
+                arrSpedometrs: [
+                    {
+                        speedNumber: 0,
+                        endAngle: 0,
+                        speed: 20,
+                        OnRight: -0.7,
+                    }
+                ],
+            },
+        },
+        {
+            eventObject: 'speedo',
+            number: 0,
+            changeObject: { }
+        },
+        {
+        eventObject: 'button',
+        number: 15,
+        changeObject: {
+            arrSpedometrs: [
+                {
+                    speedNumber: 0,
+                    endAngle: 285,
+                    speed: 20,
+                    OnRight: 1,
+                },
+                {
+                    speedNumber: 1,
+                    endAngle: 270,
+                    speed: 20,
+                    OnRight: 0.8,
+                }
+            ],
+        },
+        },
+        {
+            eventObject: 'speedo',
+            number: 1,
+            changeObject: {
+            }
+        },
+        {
+            eventObject: 'speedo',
+            number: 0,
+            changeObject: {
+                arrLamps: [
+                    {
+                        num: 14,
+                        mode: 2,
+                    },
+                    {
+                        num: 15,
+                        mode: 2,
+                    },
+                ],
+            }
+        },
+        {
+            eventObject: 'button',
+            number: 25,
+            changeObject: {
+                arrSpedometrs: [
+                    {
+                        speedNumber: 2,
+                        endAngle: 360,
+                        speed: 120,
+                        OnRight:4,
+                    },
+                ],
 
-        //     }
-        // },
-        // {
-        //     eventObject: 'speedo',
-        //     number: 2,
-        //     changeObject: {
-        //     }
-        // },
-        // {
-        //     eventObject: 'button',
-        //     number: 28,
-        //     changeObject: {
-        //         arrSpedometrs: [
-        //             {
-        //                 speedNumber: 2,
-        //                 endAngle: 320,
-        //                 speed: 120,
-        //                 OnRight: -1,
-        //             },
-        //         ],
-        //     }
-        // },
-        // {
-        //     eventObject: 'speedo',
-        //     number: 2,
-        //     changeObject: {
-        //     }
-        // },
-        // {
-        //     eventObject: 'button',
-        //     number: 29,
-        //     changeObject: {
-        //         arrSpedometrs: [
-        //             {
-        //                 speedNumber: 2,
-        //                 endAngle: 300,
-        //                 speed: 120,
-        //                 OnRight: -1,
-        //             },
-        //         ],
-        //     }
-        // },
-        // {
-        //     eventObject: 'speedo',
-        //     number: 2,
-        //     changeObject: {
-        //     }
-        // },
-        // {
-        //     eventObject: 'button',
-        //     number: 31,
-        //     changeObject: {
-        //         arrLamps: [
-        //             {
-        //                 num: 14,
-        //                 mode: 0,
-        //             },
-        //             {
-        //                 num: 15,
-        //                 mode: 0,
-        //             },
-        //             {
-        //                 num: 3,
-        //                 mode: 2,
-        //             },
-        //         ],
-        //      }
+            }
+        },
+        {
+            eventObject: 'speedo',
+            number: 2,
+            changeObject: {
+            }
+        },
+        {
+            eventObject: 'button',
+            number: 28,
+            changeObject: {
+                arrSpedometrs: [
+                    {
+                        speedNumber: 2,
+                        endAngle: 320,
+                        speed: 120,
+                        OnRight: -1,
+                    },
+                ],
+            }
+        },
+        {
+            eventObject: 'speedo',
+            number: 2,
+            changeObject: {
+            }
+        },
+        {
+            eventObject: 'button',
+            number: 29,
+            changeObject: {
+                arrSpedometrs: [
+                    {
+                        speedNumber: 2,
+                        endAngle: 300,
+                        speed: 120,
+                        OnRight: -1,
+                    },
+                ],
+            }
+        },
+        {
+            eventObject: 'speedo',
+            number: 2,
+            changeObject: {
+            }
+        },
+        {
+            eventObject: 'button',
+            number: 31,
+            changeObject: {
+                arrLamps: [
+                    {
+                        num: 14,
+                        mode: 0,
+                    },
+                    {
+                        num: 15,
+                        mode: 0,
+                    },
+                    {
+                        num: 3,
+                        mode: 2,
+                    },
+                ],
+             }
         },
 
     ]

@@ -76,15 +76,23 @@
                 
                 if(currentIteration==0) timer.startTimer();
                 if(currentIteration==queue.length-1) {
-                    var messege = `Молодцы, ваше время -  ${timer.stopTimer()} секунды\n
-                    Ваша оценка - ${check.getMark()}\n
-                    Вы совершили  - ${check.getMistake()} ошибок \n`;
+
+                    var messege = `Молодцы, ваше время -  ${timer.stopTimer()} секунды <br>
+                    Ваша оценка - ${check.getMark()} <br>
+                    Вы совершили  - ${check.getMistake()} ошибок`;
                     
-                    $('#dialog').dialog({
+                    $('#dialog').html(messege).dialog({
                         modal:true,
                         draggable:false,
-                        buttons: [{text: "Спасибо", click:function() {$(this).dialog("close")}}]
-                    }).html(messege);
+                        buttons: [{text: "В Меню", click:function() {
+                            $(this).dialog("close");
+                            //редирект на главную
+                        }}],
+                        width:500,
+                        resizable:false,
+                        show: { effect: "fold",duration: 1000 },
+                        hide: { effect: "explode", duration: 1000 }
+                    });
                 };
 
                 ++currentIteration;
