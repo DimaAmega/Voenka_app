@@ -2,11 +2,12 @@
   background: rgba(126, 125, 125, 0.359);
   position: absolute;
 }
-
+img {
+  transition: all 1s ease-out;
+}
 .buttons {
   position: relative;
 }
-
 .lamp {
   position: absolute;
   border-radius: 3px solid #7d1f1f;

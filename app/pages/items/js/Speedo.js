@@ -11,6 +11,7 @@
 			return elem;
 		}
 		this.endRotation = function () {
+			elem.style.boxShadow = '0px 0px 0px red, inset -0px -0px 0px red';
 			clearInterval(idRotation);
 			return this;
 		}
@@ -20,13 +21,16 @@
 			elem.src = options.path;
 			elem.number = options.number;
 			var geometry = options.geometry.split(",");
-			elem.style = `	position:absolute;
+			elem.style=`position:absolute;
 						z-index = 1;
 						transform:rotate(${angle}deg);
 						left:${geometry[0]}px;
 						top:${geometry[1]}px;
 						width:${geometry[2]}px;
-						height:${geometry[3]}px`;
+						height:${geometry[3]}px;
+						border-radius:50%;
+						box-shadow: 0px 0px 0px red, inset -0px -0px 0px red';
+			`;
 			if (options.parametrsOfMoving) this.setParametrsOfMoving(options.parametrsOfMoving);
 			return elem;
 		}
@@ -38,6 +42,7 @@
 		}
 		this.startRotation = function () {
 			var self = this;
+			elem.style.boxShadow = '0px 0px 100px red, inset -0px -0px 50px red';
 			idRotation = setInterval(function () {
 				angle += OnRight;
 				elem.style.transform = `rotate(${angle}deg)`;
