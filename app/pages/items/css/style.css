@@ -2,14 +2,35 @@
   background: rgba(126, 125, 125, 0.359);
   position: absolute;
 }
-
+img {
+  transition: all 1s ease-out;
+}
 .buttons {
   position: relative;
 }
-
 .lamp {
   position: absolute;
   border-radius: 3px solid #7d1f1f;
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+/***************************/
+/* СТИЛИ ДИАЛОГОВОГО ОКНА */
+/***************************/
+
+.ui-dialog-titlebar-close  {
+  display: none;
+}
+#dialog {
+  font-size: 30px;
+}
+
+/* .ui-dialog , .ui-dialog-buttonpane {
+  background:rgb(20, 75, 158);
+}
+.ui-dialog-titlebar {
+  background:blue;
+} */
+
