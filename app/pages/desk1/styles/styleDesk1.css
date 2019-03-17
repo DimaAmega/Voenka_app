@@ -10,6 +10,7 @@ body{
 }
 .wrapper {
     position: relative;
+    overflow: hidden;
 }
 #videos {
     position: relative;
@@ -30,4 +31,8 @@ body{
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.wrapper img {
+    background: linear-gradient()
 }

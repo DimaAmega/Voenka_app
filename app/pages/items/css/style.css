@@ -14,7 +14,47 @@ img {
 }
 /*# sourceMappingURL=style.css.map */
 
+ 
+#tooltip {
+  height: 100px;
+  transition: all 1s ease-out;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  font-size: 15px;
 
+  display: flex;
+    justify-content: center; /*Центрирование по горизонтали*/
+    align-items: center;     /*Центрирование по вертикали */
+
+  min-width: 30%;
+  max-width: 40%;
+  border: 1px solid rgba(0, 0, 0, 1);
+  border-radius: 10px;
+
+  background: rgba(0, 0, 0, 1);
+  color: #fff;
+  box-shadow: 0 0 7px #000; /* Добавляем тень для блока */
+ }
+ #tooltip p {
+  display: inline-block;
+  vertical-align: middle;
+ }
+ #tooltip::after, .block::before {
+  content: '';
+  position: absolute;
+  background: rgba(0, 0, 0,1);;
+  left: 17px; bottom: -11px;
+  width: 20px; height: 20px;
+  box-shadow: 0 0 7px #000; /* Добавляем тень для уголка */
+  z-index: 2; /* Прячем за основным блоком */
+
+  -webkit-transform: rotate(45deg);
+ }
+ #tooltip::before {
+  z-index: 1; /* Накладываем поверх, чтобы скрыть следы тени */
+  box-shadow: none; /* Прячем тень */
+ }
 /***************************/
 /* СТИЛИ ДИАЛОГОВОГО ОКНА */
 /***************************/
@@ -32,3 +72,10 @@ img {
 .ui-dialog-titlebar {
   background:blue;
 } */
+
+
+@keyframes clickOnMe {
+  from {box-shadow: 0px 0px 30px 10px white;}
+  50% {box-shadow: 0px 0px 0px 0px white;}
+  to {box-shadow: 0px 0px 30px 10px white;}
+}
