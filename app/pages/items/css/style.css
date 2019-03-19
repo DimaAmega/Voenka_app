@@ -7,10 +7,31 @@ img {
 }
 .buttons {
   position: relative;
+  z-index: 100;
 }
 .lamp {
   position: absolute;
-  border-radius: 3px solid #7d1f1f;
+  /* border-radius: 3px solid #7d1f1f; */
+}
+
+.tumb {
+  position: absolute;
+  border-radius: 1px solid rgb(96, 69, 69);
+}
+
+.anvill {
+  position: absolute;
+  border-radius: 1px solid black;
+}
+
+.black {
+  position: absolute;
+  border-radius: 1px solid black;
+}
+
+.red {
+  position: absolute;
+  border-radius: 1px solid black;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -28,6 +28,7 @@
             speed:2, //fps
         }
     });
+
     var speed3 = new Speedo(
     {
             geometry: "906,150,80,80",
@@ -46,7 +47,7 @@
         document.getElementById("speedometers").appendChild(speed2.getElem());
         document.getElementById("speedometers").appendChild(speed3.getElem());
 
-        //кнопки
+        // кнопки
         var buttons = сreateAndPlantElem({
             parentElem:{
                 tagName:'div',
@@ -58,11 +59,14 @@
                 objectName:'button',
                 className:'cristal-button',
                 constructor:buttonClass,
+                scale: 0.75,
             },
             coords: coords.cristalButtons,
         });
 
         //лампы
+       
+       
         var lamps = сreateAndPlantElem({
             parentElem:{
                 tagName:'div',
@@ -72,10 +76,80 @@
             childElem:{
                 tagName:'img',
                 className:'lamp',
-                mode:'0',
+                name:'Lamp',
+                mode:'1',
                 constructor:variationPictureClass,
+                scale: 0.75,
             },
             coords:coords.lamps,
+        });
+
+        var black_but = сreateAndPlantElem({
+            parentElem: {
+                tagName: 'div',
+                idName: 'black_but',
+                className: '',
+            },
+            childElem: {
+                tagName: 'img',
+                className: 'black',
+                name: 'Black',
+                mode: '0',
+                constructor: variationPictureClass,
+                scale: 0.75,
+            },
+            coords: coords.black,
+        });
+
+        var red_but = сreateAndPlantElem({
+            parentElem: {
+                tagName: 'div',
+                idName: 'red_but',
+                className: '',
+            },
+            childElem: {
+                tagName: 'img',
+                className: 'red',
+                name: 'Red',
+                mode: '0',
+                constructor: variationPictureClass,
+                scale: 0.75,
+            },
+            coords: coords.red,
+        });
+
+        var tumbs = сreateAndPlantElem({
+            parentElem: {
+                    tagName: 'div',
+                    idName: 'tumbs',
+                    className: '',
+                },
+                childElem: {
+                    tagName: 'img',
+                    className: 'tumb',
+                    name:'Tumb',
+                    mode: '0',
+                    constructor: variationPictureClass,
+                    scale:0.75,
+                },
+                coords: coords.tumbs,
+        });
+
+        var anvill = сreateAndPlantElem({
+            parentElem: {
+                tagName: 'div',
+                idName: 'anvills',
+                className: '',
+            },
+            childElem: {
+                tagName: 'img',
+                className: 'anvill',
+                name: 'Anvil',
+                mode: '0',
+                constructor: variationPictureClass,
+                scale: 0.75,
+            },
+            coords: coords.anvils,
         });
     
     //////////////////////////
