@@ -9,6 +9,7 @@ body{
     font-size: 20px;
 }
 .wrapper {
+    margin: auto;
     position: relative;
     overflow: hidden;
 }
@@ -35,4 +36,8 @@ body{
 
 .wrapper img {
     background: linear-gradient()
+}
+#main-img{
+    transform: scale(.75, .75);
+    transform-origin: left top;
 }

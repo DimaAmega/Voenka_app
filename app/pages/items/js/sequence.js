@@ -5,6 +5,7 @@
         var parentElement = document.getElementById('parentElement');
         var currentIteration = 0;
         var allButtons = settings.elements.buttons;
+        var allTumblers = settings.elements.tumbs;
         var allLamps = settings.elements.lamps;
         var queue = settings.queue;
         var allSpedometers = settings.elements.speedometrs;
@@ -12,6 +13,8 @@
         var PointsForError = settings.PointsForError;
         var timer = new Timer();
         var check = new Check(ListPointsOfMark);
+        var elemToolTip = document.getElementById('tooltip');
+
 
 
         
@@ -26,8 +29,16 @@
                 allLamps[currentLamps[i].num].setMode(currentLamps[i].mode);
             }
         };
+        function setModeForTumbs(currentIteration) {
+            var currentTumbs = [];
+            if (queue[currentIteration].changeObject.arrTumbs) currentTumbs = queue[currentIteration].changeObject.arrTumbs;
+
+            for (var i = 0; i < currentTumbs.length; i++) {
+                allTumblers[currentTumbs[i].num].setMode(currentTumbs[i].mode);
+            }
+        };
         function getMessage() {
-            return `Молодцы, ваше время -  ${timer.stopTimer()} секунды <br>
+            return `Молодцы, ваше время -  ${timer.stopTimer()-30} секунды <br>
             Ваша оценка - ${check.getMark()} <br>
             Вы совершили  - ${check.getMistake()} ошибок`;
         };
@@ -79,21 +90,21 @@
                 this.dispatchEvent(event);
             }
         }
+
     //////////////////////////////////////////////////////////
     //Сам обработчик - сердце программы
     //////////////////////////////////////////////////////////
         parentElement.addEventListener('myEvent', function(event){
-
             if (queue[currentIteration].number == event.target.number &&
              queue[currentIteration].eventObject == event.target.objectName){
 
                 setModeForLamps(currentIteration);
                 activateSpeedo(currentIteration);
                 showVideo(currentIteration);
+                setModeForTumbs(currentIteration);
 
                 if(currentIteration==0) timer.startTimer();
                 if(currentIteration==queue.length-1) showDialog(getMessage());
-
 
 
                 ++currentIteration; 
@@ -211,8 +222,10 @@
 
         allButtons[queue[0].number].elem.style.animation = 'clickOnMe 1s infinite ease-in-out';
         setPositionTooltip(allButtons[queue[0].number].elem.style.left,allButtons[queue[0].number].elem.style.top);
+
         elemToolTip.innerHTML = LearningMessege[butCount];
         elemToolTip.style.transform = 'translate(0,-120px)';
+        elemToolTip.style.display = 'flex';
 
 
 

@@ -27,11 +27,23 @@
             var [left, top, width, height] = coord.split(',');
             var style = this.elem.style;
             //задание размеров и позиционирования
-            [style.top, style.left, style.height, style.width] = [top + 'px', left + 'px', height + 'px', width + 'px'];
+            if(settings.scale != undefined){
+                [style.top, style.left, style.height, style.width] = [
+                Number(top)*settings.scale + 'px',
+                Number(left) * settings.scale + 'px',
+                Number(height) * settings.scale + 'px',
+                Number(width) * settings.scale + 'px'];
+            }
+            else{
+                [style.top, style.left, style.height, style.width] = [top + 'px', left + 'px', height + 'px', width + 'px'];
+            }
+            if(settings.name != undefined){
+                this.name = settings.name;
+            }
             this.elem.number = settings.number;
             this.elem.objectName = settings.objectName;
         };
-        this.elem = settings.number;//получаем номер виджета
+        // this.elem = settings.number;//получаем номер виджета
         this.elem = elem;
         this.createElement = createElement;
     };
@@ -51,14 +63,21 @@
         // this.deskNumber = settings.deskNumber;//номер пульта
 
         function setMode(mode){
+
             // правильно
-                // this.elem.setAttribute('src', `images/buttons/Lamp${this.number}_mode_${mode}.png`);
+                this.elem.setAttribute('src', `images/buttons/${this.name}${this.elem.number}_mode_${mode}.png`);
+                if(this.name == 'Lamp'){
+                    if(mode == '1'){
+                        // this.elem.style['box-shadow'] = '0px 0px 100px red, inset -0px -0px 50px red';
+                    }
+                }
+            // добавление тени у кнопок(чтобы раз и красиво)
             // не правильно
-            this.elem.setAttribute('src', `images/buttons/Lamp0_mode_${mode}.png`);
+            // this.elem.setAttribute('src', `images/buttons/Lamp0_mode_${mode}.png`);
         };
 
         this.setMode = setMode;
-        this.setMode(0);
+        this.setMode(settings.mode);
     };
 
 

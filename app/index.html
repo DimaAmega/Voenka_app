@@ -6,13 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="main_styles.css">
+    <!-- <link rel="stylesheet" href="pages/items/css/style.css"> -->
 </head>
 <body>
     <div class='menu' id ='menu'>
-        <div class="field" >
+        <div class="field" id='field1'>
+            <div class="blur">
+                <img src="/app/pages/desk1/images/desk.png" alt="">
+                <p>название1</p>
+            </div>
             <div class="content">
                 <form action="pages/desk1/desk1.html" method="get">
-                    <p class='skewX25'>Пульт 3</p>
+                    <p class='skewX25'>Пульт 1</p>
                     <span class='skewX25'>Выберите режим</span>
                     <select name="mode1" id="" class='skewX25'>
                         <option value="1">Режим 1</option>
@@ -21,6 +26,7 @@
                     </select>
                     <br>
                     <span class='skewX25'>Тренировка</span>
+                    <input type="text" value = '1' name=deskNumber hidden>
                     <input type="radio" name="mode2" value='1' id="" class='skewX25'>
                     <br>
                     <span class='skewX25'>Экзамен</span>
@@ -31,10 +37,14 @@
             </div>
         </div>
 
-        <div class="field">
+        <div class="field" id='field2'>
+            <div class="blur">
+                <img src="/app/pages/desk2/images/desk.jpg" alt="">
+                <p>название1</p>
+            </div>
             <div class="content">
-                <form action="" method="post">
-                    <p class='skewX25'>Пульт 3</p>
+                <form action="pages/desk2/desk2.html" method="get">
+                    <p class='skewX25'>Пульт 2</p>
                     <span class='skewX25'>Выберите режим</span>
                     <select name="mode" id="" class='skewX25'>
                         <option value="1">Режим 1</option>
@@ -43,19 +53,24 @@
                     </select>
                     <br>
                     <span class='skewX25'>Тренировка</span>
-                    <input type="radio" name="mode" id="" class='skewX25'>
+                    <input type="text" value='1' name=deskNumber hidden>
+                    <input type="radio" name="option" id="" class='skewX25'>
                     <br>
                     <span class='skewX25'>Экзамен</span>
-                    <input type="radio" name="mode" id="" class='skewX25'>
+                    <input type="radio" name="option" id="" class='skewX25'>
                     <br>
                     <button type="submit" class='skewX25'>Начать выполение</button>
                 </form>
             </div>
         </div>
 
-        <div class="field">
+        <div class="field" id='field3'>
+            <div class="blur">
+                <img src="/app/pages/desk1/images/desk.png" alt="">
+                <p>название1</p>  
+            </div>
             <div class="content">
-                <form action="" method="post">
+                <form action="pages/desk3/desk3.html" method="post">
                     <p class='skewX25'>Пульт 3</p>
                     <span class='skewX25'>Выберите режим</span>
                     <select name="mode" id="" class='skewX25'>
@@ -65,6 +80,7 @@
                     </select>
                     <br>
                     <span class='skewX25'>Тренировка</span>
+                    <input type="text" value='1' name=deskNumber hidden>
                     <input type="radio" name="mode" id="" class='skewX25'>
                     <br>
                     <span class='skewX25'>Экзамен</span>
@@ -75,5 +91,6 @@
             </div>
         </div>
     </div>
+    <script src="pages/items/js/menu.js"></script>
 </body>
 </html>

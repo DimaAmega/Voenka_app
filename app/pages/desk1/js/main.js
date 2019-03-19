@@ -5,9 +5,9 @@
     ///////////////////////////////////////////////////////////////
     var speed1 = new Speedo(
     {
-        geometry:"396,104,100,100",
+        geometry:"383,78,180,180",
         path:"images/buttons/Pointer.png",
-        startAngle:0,
+        startAngle:-30,
         number: 0,
         parametrsOfMoving:
         {
@@ -18,9 +18,9 @@
     
     var speed2 = new Speedo(
     {
-        geometry:"629,104,100,100",
-        path:"images/buttons/Pointer.png",
-        startAngle:180,
+        geometry:"630,80,180,180",
+        path:"images/buttons/Pointer1.png",
+        startAngle:152,
         number: 1,
         parametrsOfMoving:
         {
@@ -30,9 +30,9 @@
     });
     var speed3 = new Speedo(
     {
-            geometry: "906,150,80,80",
-            path: "images/buttons/Pointer.png",
-            startAngle: 180,
+            geometry: "940,142,122,122",
+            path: "images/buttons/Pointer2.png",
+            startAngle: 155,
             number: 2,
             parametrsOfMoving:
             {
@@ -46,7 +46,7 @@
         document.getElementById("speedometers").appendChild(speed2.getElem());
         document.getElementById("speedometers").appendChild(speed3.getElem());
 
-        //кнопки
+
         var buttons = сreateAndPlantElem({
             parentElem:{
                 tagName:'div',
@@ -58,11 +58,14 @@
                 objectName:'button',
                 className:'cristal-button',
                 constructor:buttonClass,
+                scale: 0.75,
             },
             coords: coords.cristalButtons,
         });
 
         //лампы
+       
+       
         var lamps = сreateAndPlantElem({
             parentElem:{
                 tagName:'div',
@@ -72,11 +75,82 @@
             childElem:{
                 tagName:'img',
                 className:'lamp',
+                name:'Lamp',
                 mode:'0',
                 constructor:variationPictureClass,
+                scale: 0.75,
             },
             coords:coords.lamps,
         });
+
+        var black_but = сreateAndPlantElem({
+            parentElem: {
+                tagName: 'div',
+                idName: 'black_but',
+                className: '',
+            },
+            childElem: {
+                tagName: 'img',
+                className: 'black',
+                name: 'Black',
+                mode: '0',
+                constructor: variationPictureClass,
+                scale: 0.75,
+            },
+            coords: coords.black,
+        });
+
+        var red_but = сreateAndPlantElem({
+            parentElem: {
+                tagName: 'div',
+                idName: 'red_but',
+                className: '',
+            },
+            childElem: {
+                tagName: 'img',
+                className: 'red',
+                name: 'Red',
+                mode: '0',
+                constructor: variationPictureClass,
+                scale: 0.75,
+            },
+            coords: coords.red,
+        });
+
+        var tumbs = сreateAndPlantElem({
+            parentElem: {
+                    tagName: 'div',
+                    idName: 'tumbs',
+                    className: '',
+                },
+                childElem: {
+                    tagName: 'img',
+                    className: 'tumb',
+                    name:'Tumb',
+                    mode: '1',
+                    constructor: variationPictureClass,
+                    scale:0.75,
+                },
+                coords: coords.tumbs,
+        });
+
+        var anvill = сreateAndPlantElem({
+            parentElem: {
+                tagName: 'div',
+                idName: 'anvills',
+                className: '',
+            },
+            childElem: {
+                tagName: 'img',
+                className: 'anvill',
+                name: 'Anvil',
+                mode: '0',
+                constructor: variationPictureClass,
+                scale: 0.75,
+            },
+            coords: coords.anvils,
+        });
+    
     
     //////////////////////////
     //Последовательность
@@ -105,6 +179,8 @@ var settings_true = {
             buttons,
         lamps:
             lamps,
+        tumbs:
+            tumbs,
     },
     ListPointsOfMark: [0,5,7,8],
     PointsForError:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
@@ -112,13 +188,16 @@ var settings_true = {
         {
             eventObject:'button',
             number: 5,
-            changeObject:{}
+            changeObject:{
+                arrTumbs:[{num:4,mode:0}],
+            }
         },
         {
             eventObject:'button',
             number: 6,
             changeObject:{
-                arrLamps:[{num:9,mode:2}],
+                arrLamps:[{num:3,mode:1}],
+                arrTumbs:[{num:3,mode:2}],
             }
         },
         {
@@ -131,13 +210,14 @@ var settings_true = {
                         width:500,
                         height:500,
                     },
-                }
+                },
+                arrTumbs:[{num:7,mode:0}],
             }
         },
         {
             eventObject:'video',
             changeObject:{
-                arrLamps:[{num:8,mode:2}],
+                arrLamps:[{num:4,mode:1}],
             },
             number: 0,
         },
@@ -145,7 +225,9 @@ var settings_true = {
             eventObject:'button',
             number: 18,
             changeObject:{
-            arrLamps:[{num:8,mode:0}],
+            arrLamps:[{num:4,mode:0}],
+            arrTumbs:[{num:7,mode:2}],
+
             video:{
                 options:{
                     src:'videos/videoOpen.mp4',
@@ -159,7 +241,8 @@ var settings_true = {
         {
             eventObject:'video',
             changeObject:{
-                arrLamps:[{num:13,mode:2}],
+                arrLamps:[{num:2,mode:1}],
+                
             },
             number: 0,
         },
@@ -170,11 +253,12 @@ var settings_true = {
                 arrSpedometrs:[
                     {
                         speedNumber: 0,
-                        endAngle: 70,
+                        endAngle: 40,
                         speed: 20,
                         OnRight: 0.7,
                     }
                 ],
+                arrTumbs:[{num:2,mode:0}],
             },
         },
         {
@@ -189,11 +273,12 @@ var settings_true = {
                 arrSpedometrs: [
                     {
                         speedNumber: 0,
-                        endAngle: 0,
+                        endAngle: -30,
                         speed: 20,
                         OnRight: -0.7,
                     }
                 ],
+                arrTumbs:[{num:2,mode:1}],
             },
         },
         {
@@ -208,17 +293,18 @@ var settings_true = {
             arrSpedometrs: [
                 {
                     speedNumber: 0,
-                    endAngle: 285,
+                    endAngle: 255,
                     speed: 20,
                     OnRight: 1,
                 },
                 {
                     speedNumber: 1,
-                    endAngle: 270,
+                    endAngle: 240,
                     speed: 20,
                     OnRight: 0.8,
                 }
             ],
+            arrTumbs:[{num:2,mode:2}],
         },
         },
         {
@@ -233,12 +319,12 @@ var settings_true = {
             changeObject: {
                 arrLamps: [
                     {
-                        num: 14,
-                        mode: 2,
+                        num: 0,
+                        mode: 1,
                     },
                     {
-                        num: 15,
-                        mode: 2,
+                        num: 1,
+                        mode: 1,
                     },
                 ],
             }
@@ -246,6 +332,25 @@ var settings_true = {
         {
             eventObject: 'button',
             number: 25,
+            changeObject: {
+                arrSpedometrs: [
+                    {
+                        speedNumber: 2,
+                        endAngle: 330,
+                        speed: 90,
+                        OnRight:4,
+                    },
+                ],
+            }
+        },
+        {
+            eventObject: 'speedo',
+            number: 2,
+            changeObject: { }
+        },
+        {
+            eventObject: 'button',
+            number: 28,
             changeObject: {
                 arrSpedometrs: [
                     {
@@ -266,31 +371,12 @@ var settings_true = {
         },
         {
             eventObject: 'button',
-            number: 28,
-            changeObject: {
-                arrSpedometrs: [
-                    {
-                        speedNumber: 2,
-                        endAngle: 320,
-                        speed: 120,
-                        OnRight: -1,
-                    },
-                ],
-            }
-        },
-        {
-            eventObject: 'speedo',
-            number: 2,
-            changeObject: { }
-        },
-        {
-            eventObject: 'button',
             number: 29,
             changeObject: {
                 arrSpedometrs: [
                     {
                         speedNumber: 2,
-                        endAngle: 300,
+                        endAngle: 270,
                         speed: 120,
                         OnRight: -1,
                     },
@@ -311,16 +397,9 @@ var settings_true = {
                         num: 14,
                         mode: 0,
                     },
-                    {
-                        num: 15,
-                        mode: 0,
-                    },
-                    {
-                        num: 3,
-                        mode: 2,
-                    },
                 ],
-             }
+
+            }
         },
     ],
     LearningMessege: ['Кнопка 1 Эта кнопка предназначена для...',
@@ -336,9 +415,7 @@ var settings_true = {
                     'Кнопка 11 Эта кнопка предназначена для...'],
 }
 
-
-
-var  seq2 = new Sequence2(settings_true);
+var  seq2 = new Sequence(settings_true);
 
 }
 )();
