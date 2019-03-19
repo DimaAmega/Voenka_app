@@ -134,7 +134,7 @@
                 coords: coords.tumbs,
         });
 
-        var anvill = сreateAndPlantElem({
+        var anvills = сreateAndPlantElem({
             parentElem: {
                 tagName: 'div',
                 idName: 'anvills',
@@ -181,6 +181,8 @@ var settings_true = {
             lamps,
         tumbs:
             tumbs,
+        anvills:
+            anvills
     },
     ListPointsOfMark: [0,5,7,8],
     PointsForError:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
@@ -339,7 +341,13 @@ var settings_true = {
                         endAngle: 330,
                         speed: 90,
                         OnRight:4,
-                    },
+                    }  
+                ],
+                arrAnvills:[
+                    {
+                        num: 1,
+                        mode: 1,
+                    }
                 ],
             }
         },
@@ -355,10 +363,16 @@ var settings_true = {
                 arrSpedometrs: [
                     {
                         speedNumber: 2,
-                        endAngle: 360,
+                        endAngle: 390,
                         speed: 120,
                         OnRight:4,
                     },
+                ],
+                arrAnvills:[
+                    {
+                        num: 2,
+                        mode: 1,
+                    }
                 ],
 
             }
@@ -380,6 +394,12 @@ var settings_true = {
                         speed: 120,
                         OnRight: -1,
                     },
+                ],
+                arrAnvills:[
+                    {
+                        num: 2,
+                        mode: 2,
+                    }
                 ],
             }
         },
