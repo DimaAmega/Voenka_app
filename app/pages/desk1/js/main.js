@@ -185,7 +185,7 @@ var settings_true = {
             anvills
     },
     ListPointsOfMark: [0,5,7,8],
-    PointsForError:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    PointsForError:[10,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
     queue:[
         {
             eventObject:'button',
@@ -365,7 +365,7 @@ var settings_true = {
                         speedNumber: 2,
                         endAngle: 390,
                         speed: 120,
-                        OnRight:4,
+                        OnRight:1,
                     },
                 ],
                 arrAnvills:[
