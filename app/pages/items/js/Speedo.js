@@ -29,7 +29,7 @@
 						width:${geometry[2]}px;
 						height:${geometry[3]}px;
 						border-radius:50%;
-						box-shadow: 0px 0px 0px red, inset -0px -0px 0px red';
+						box-shadow: 0px 0px 0px red, inset -0px -0px 0px red;
 			`;
 			if (options.parametrsOfMoving) this.setParametrsOfMoving(options.parametrsOfMoving);
 			return elem;
