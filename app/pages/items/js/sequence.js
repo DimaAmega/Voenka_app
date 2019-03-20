@@ -14,11 +14,8 @@
         var PointsForError = settings.PointsForError;
         var timer = new Timer();
         var check = new Check(ListPointsOfMark);
-<<<<<<< HEAD
-=======
         var elemToolTip = document.getElementById('tooltip');
 
->>>>>>> 72a101c6d7698c994bd4938b90a09c038f670458
 
 
         
