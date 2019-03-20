@@ -28,18 +28,33 @@ img {
   position: absolute;
   border-radius: 1px solid black;
 }
-<<<<<<< HEAD
 .red {
   position: absolute;
   border-radius: 1px solid black;
 }
-=======
->>>>>>> 72a101c6d7698c994bd4938b90a09c038f670458
 /*# sourceMappingURL=style.css.map */
 
- 
+#warning {
+  width: 50%;
+  height: 100px;
+  padding: 20px;
+  font-size: 25px;
+  text-align: center;
+  background: black;
+  color: white;
+  position: absolute;
+  top: -110px;
+  left: 25%;
+  border-radius: 20px;
+  box-shadow: 0 0 7px #000; /* Добавляем тень для блока */
+  transition: top 1s cubic-bezier(0.71,-1.15, 0.35, 2.18), opacity 1s ease-out;
+
+  display: flex;
+  justify-content: center; /*Центрирование по горизонтали*/
+  align-items: center;  
+
+} 
 #tooltip {
-  
   height: 100px;
   transition: all 1s ease-out;
   position: absolute;

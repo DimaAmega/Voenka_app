@@ -435,7 +435,7 @@ var settings_true = {
                     'Кнопка 11 Эта кнопка предназначена для...'],
 }
 
-var  seq2 = new Sequence(settings_true);
+var  seq2 = new Sequence2(settings_true);
 
 }
 )();
