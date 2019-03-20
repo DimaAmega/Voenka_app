@@ -46,7 +46,7 @@
         document.getElementById("speedometers").appendChild(speed2.getElem());
         document.getElementById("speedometers").appendChild(speed3.getElem());
 
-        //кнопки
+        // кнопки
         var buttons = сreateAndPlantElem({
             parentElem:{
                 tagName:'div',
@@ -58,11 +58,14 @@
                 objectName:'button',
                 className:'cristal-button',
                 constructor:buttonClass,
+                scale: 0.75,
             },
             coords: coords.cristalButtons,
         });
 
         //лампы
+       
+       
         var lamps = сreateAndPlantElem({
             parentElem:{
                 tagName:'div',
@@ -72,8 +75,10 @@
             childElem:{
                 tagName:'img',
                 className:'lamp',
+                name:'Lamp',
                 mode:'0',
                 constructor:variationPictureClass,
+                scale: 0.75,
             },
             coords:coords.lamps,
         });
@@ -82,19 +87,79 @@
     //Последовательность
     //////////////////////////
 
-/*
-В объекте настроек есть массив queque - это очередь - последоваательность. 
-В этом массиве содержатся объекты, описывающие определённые этапы.
-Описание объекта: 
-    поля
-            eventObject:'', - тип ожидаемого события
-            number: 5, '' - номер эллемента - у каждого эллемента есть его id. Это его номер
-            changeObject:{} - объект, который хранит объекты, которые должны измениться.
-                arrLamps:[] - хранит массив объектов ламп - { num:'номер лампы',mode:'позиция ' - 0,2}
-                video:...
-                arrSpedometrs:...
-*/ 
-var settings_true = {
+        var black_but = сreateAndPlantElem({
+            parentElem: {
+                tagName: 'div',
+                idName: 'black_but',
+                className: '',
+            },
+            childElem: {
+                tagName: 'img',
+                className: 'black',
+                name: 'Black',
+                mode: '0',
+                constructor: variationPictureClass,
+                scale: 0.75,
+            },
+            coords: coords.black,
+        });
+
+        var red_but = сreateAndPlantElem({
+            parentElem: {
+                tagName: 'div',
+                idName: 'red_but',
+                className: '',
+            },
+            childElem: {
+                tagName: 'img',
+                className: 'red',
+                name: 'Red',
+                mode: '0',
+                constructor: variationPictureClass,
+                scale: 0.75,
+            },
+            coords: coords.red,
+        });
+
+        var tumbs = сreateAndPlantElem({
+            parentElem: {
+                    tagName: 'div',
+                    idName: 'tumbs',
+                    className: '',
+                },
+                childElem: {
+                    tagName: 'img',
+                    className: 'tumb',
+                    name:'Tumb',
+                    mode: '0',
+                    constructor: variationPictureClass,
+                    scale:0.75,
+                },
+                coords: coords.tumbs,
+        });
+
+        var anvill = сreateAndPlantElem({
+            parentElem: {
+                tagName: 'div',
+                idName: 'anvills',
+                className: '',
+            },
+            childElem: {
+                tagName: 'img',
+                className: 'anvill',
+                name: 'Anvil',
+                mode: '0',
+                constructor: variationPictureClass,
+                scale: 0.75,
+            },
+            coords: coords.anvils,
+        });
+    
+    //////////////////////////
+    //Последовательность
+    //////////////////////////
+
+var settings = {
     elements: {
         speedometrs: [
             speed1,
@@ -236,6 +301,14 @@ var settings_true = {
                         num: 14,
                         mode: 2,
                     },
+                ],
+            }
+        },
+        {
+            eventObject: 'button',
+            number: 25,
+            changeObject: {
+                arrSpedometrs: [
                     {
                         num: 15,
                         mode: 2,
@@ -311,10 +384,39 @@ var settings_true = {
                         num: 14,
                         mode: 0,
                     },
+                ],
+
+            }
+        },
+        {
+            eventObject: 'speedo',
+            number: 2,
+            changeObject: {
+            }
+        },
+        {
+            eventObject: 'button',
+            number: 28,
+            changeObject: {
+                arrSpedometrs: [
                     {
                         num: 15,
                         mode: 0,
                     },
+                ],
+            }
+        },
+        {
+            eventObject: 'speedo',
+            number: 2,
+            changeObject: {
+            }
+        },
+        {
+            eventObject: 'button',
+            number: 29,
+            changeObject: {
+                arrSpedometrs: [
                     {
                         num: 3,
                         mode: 2,
@@ -338,7 +440,7 @@ var settings_true = {
 
 
 
-var  seq2 = new Sequence2(settings_true);
+var seq2 = new Sequence1(settings);
 
 }
 )();
