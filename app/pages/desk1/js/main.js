@@ -5,9 +5,9 @@
     ///////////////////////////////////////////////////////////////
     var speed1 = new Speedo(
     {
-        geometry:"396,104,100,100",
+        geometry:"383,78,180,180",
         path:"images/buttons/Pointer.png",
-        startAngle:0,
+        startAngle:-30,
         number: 0,
         parametrsOfMoving:
         {
@@ -18,9 +18,9 @@
     
     var speed2 = new Speedo(
     {
-        geometry:"629,104,100,100",
-        path:"images/buttons/Pointer.png",
-        startAngle:180,
+        geometry:"630,80,180,180",
+        path:"images/buttons/Pointer1.png",
+        startAngle:152,
         number: 1,
         parametrsOfMoving:
         {
@@ -30,9 +30,9 @@
     });
     var speed3 = new Speedo(
     {
-            geometry: "906,150,80,80",
-            path: "images/buttons/Pointer.png",
-            startAngle: 180,
+            geometry: "940,142,122,122",
+            path: "images/buttons/Pointer2.png",
+            startAngle: 155,
             number: 2,
             parametrsOfMoving:
             {
@@ -46,7 +46,7 @@
         document.getElementById("speedometers").appendChild(speed2.getElem());
         document.getElementById("speedometers").appendChild(speed3.getElem());
 
-        // кнопки
+
         var buttons = сreateAndPlantElem({
             parentElem:{
                 tagName:'div',
@@ -82,10 +82,6 @@
             },
             coords:coords.lamps,
         });
-    
-    //////////////////////////
-    //Последовательность
-    //////////////////////////
 
         var black_but = сreateAndPlantElem({
             parentElem: {
@@ -131,14 +127,14 @@
                     tagName: 'img',
                     className: 'tumb',
                     name:'Tumb',
-                    mode: '0',
+                    mode: '1',
                     constructor: variationPictureClass,
                     scale:0.75,
                 },
                 coords: coords.tumbs,
         });
 
-        var anvill = сreateAndPlantElem({
+        var anvills = сreateAndPlantElem({
             parentElem: {
                 tagName: 'div',
                 idName: 'anvills',
@@ -155,11 +151,24 @@
             coords: coords.anvils,
         });
     
+    
     //////////////////////////
     //Последовательность
     //////////////////////////
 
-var settings = {
+/*
+В объекте настроек есть массив queque - это очередь - последоваательность. 
+В этом массиве содержатся объекты, описывающие определённые этапы.
+Описание объекта: 
+    поля
+            eventObject:'', - тип ожидаемого события
+            number: 5, '' - номер эллемента - у каждого эллемента есть его id. Это его номер
+            changeObject:{} - объект, который хранит объекты, которые должны измениться.
+                arrLamps:[] - хранит массив объектов ламп - { num:'номер лампы',mode:'позиция ' - 0,2}
+                video:...
+                arrSpedometrs:...
+*/ 
+var settings_true = {
     elements: {
         speedometrs: [
             speed1,
@@ -170,20 +179,27 @@ var settings = {
             buttons,
         lamps:
             lamps,
+        tumbs:
+            tumbs,
+        anvills:
+            anvills
     },
     ListPointsOfMark: [0,5,7,8],
-    PointsForError:[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+    PointsForError:[10,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
     queue:[
         {
             eventObject:'button',
             number: 5,
-            changeObject:{}
+            changeObject:{
+                arrTumbs:[{num:4,mode:0}],
+            }
         },
         {
             eventObject:'button',
             number: 6,
             changeObject:{
-                arrLamps:[{num:9,mode:2}],
+                arrLamps:[{num:3,mode:1}],
+                arrTumbs:[{num:3,mode:2}],
             }
         },
         {
@@ -196,13 +212,14 @@ var settings = {
                         width:500,
                         height:500,
                     },
-                }
+                },
+                arrTumbs:[{num:7,mode:0}],
             }
         },
         {
             eventObject:'video',
             changeObject:{
-                arrLamps:[{num:8,mode:2}],
+                arrLamps:[{num:4,mode:1}],
             },
             number: 0,
         },
@@ -210,7 +227,9 @@ var settings = {
             eventObject:'button',
             number: 18,
             changeObject:{
-            arrLamps:[{num:8,mode:0}],
+            arrLamps:[{num:4,mode:0}],
+            arrTumbs:[{num:7,mode:2}],
+
             video:{
                 options:{
                     src:'videos/videoOpen.mp4',
@@ -224,7 +243,8 @@ var settings = {
         {
             eventObject:'video',
             changeObject:{
-                arrLamps:[{num:13,mode:2}],
+                arrLamps:[{num:2,mode:1}],
+                
             },
             number: 0,
         },
@@ -235,11 +255,12 @@ var settings = {
                 arrSpedometrs:[
                     {
                         speedNumber: 0,
-                        endAngle: 70,
+                        endAngle: 40,
                         speed: 20,
                         OnRight: 0.7,
                     }
                 ],
+                arrTumbs:[{num:2,mode:0}],
             },
         },
         {
@@ -254,11 +275,12 @@ var settings = {
                 arrSpedometrs: [
                     {
                         speedNumber: 0,
-                        endAngle: 0,
+                        endAngle: -30,
                         speed: 20,
                         OnRight: -0.7,
                     }
                 ],
+                arrTumbs:[{num:2,mode:1}],
             },
         },
         {
@@ -273,17 +295,18 @@ var settings = {
             arrSpedometrs: [
                 {
                     speedNumber: 0,
-                    endAngle: 285,
+                    endAngle: 255,
                     speed: 20,
                     OnRight: 1,
                 },
                 {
                     speedNumber: 1,
-                    endAngle: 270,
+                    endAngle: 240,
                     speed: 20,
                     OnRight: 0.8,
                 }
             ],
+            arrTumbs:[{num:2,mode:2}],
         },
         },
         {
@@ -298,20 +321,12 @@ var settings = {
             changeObject: {
                 arrLamps: [
                     {
-                        num: 14,
-                        mode: 2,
+                        num: 0,
+                        mode: 1,
                     },
-                ],
-            }
-        },
-        {
-            eventObject: 'button',
-            number: 25,
-            changeObject: {
-                arrSpedometrs: [
                     {
-                        num: 15,
-                        mode: 2,
+                        num: 1,
+                        mode: 1,
                     },
                 ],
             }
@@ -323,10 +338,41 @@ var settings = {
                 arrSpedometrs: [
                     {
                         speedNumber: 2,
-                        endAngle: 360,
-                        speed: 120,
+                        endAngle: 330,
+                        speed: 90,
                         OnRight:4,
+                    }  
+                ],
+                arrAnvills:[
+                    {
+                        num: 1,
+                        mode: 1,
+                    }
+                ],
+            }
+        },
+        {
+            eventObject: 'speedo',
+            number: 2,
+            changeObject: { }
+        },
+        {
+            eventObject: 'button',
+            number: 28,
+            changeObject: {
+                arrSpedometrs: [
+                    {
+                        speedNumber: 2,
+                        endAngle: 390,
+                        speed: 120,
+                        OnRight:1,
                     },
+                ],
+                arrAnvills:[
+                    {
+                        num: 2,
+                        mode: 1,
+                    }
                 ],
 
             }
@@ -339,34 +385,21 @@ var settings = {
         },
         {
             eventObject: 'button',
-            number: 28,
-            changeObject: {
-                arrSpedometrs: [
-                    {
-                        speedNumber: 2,
-                        endAngle: 320,
-                        speed: 120,
-                        OnRight: -1,
-                    },
-                ],
-            }
-        },
-        {
-            eventObject: 'speedo',
-            number: 2,
-            changeObject: { }
-        },
-        {
-            eventObject: 'button',
             number: 29,
             changeObject: {
                 arrSpedometrs: [
                     {
                         speedNumber: 2,
-                        endAngle: 300,
+                        endAngle: 270,
                         speed: 120,
                         OnRight: -1,
                     },
+                ],
+                arrAnvills:[
+                    {
+                        num: 2,
+                        mode: 2,
+                    }
                 ],
             }
         },
@@ -388,42 +421,6 @@ var settings = {
 
             }
         },
-        {
-            eventObject: 'speedo',
-            number: 2,
-            changeObject: {
-            }
-        },
-        {
-            eventObject: 'button',
-            number: 28,
-            changeObject: {
-                arrSpedometrs: [
-                    {
-                        num: 15,
-                        mode: 0,
-                    },
-                ],
-            }
-        },
-        {
-            eventObject: 'speedo',
-            number: 2,
-            changeObject: {
-            }
-        },
-        {
-            eventObject: 'button',
-            number: 29,
-            changeObject: {
-                arrSpedometrs: [
-                    {
-                        num: 3,
-                        mode: 2,
-                    },
-                ],
-             }
-        },
     ],
     LearningMessege: ['Кнопка 1 Эта кнопка предназначена для...',
                     'Кнопка 2 Эта кнопка предназначена для...',
@@ -438,9 +435,7 @@ var settings = {
                     'Кнопка 11 Эта кнопка предназначена для...'],
 }
 
-
-
-var seq2 = new Sequence1(settings);
+var  seq2 = new Sequence(settings_true);
 
 }
 )();

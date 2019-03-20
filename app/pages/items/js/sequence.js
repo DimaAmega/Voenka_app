@@ -5,13 +5,20 @@
         var parentElement = document.getElementById('parentElement');
         var currentIteration = 0;
         var allButtons = settings.elements.buttons;
+        var allTumblers = settings.elements.tumbs;
         var allLamps = settings.elements.lamps;
+        var allAnvills = settings.elements.anvills;
         var queue = settings.queue;
         var allSpedometers = settings.elements.speedometrs;
         var ListPointsOfMark = settings.ListPointsOfMark;
         var PointsForError = settings.PointsForError;
         var timer = new Timer();
         var check = new Check(ListPointsOfMark);
+<<<<<<< HEAD
+=======
+        var elemToolTip = document.getElementById('tooltip');
+
+>>>>>>> 72a101c6d7698c994bd4938b90a09c038f670458
 
 
         
@@ -26,8 +33,24 @@
                 allLamps[currentLamps[i].num].setMode(currentLamps[i].mode);
             }
         };
+        function setModeForAnvills(currentIteration) {
+            var currenAnvills = [];
+            if (queue[currentIteration].changeObject.arrAnvills) currenAnvills = queue[currentIteration].changeObject.arrAnvills;
+
+            for (var i = 0; i < currenAnvills.length; i++) {
+                allAnvills[currenAnvills[i].num].setMode(currenAnvills[i].mode);
+            }
+        };
+        function setModeForTumbs(currentIteration) {
+            var currentTumbs = [];
+            if (queue[currentIteration].changeObject.arrTumbs) currentTumbs = queue[currentIteration].changeObject.arrTumbs;
+
+            for (var i = 0; i < currentTumbs.length; i++) {
+                allTumblers[currentTumbs[i].num].setMode(currentTumbs[i].mode);
+            }
+        };
         function getMessage() {
-            return `Молодцы, ваше время -  ${timer.stopTimer()} секунды <br>
+            return `Молодцы, ваше время -  ${timer.stopTimer()-30} секунды <br>
             Ваша оценка - ${check.getMark()} <br>
             Вы совершили  - ${check.getMistake()} ошибок`;
         };
@@ -54,7 +77,7 @@
                 width:500,
                 resizable:false,
                 show: { effect: "blind",duration: 1000 },
-                hide: { effect: "explode", duration: 1000 },
+                hide: { effect: "drop", duration: 1000 },
             });
         };
         function activateSpeedo(currentIteration) {
@@ -79,21 +102,22 @@
                 this.dispatchEvent(event);
             }
         }
+
     //////////////////////////////////////////////////////////
     //Сам обработчик - сердце программы
     //////////////////////////////////////////////////////////
         parentElement.addEventListener('myEvent', function(event){
-
             if (queue[currentIteration].number == event.target.number &&
              queue[currentIteration].eventObject == event.target.objectName){
 
                 setModeForLamps(currentIteration);
                 activateSpeedo(currentIteration);
                 showVideo(currentIteration);
+                setModeForTumbs(currentIteration);
+                setModeForAnvills(currentIteration)
 
                 if(currentIteration==0) timer.startTimer();
                 if(currentIteration==queue.length-1) showDialog(getMessage());
-
 
 
                 ++currentIteration; 
@@ -114,6 +138,8 @@
         var currentIteration = 0;
         var allButtons = settings.elements.buttons;
         var allLamps = settings.elements.lamps;
+        var allTumblers = settings.elements.tumbs;
+        var allAnvills = settings.elements.anvills;
         var queue = settings.queue;
         var allSpedometers = settings.elements.speedometrs;
         var prevIteration = 0;
@@ -126,7 +152,23 @@
     ///////////////////////////////////////////////////////////////
     //Служебные функции для обработки очереди в последовательности
     ///////////////////////////////////////////////////////////////
-        
+    function setModeForAnvills(currentIteration) {
+        var currenAnvills = [];
+        if (queue[currentIteration].changeObject.arrAnvills) currenAnvills = queue[currentIteration].changeObject.arrAnvills;
+
+        for (var i = 0; i < currenAnvills.length; i++) {
+            allAnvills[currenAnvills[i].num].setMode(currenAnvills[i].mode);
+        }
+    };
+    function setModeForTumbs(currentIteration) {
+        var currentTumbs = [];
+        if (queue[currentIteration].changeObject.arrTumbs) currentTumbs = queue[currentIteration].changeObject.arrTumbs;
+
+        for (var i = 0; i < currentTumbs.length; i++) {
+            allTumblers[currentTumbs[i].num].setMode(currentTumbs[i].mode);
+        }
+    };
+
         function setModeForLamps(currentIteration) {
             var currentLamps = [];
             if (queue[currentIteration].changeObject.arrLamps) currentLamps = queue[currentIteration].changeObject.arrLamps;
@@ -211,8 +253,10 @@
 
         allButtons[queue[0].number].elem.style.animation = 'clickOnMe 1s infinite ease-in-out';
         setPositionTooltip(allButtons[queue[0].number].elem.style.left,allButtons[queue[0].number].elem.style.top);
+
         elemToolTip.innerHTML = LearningMessege[butCount];
         elemToolTip.style.transform = 'translate(0,-120px)';
+        elemToolTip.style.display = 'flex';
 
 
 
@@ -227,6 +271,9 @@
                 setModeForLamps(currentIteration);
                 activateSpeedo(currentIteration);
                 showVideo(currentIteration);
+                setModeForTumbs(currentIteration);
+                setModeForAnvills(currentIteration);
+
 
                 if(currentIteration==queue.length-1){
                     showDialog2(getMessage());

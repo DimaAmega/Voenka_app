@@ -28,14 +28,18 @@ img {
   position: absolute;
   border-radius: 1px solid black;
 }
+<<<<<<< HEAD
 .red {
   position: absolute;
   border-radius: 1px solid black;
 }
+=======
+>>>>>>> 72a101c6d7698c994bd4938b90a09c038f670458
 /*# sourceMappingURL=style.css.map */
 
  
 #tooltip {
+  
   height: 100px;
   transition: all 1s ease-out;
   position: absolute;
@@ -43,7 +47,7 @@ img {
   left: 0px;
   font-size: 15px;
 
-  display: flex;
+  display: none;
     justify-content: center; /*Центрирование по горизонтали*/
     align-items: center;     /*Центрирование по вертикали */
 

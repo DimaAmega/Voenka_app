@@ -66,7 +66,7 @@
 
             // правильно
                 this.elem.setAttribute('src', `images/buttons/${this.name}${this.elem.number}_mode_${mode}.png`);
-                if(this.name = 'Lamp'){
+                if(this.name == 'Lamp'){
                     if(mode == '1'){
                         // this.elem.style['box-shadow'] = '0px 0px 100px red, inset -0px -0px 50px red';
                     }
