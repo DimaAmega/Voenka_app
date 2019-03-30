@@ -22,9 +22,9 @@
     };
 
     function getMessage() {
-        return `Молодцы, ваше время - ${D.timer.stopTimer()-30} секунды <br> 
-Ваша оценка - ${D.check.getMark()} <br> 
-Вы совершили - ${D.check.getMistake()} ошибок`;
+    return `Молодцы, ваше время - ${D.timer.stopTimer()-30} секунды <br> 
+    Ваша оценка - ${D.check.getMark()} <br> 
+    Вы совершили - ${D.check.getMistake()} ошибок`;
     };
 
     function showVideo(D) {
@@ -135,9 +135,7 @@
         D.allButtons[D.queue[D.prevIteration].number].elem.style.animation = '';
     };
 
-    function
-
-    showWarning(message) {
+    function showWarning(message) {
         D.elemWarning.innerHTML = message;
         D.elemWarning.style.top = '10px';
         D.elemWarning.style.opacity = '1';
@@ -145,11 +143,11 @@
             D.elemWarning.style.opacity = '0';
             D.elemWarning.style.top = '-110px';
         }, 2000);
-    }
+    };
     ////////////////////////////////////////////////////////// 
     // РЕЖИМ ЭКЗАМЕНА 
     ////////////////////////////////////////////////////////// 
-    function Sequence(settings) {
+    function Exam(settings) {
         D = getLocalVariables(settings);
         ////////////////////////////////////////////////////////// 
         //Установка всех кнопок на клик обращаться к обработчику 
@@ -181,7 +179,7 @@
 
                 ++D.currentIteration;
             } else {
-                D.check.addMistake(D.PointsForError[currentIteration]);
+                D.check.addMistake(D.PointsForError[D.currentIteration]);
                 if (D.check.getMark() == 2) showDialog("Завалился");
             }
         });
@@ -192,7 +190,7 @@
     ////////////////////////////////////////////////////////// 
     // РЕЖИМ ОБУЧЕНИЯ 
     ////////////////////////////////////////////////////////// 
-    function Sequence2(settings) {
+    function Training(settings) {
         D = getLocalVariables(settings);
         ////////////////////////////////////////////////////////// 
         //Установка всех кнопок на клик обращаться к обработчику 
@@ -234,7 +232,6 @@
 
                 if (D.currentIteration != D.queue.length && D.queue[D.currentIteration].eventObject == 'button') {
                     D.butCount++;
-
                     InspectButton(D); //подсветить кнопку 
                     ShowToolTip(D); //показать подсказку 
                     setPositionTooltip(D.allButtons[D.queue[D.currentIteration].number].elem.style.left, D.allButtons[D.queue[D.currentIteration].number].elem.style.top); //переместить над кнопкой 
@@ -242,16 +239,16 @@
                     HideToolTip(D);
                     UnInspectButton(D);
                 }
-
-            } else {
+            }
+             else {
                 showWarning('Вы совершили ошибку, не нажимайте на неподсвеченные клавиши!')
             }
         });
 
     };
 
-    window.Sequence = Sequence;
-    window.Sequence2 = Sequence2;
+    window.Exam = Exam;
+    window.Training = Training;
 
 })();
 

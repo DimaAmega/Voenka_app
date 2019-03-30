@@ -59,24 +59,6 @@
 
         //лампы
 
-
-        /* var lamps = сreateAndPlantElem({
-            parentElem:{
-                tagName:'div',
-                idName:'lamps',
-                className:'',
-            },
-            childElem:{
-                tagName:'img',
-                className:'lamp',
-                name:'Lamp',
-                mode:'0',
-                constructor:variationPictureClass,
-                scale: 0.75,
-            },
-            coords:coords.lamps,
-        }); */
-
         var lamps = сreateAndPlantElem({
             parentElem: {
                 tagName: 'div',
@@ -179,6 +161,11 @@
                         video:...
                         arrSpedometrs:...
         */
+
+
+        ////////////////////////////////////
+        //Начальная последовательность
+        ////////////////////////////////////
         var settings_true = {
             elements: {
                 speedometrs: [
@@ -191,7 +178,7 @@
                 tumbs: tumbs,
                 anvills: anvills
             },
-            ListPointsOfMark: [0, 5, 7, 8],
+            ListPointsOfMark: [0, 1, 2, 3],
             PointsForError: [10, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
             queue: [{
                     eventObject: 'button',
@@ -452,7 +439,267 @@
                 'Кнопка 11 Эта кнопка предназначена для...'
             ],
         }
-
-        var seq2 = new Sequence(settings_true);
+        ///////////////////////////
+        //От ГОМ ВКЛ
+        ///////////////////////////
+        var Gom = {
+            elements: {
+                speedometrs: [
+                    speed1,
+                    speed2,
+                    speed3,
+                ],
+                buttons: buttons,
+                lamps: lamps,
+                tumbs: tumbs,
+                anvills: anvills
+            },
+            ListPointsOfMark: [0, 1, 2, 3],
+            PointsForError: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            queue: [
+                    {
+                        eventObject: 'button',
+                        number: 5,
+                        changeObject: {
+                            arrTumbs: [{
+                                num: 4,
+                                mode: 0
+                            }],
+                        }
+                    },
+                    {
+                        eventObject: 'button',
+                        number: 6,
+                        changeObject: {
+                            arrLamps: [{
+                                num: 3,
+                                mode: 1
+                            }],
+                            arrTumbs: [{
+                                num: 3,
+                                mode: 2
+                            }],
+                        }
+                    },
+                    {
+                    eventObject: 'button',
+                    number: 23,
+                    changeObject: {
+                        arrAnvills:[{
+                            num: 0,
+                            mode: 2,
+                        }],
+                        arrLamps: [
+                        {
+                            num: 4,
+                            mode: 2
+                        },
+                        {
+                            num: 5,
+                            mode: 2
+                        },
+                        {
+                            num: 6,
+                            mode: 2
+                        },
+                        {
+                            num: 7,
+                            mode: 2
+                        },
+                        {
+                            num: 0,
+                            mode: 1
+                        },
+                        {
+                            num: 1,
+                            mode: 1
+                        },
+                        {
+                            num: 8,
+                            mode: 2
+                        },
+                        {
+                            num: 9,
+                            mode: 2
+                        },
+                        {
+                            num: 14,
+                            mode: 1
+                        },
+                        {
+                            num: 15,
+                            mode: 2
+                        },
+                        {
+                            num: 2,
+                            mode: 1
+                        },
+                        {
+                            num: 15,
+                            mode: 2
+                        },
+                        {
+                            num: 16,
+                            mode: 2
+                        },
+                        {
+                            num: 17,
+                            mode: 2
+                        },
+                        {
+                            num: 18,
+                            mode: 2
+                        },
+                        {
+                            num: 10,
+                            mode: 2
+                        },
+                        {
+                            num: 11,
+                            mode: 2
+                        },
+                        {
+                            num: 12,
+                            mode: 2
+                        },
+                        {
+                            num: 13,
+                            mode: 2
+                        },
+                    ],
+                    }
+                },
+                {
+                    eventObject: 'button',
+                    number: 21,
+                    changeObject: {
+                        arrAnvills:[{
+                            num: 0,
+                            mode: 0,
+                        }],
+                        arrLamps: [
+                        {
+                            num: 4,
+                            mode: 0
+                        },
+                        {
+                            num: 5,
+                            mode: 0
+                        },
+                        {
+                            num: 6,
+                            mode: 0
+                        },
+                        {
+                            num: 7,
+                            mode: 0
+                        },
+                        {
+                            num: 0,
+                            mode: 0
+                        },
+                        {
+                            num: 1,
+                            mode: 0
+                        },
+                        {
+                            num: 8,
+                            mode: 0
+                        },
+                        {
+                            num: 9,
+                            mode: 0
+                        },
+                        {
+                            num: 14,
+                            mode: 0
+                        },
+                        {
+                            num: 15,
+                            mode: 0
+                        },
+                        {
+                            num: 2,
+                            mode: 0
+                        },
+                        {
+                            num: 15,
+                            mode: 0
+                        },
+                        {
+                            num: 16,
+                            mode: 0
+                        },
+                        {
+                            num: 17,
+                            mode: 0
+                        },
+                        {
+                            num: 18,
+                            mode: 0
+                        },
+                        {
+                            num: 10,
+                            mode: 0
+                        },
+                        {
+                            num: 11,
+                            mode: 0
+                        },
+                        {
+                            num: 12,
+                            mode: 0
+                        },
+                        {
+                            num: 13,
+                            mode: 0
+                        },
+                    ],
+                    }
+                },
+                {
+                    eventObject: 'button',
+                    number: 36,
+                    changeObject: {
+                        arrLamps: [{
+                            num: 14,
+                            mode: 1
+                        }],
+                        arrTumbs: [{
+                            num: 6,
+                            mode: 2
+                        }],
+                    }
+                },
+                {
+                    eventObject: 'button',
+                    number: 38,
+                    changeObject: {
+                        arrLamps: [{
+                            num: 15,
+                            mode: 1
+                        }],
+                        arrTumbs: [{
+                            num: 6,
+                            mode: 0
+                        }],
+                    }
+                },
+            ],
+            LearningMessege: 
+                ['Кнопка 1 Эта кнопка предназначена для...',
+                'Кнопка 2 Эта кнопка предназначена для...',
+                'Кнопка 3 Эта кнопка предназначена для...',
+                'Кнопка 4 Эта кнопка предназначена для...',
+                'Кнопка 5 Эта кнопка предназначена для...',
+                'Кнопка 6 Эта кнопка предназначена для...',
+                'Кнопка 7 Эта кнопка предназначена для...',
+                'Кнопка 8 Эта кнопка предназначена для...',
+                'Кнопка 9 Эта кнопка предназначена для...',
+                'Кнопка 10 Эта кнопка предназначена для...',
+                'Кнопка 11 Эта кнопка предназначена для...'
+            ],
+        }
+        var seq2 = new Training(Gom);  //пеменяй на Exam
     }
 )();
