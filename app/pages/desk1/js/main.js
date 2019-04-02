@@ -161,8 +161,31 @@
                         video:...
                         arrSpedometrs:...
         */
+        /* 
+        startSettings хранит вспомогательные элементы для последовательностей, будут импортированы во вне для файла AllOrders.js
+         */
+        var startSettings = {
 
-
+            elements:{
+                speedometrs: [
+                        speed1,
+                        speed2,
+                        speed3,
+                    ],
+                    buttons: buttons,
+                    lamps: lamps,
+                    tumbs: tumbs,
+                    anvills: anvills,
+            },
+            order1:{
+                // начальные положения для элементов в посл1
+            },
+            order2:{
+                // начальные положения для элементов в посл2
+            }
+        };
+        // вынесем для AllOrders.js
+        window.startSettings = startSettings;
         ////////////////////////////////////
         //Начальная последовательность
         ////////////////////////////////////
@@ -700,6 +723,6 @@
                 'Кнопка 11 Эта кнопка предназначена для...'
             ],
         }
-        var seq2 = new Training(Gom);  //пеменяй на Exam
+        // var seq2 = new Training(Gom);  //пеменяй на Exam
     }
 )();

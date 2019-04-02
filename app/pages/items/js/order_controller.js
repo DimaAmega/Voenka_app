@@ -1,24 +1,27 @@
 ;(function(){
-    // получение всех параметров
-    //номер пульта
-    var deskNumber = getAllUrlParams().deskNumber;
+    /* 
+    данный файл отвечает за запуск той или иной последовательности, того или иного режима
+    */
+    var deskNumber = Number(getAllUrlParams().desk);
     //номер задания
-    var mode1 = getAllUrlParams().mode1;
+    var mode = Number(getAllUrlParams().mode);
     //режим обучение/контроль
-    var mode2 = getAllUrlParams().mode2;
+    var type = Number(getAllUrlParams().type);
     //первый пульт
-    if (deskNumber == '1') {
-        if(mode1 == '1'){
-            if(mode2 == '1'){
-                //режим обучения
-            }
-            else if (mode2 == '2'){
-                //режим экзамена
-            }
-        }
-    }
-    else if (deskNumber == '1') {
 
-    }
+    console.log(deskNumber);
+    console.log(mode);
+    console.log(type);
+    // deskNumber - номер пульта
+    // mode - последовательность
+    // type - режим -  обучение или экзамен
+    var orders = window.orders;
 
+    var types = [
+        window.Training,
+        window.Exam,
+    ];
+
+    //запустить режим type с последовательностью mode
+    types[type](orders[mode]);
 })();
