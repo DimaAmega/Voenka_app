@@ -8,6 +8,7 @@
         elements: settinsForOrders.elements,
         ListPointsOfMark: [0, 1, 2, 3],
         PointsForError: [10, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        startSettings:settinsForOrders.order1,
         queue: [{
                 eventObject: 'button',
                 number: 5,
@@ -511,10 +512,13 @@
             'Кнопка 11 Эта кнопка предназначена для...'
         ],
     };
-    
+    var order3 = {
+    };
+
     //выносим настройки на уровень выше
     window.orders = [
         order1,
         order2,
+        order3,
     ];
 })();

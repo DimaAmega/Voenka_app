@@ -104,7 +104,8 @@
             butCount: 0,
             prevIteration: 0,
             elemWarning: document.getElementById('warning'),
-        }
+            startSettings:settings.startSettings,
+        };
     };
 
     function setPositionTooltip(x, y) {
@@ -144,6 +145,15 @@
             D.elemWarning.style.top = '-110px';
         }, 2000);
     };
+    //сделаем настройки для всех элементов
+    function setModeForAllelements(D){
+
+        setModeForLamps(D);
+        activateSpeedo(D);
+        showVideo(D);
+        setModeForTumbs(D);
+        setModeForAnvills(D)
+    };
     ////////////////////////////////////////////////////////// 
     // РЕЖИМ ЭКЗАМЕНА 
     ////////////////////////////////////////////////////////// 
@@ -168,11 +178,13 @@
             if (D.queue[D.currentIteration].number == event.target.number &&
                 D.queue[D.currentIteration].eventObject == event.target.objectName) {
 
-                setModeForLamps(D);
-                activateSpeedo(D);
-                showVideo(D);
-                setModeForTumbs(D);
-                setModeForAnvills(D)
+                // setModeForLamps(D);
+                // activateSpeedo(D);
+                // showVideo(D);
+                // setModeForTumbs(D);
+                // setModeForAnvills(D);
+
+                setModeForAllelements(D);
 
                 if (D.currentIteration == 0) D.timer.startTimer();
                 if (D.currentIteration == D.queue.length - 1) showDialog(getMessage());
@@ -186,12 +198,36 @@
 
     };
 
+    function setModeInBegin(D,startSettings){
+        // лампы 
+        var tmpElArr = startSettings['lampsArr'];
+        for (var changeLamp = 0; changeLamp < tmpElArr.length; changeLamp++) {
+            var number = tmpElArr[changeLamp][0];
+            var mode = tmpElArr[changeLamp][1];
+            D.allLamps[number].setMode(mode);
+        }
+        // тумблеры 
+        var tmpElArr = startSettings['tumbsArr'];
+        for (var changeTumb = 0; changeTumb < tmpElArr.length; changeTumb++) {
+            var number = tmpElArr[changeTumb][0];
+            var mode = tmpElArr[changeTumb][1];
+            D.allTumblers[number].setMode(mode);
+        }
+        //наковальни
+        var tmpElArr = startSettings['anvilsArr'];
+        for (var changeAnvils = 0; changeAnvils < tmpElArr.length; changeAnvils++) {
+            var number = tmpElArr[changeAnvils][0];
+            var mode = tmpElArr[changeAnvils][1];
+            D.allAnvills[number].setMode(mode);
+        }
+    };
 
     ////////////////////////////////////////////////////////// 
     // РЕЖИМ ОБУЧЕНИЯ 
     ////////////////////////////////////////////////////////// 
     function Training(settings) {
         D = getLocalVariables(settings);
+        setModeInBegin(D, D.startSettings);
         ////////////////////////////////////////////////////////// 
         //Установка всех кнопок на клик обращаться к обработчику 
         ////////////////////////////////////////////////////////// 
@@ -218,12 +254,12 @@
             if (D.queue[D.currentIteration].number == event.target.number &&
                 D.queue[D.currentIteration].eventObject == event.target.objectName) {
 
-                setModeForLamps(D);
-                activateSpeedo(D);
-                showVideo(D);
-                setModeForTumbs(D);
-                setModeForAnvills(D);
-
+                // setModeForLamps(D);
+                // activateSpeedo(D);
+                // showVideo(D);
+                // setModeForTumbs(D);
+                // setModeForAnvills(D);
+                setModeForAllelements(D);
 
                 if (D.currentIteration == D.queue.length - 1) showDialog('Вы успешно прошли режим обучения!');
 
