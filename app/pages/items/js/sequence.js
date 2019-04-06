@@ -123,7 +123,7 @@
     };
 
     function ShowToolTip(D) {
-        D.elemToolTip.style.opacity = 1;
+        D.elemToolTip.style.opacity = 0.75;
         D.elemToolTip.style.transform = 'translate(0,-120px)';
         D.elemToolTip.innerHTML = D.LearningMessege[D.butCount];
     };
