@@ -9,11 +9,16 @@
 		this.getElem = function () {
 			if (!elem) elem = this.create(options);
 			return elem;
-		}
+		};
 		this.endRotation = function () {
+			console.log('всё',elem.number)
 			elem.style.boxShadow = '0px 0px 0px red, inset -0px -0px 0px red';
 			clearInterval(idRotation);
 			return this;
+		};
+		this.setStartAngle = function(alpha){
+			elem.style.transform = `rotate(${alpha}deg)`;
+			angle = alpha;
 		}
 		this.create = function (options) {
 			elem = document.createElement("img");
@@ -46,7 +51,7 @@
 			idRotation = setInterval(function () {
 				angle += OnRight;
 				elem.style.transform = `rotate(${angle}deg)`;
-				if (angle >= endAngle && OnRight > 0 || angle <= endAngle && OnRight < 0) {
+				if ((angle >= endAngle && OnRight > 0) || (angle <= endAngle && OnRight < 0)) {
 					self.endRotation();
 					elem.dispatchEvent(new Event('myEvent', { 'bubbles': true, cancelable: false }));
 				}

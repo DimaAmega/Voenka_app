@@ -1,14 +1,31 @@
 ;(function(){
     var settinsForOrders = window.startSettings;
-    // order1 - первая последовательность
-    // order2 - последовательность от гом
-    // order3 - третья последовательность, не помню как называется 
+    // order1 - работа от гап - включение
+    // order2 - работа от гап - отключение 
+    // order3 - работа от гом - включение
+    // order4 - работа от гом - выключение
+    // order5 - работа от свэп - включение
+    // order6 - работа от свэп - выключение
+
 
     var order1 = {
         elements: settinsForOrders.elements,
         ListPointsOfMark: [0, 1, 2, 3],
-        PointsForError: [10, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        PointsForError: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        minusTime:30,
         startSettings:settinsForOrders.order1,
+        LearningMessege: ['Кнопка 1 Эта кнопка предназначена для...',
+            'Кнопка 2 Эта кнопка предназначена для...',
+            'Кнопка 3 Эта кнопка предназначена для...',
+            'Кнопка 4 Эта кнопка предназначена для...',
+            'Кнопка 5 Эта кнопка предназначена для...',
+            'Кнопка 6 Эта кнопка предназначена для...',
+            'Кнопка 7 Эта кнопка предназначена для...',
+            'Кнопка 8 Эта кнопка предназначена для...',
+            'Кнопка 9 Эта кнопка предназначена для...',
+            'Кнопка 10 Эта кнопка предназначена для...',
+            'Кнопка 11 Эта кнопка предназначена для...'
+        ],
         queue: [{
                 eventObject: 'button',
                 number: 5,
@@ -246,32 +263,131 @@
             {
                 eventObject: 'button',
                 number: 31,
-                changeObject: {
-                    arrLamps: [{
-                        num: 14,
-                        mode: 0,
-                    }, ],
-
-                }
+                changeObject: { }
             },
-        ],
-        LearningMessege: ['Кнопка 1 Эта кнопка предназначена для...',
-            'Кнопка 2 Эта кнопка предназначена для...',
-            'Кнопка 3 Эта кнопка предназначена для...',
-            'Кнопка 4 Эта кнопка предназначена для...',
-            'Кнопка 5 Эта кнопка предназначена для...',
-            'Кнопка 6 Эта кнопка предназначена для...',
-            'Кнопка 7 Эта кнопка предназначена для...',
-            'Кнопка 8 Эта кнопка предназначена для...',
-            'Кнопка 9 Эта кнопка предназначена для...',
-            'Кнопка 10 Эта кнопка предназначена для...',
-            'Кнопка 11 Эта кнопка предназначена для...'
         ],
     };
     var order2 = {
         elements: settinsForOrders.elements,
         ListPointsOfMark: [0, 1, 2, 3],
         PointsForError: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        minusTime:15,
+        startSettings:settinsForOrders.order2,
+        LearningMessege: ['Кнопка 1 Эта кнопка предназначена для...',
+        'Кнопка 2 Эта кнопка предназначена для...',
+        'Кнопка 3 Эта кнопка предназначена для...',
+        'Кнопка 4 Эта кнопка предназначена для...',
+        'Кнопка 5 Эта кнопка предназначена для...',
+        'Кнопка 6 Эта кнопка предназначена для...',
+        'Кнопка 7 Эта кнопка предназначена для...',
+        'Кнопка 8 Эта кнопка предназначена для...',
+        'Кнопка 9 Эта кнопка предназначена для...',
+        'Кнопка 10 Эта кнопка предназначена для...',
+        'Кнопка 11 Эта кнопка предназначена для...'
+    ],
+        queue: [{
+                eventObject: 'button',
+                number: 34,
+                changeObject: {
+                    arrLamps: [{
+                        num: 5,
+                        mode: 0,
+                    }],
+                }
+            },
+            {
+                eventObject: 'button',
+                number: 33,
+                changeObject: {
+                    arrLamps: [{
+                        num: 0,
+                        mode: 0,
+                    },
+                    {
+                        num: 1,
+                        mode: 0,
+                    }],
+                    arrSpedometrs: [{
+                        speedNumber: 0,
+                        endAngle: -30,
+                        speed: 20,
+                        OnRight: -1,
+                    },
+                    {
+                        speedNumber: 1,
+                        endAngle: 152,
+                        speed: 10,
+                        OnRight: -0.8,
+                    }, 
+                ],
+                }
+            },
+            {
+                eventObject: 'speedo',
+                number: 1,
+                changeObject: { }
+            },
+            {
+                eventObject: 'speedo',
+                number: 0,
+                changeObject: { }
+            },
+            {
+                eventObject: 'button',
+                number: 20,
+                changeObject: {
+                    arrLamps: [{
+                        num: 2,
+                        mode: 0,
+                    }],
+                    arrTumbs:[{
+                        num:7,
+                        mode:0
+                        },
+                    ],
+                    video: {
+                        options: {
+                            src: 'videos/videoOpen.mp4',
+                            width: 500,
+                            height: 500,
+                        },
+                    },
+                }
+            },
+            {
+                eventObject: 'video',
+                number: 0,
+                changeObject: {
+                    arrLamps: [{
+                        num: 4,
+                        mode: 1,
+                    }],
+                },
+            },
+            {
+                eventObject: 'button',
+                number: 8,
+                changeObject: {
+                    arrLamps: [{
+                        num: 3,
+                        mode: 0,
+                    }],
+                    arrTumbs:[
+                        {
+                            num:3,
+                            mode:0,
+                        }
+                    ]
+                }
+            },
+        ]
+    };
+    var order3 = {
+        elements: settinsForOrders.elements,
+        ListPointsOfMark: [0, 1, 2, 3],
+        PointsForError: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        minusTime:0,
+        startSettings:settinsForOrders.order3,
         queue: [{
                 eventObject: 'button',
                 number: 5,
@@ -511,8 +627,6 @@
             'Кнопка 10 Эта кнопка предназначена для...',
             'Кнопка 11 Эта кнопка предназначена для...'
         ],
-    };
-    var order3 = {
     };
 
     //выносим настройки на уровень выше

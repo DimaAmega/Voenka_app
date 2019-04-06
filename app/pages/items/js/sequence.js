@@ -22,7 +22,7 @@
     };
 
     function getMessage() {
-    return `Молодцы, ваше время - ${D.timer.stopTimer()-30} секунды <br> 
+    return `Молодцы, ваше время - ${Number((D.timer.stopTimer()-D.minusTime).toFixed(2))} секунды <br> 
     Ваша оценка - ${D.check.getMark()} <br> 
     Вы совершили - ${D.check.getMistake()} ошибок`;
     };
@@ -105,6 +105,7 @@
             prevIteration: 0,
             elemWarning: document.getElementById('warning'),
             startSettings:settings.startSettings,
+            minusTime:settings.minusTime,
         };
     };
 
@@ -145,9 +146,44 @@
             D.elemWarning.style.top = '-110px';
         }, 2000);
     };
+
+    function setModeInBegin(D,startSettings){
+        // лампы 
+        var tmpElArr = startSettings['lampsArr'];
+        if(tmpElArr) 
+        for (var changeLamp = 0; changeLamp < tmpElArr.length; changeLamp++) {
+            var number = tmpElArr[changeLamp][0];
+            var mode = tmpElArr[changeLamp][1];
+            D.allLamps[number].setMode(mode);
+        }
+        // тумблеры 
+        var tmpElArr = startSettings['tumbsArr'];
+        if(tmpElArr)
+        for (var changeTumb = 0; changeTumb < tmpElArr.length; changeTumb++) {
+            var number = tmpElArr[changeTumb][0];
+            var mode = tmpElArr[changeTumb][1];
+            D.allTumblers[number].setMode(mode);
+        }
+        //наковальни
+        var tmpElArr = startSettings['anvilsArr'];
+        if(tmpElArr)
+        for (var changeAnvils = 0; changeAnvils < tmpElArr.length; changeAnvils++) {
+            var number = tmpElArr[changeAnvils][0];
+            var mode = tmpElArr[changeAnvils][1];
+            D.allAnvills[number].setMode(mode);
+        }
+        var tmpElArr = startSettings['speedoArr'];
+        if(tmpElArr)
+        for (var changespeedo = 0; changespeedo < tmpElArr.length; changespeedo++) {
+            var number = tmpElArr[changespeedo][0];
+            var startAngle = tmpElArr[changespeedo][1];
+            D.allSpedometers[number].setStartAngle(startAngle)
+        }
+    };
+
+
     //сделаем настройки для всех элементов
     function setModeForAllelements(D){
-
         setModeForLamps(D);
         activateSpeedo(D);
         showVideo(D);
@@ -159,6 +195,7 @@
     ////////////////////////////////////////////////////////// 
     function Exam(settings) {
         D = getLocalVariables(settings);
+        setModeInBegin(D, D.startSettings);
         ////////////////////////////////////////////////////////// 
         //Установка всех кнопок на клик обращаться к обработчику 
         ////////////////////////////////////////////////////////// 
@@ -196,30 +233,6 @@
             }
         });
 
-    };
-
-    function setModeInBegin(D,startSettings){
-        // лампы 
-        var tmpElArr = startSettings['lampsArr'];
-        for (var changeLamp = 0; changeLamp < tmpElArr.length; changeLamp++) {
-            var number = tmpElArr[changeLamp][0];
-            var mode = tmpElArr[changeLamp][1];
-            D.allLamps[number].setMode(mode);
-        }
-        // тумблеры 
-        var tmpElArr = startSettings['tumbsArr'];
-        for (var changeTumb = 0; changeTumb < tmpElArr.length; changeTumb++) {
-            var number = tmpElArr[changeTumb][0];
-            var mode = tmpElArr[changeTumb][1];
-            D.allTumblers[number].setMode(mode);
-        }
-        //наковальни
-        var tmpElArr = startSettings['anvilsArr'];
-        for (var changeAnvils = 0; changeAnvils < tmpElArr.length; changeAnvils++) {
-            var number = tmpElArr[changeAnvils][0];
-            var mode = tmpElArr[changeAnvils][1];
-            D.allAnvills[number].setMode(mode);
-        }
     };
 
     ////////////////////////////////////////////////////////// 

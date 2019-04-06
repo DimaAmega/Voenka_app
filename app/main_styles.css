@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+body {
+    overflow: hidden;
+}
 div.menu{
     margin-left: 10%;
     display: flex;
