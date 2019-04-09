@@ -11,7 +11,6 @@
 			return elem;
 		};
 		this.endRotation = function () {
-			console.log('всё',elem.number)
 			elem.style.boxShadow = '0px 0px 0px red, inset -0px -0px 0px red';
 			clearInterval(idRotation);
 			return this;

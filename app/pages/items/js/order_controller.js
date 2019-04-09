@@ -16,7 +16,7 @@
     // mode - последовательность
     // type - режим -  обучение или экзамен
     var orders = window.orders;
-
+    console.log(orders);
     var types = [
         window.Training,
         window.Exam,

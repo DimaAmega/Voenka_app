@@ -663,7 +663,335 @@
             },
 
         ]
-    }
+    };
+    var order5 = {
+        elements: settinsForOrders.elements,
+        ListPointsOfMark: [0, 1, 2, 3],
+        PointsForError: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        minusTime:0,
+        startSettings:settinsForOrders.order5,
+        LearningMessege: ['Кнопка 1 Эта кнопка предназначена для...',
+        'Кнопка 2 Эта кнопка предназначена для...',
+    ],
+    queue: [{
+        eventObject: 'button',
+        number: 5,
+        changeObject: {
+            arrTumbs: [{
+                num: 4,
+                mode: 0
+            }],
+        }
+    },
+    {
+        eventObject: 'button',
+        number: 6,
+        changeObject: {
+            arrLamps: [{
+                num: 3,
+                mode: 1
+            }],
+            arrTumbs: [{
+                num: 3,
+                mode: 2
+            }],
+        }
+    },
+    {
+        eventObject: 'button',
+        number: 23,
+        changeObject: {
+            arrAnvills: [{
+                num: 0,
+                mode: 2,
+            }],
+            arrLamps: [{
+                    num: 4,
+                    mode: 2
+                },
+                {
+                    num: 5,
+                    mode: 2
+                },
+                {
+                    num: 6,
+                    mode: 2
+                },
+                {
+                    num: 7,
+                    mode: 2
+                },
+                {
+                    num: 0,
+                    mode: 1
+                },
+                {
+                    num: 1,
+                    mode: 1
+                },
+                {
+                    num: 8,
+                    mode: 2
+                },
+                {
+                    num: 9,
+                    mode: 2
+                },
+                {
+                    num: 14,
+                    mode: 1
+                },
+                {
+                    num: 15,
+                    mode: 2
+                },
+                {
+                    num: 2,
+                    mode: 1
+                },
+                {
+                    num: 15,
+                    mode: 2
+                },
+                {
+                    num: 16,
+                    mode: 2
+                },
+                {
+                    num: 17,
+                    mode: 2
+                },
+                {
+                    num: 18,
+                    mode: 2
+                },
+                {
+                    num: 10,
+                    mode: 2
+                },
+                {
+                    num: 11,
+                    mode: 2
+                },
+                {
+                    num: 12,
+                    mode: 2
+                },
+                {
+                    num: 13,
+                    mode: 2
+                },
+            ],
+        }
+    },
+    {
+        eventObject: 'button',
+        number: 21,
+        changeObject: {
+            arrAnvills: [{
+                num: 0,
+                mode: 0,
+            }],
+            arrLamps: [{
+                    num: 4,
+                    mode: 0
+                },
+                {
+                    num: 5,
+                    mode: 0
+                },
+                {
+                    num: 6,
+                    mode: 0
+                },
+                {
+                    num: 7,
+                    mode: 0
+                },
+                {
+                    num: 0,
+                    mode: 0
+                },
+                {
+                    num: 1,
+                    mode: 0
+                },
+                {
+                    num: 8,
+                    mode: 0
+                },
+                {
+                    num: 9,
+                    mode: 0
+                },
+                {
+                    num: 14,
+                    mode: 0
+                },
+                {
+                    num: 15,
+                    mode: 0
+                },
+                {
+                    num: 2,
+                    mode: 0
+                },
+                {
+                    num: 15,
+                    mode: 0
+                },
+                {
+                    num: 16,
+                    mode: 0
+                },
+                {
+                    num: 17,
+                    mode: 0
+                },
+                {
+                    num: 18,
+                    mode: 0
+                },
+                {
+                    num: 10,
+                    mode: 0
+                },
+                {
+                    num: 11,
+                    mode: 0
+                },
+                {
+                    num: 12,
+                    mode: 0
+                },
+                {
+                    num: 13,
+                    mode: 0
+                },
+            ],
+        }
+    },
+    {
+        eventObject: 'button',
+        number: 24,
+        changeObject: {
+            arrSpedometrs: [{
+                speedNumber: 2,
+                endAngle: 180,
+                speed: 120,
+                OnRight: 0.7,
+            }, ],
+            arrAnvills: [{
+                num: 1,
+                mode: 0,
+            }],
+
+        }
+    },
+    {
+        eventObject: 'speedo',
+        number: 2,
+        changeObject: {}
+    },
+    {
+        eventObject: 'button',
+        number: 28,
+        changeObject: {
+            arrSpedometrs: [{
+                speedNumber: 2,
+                endAngle: 390,
+                speed: 120,
+                OnRight: 1,
+            }, ],
+            arrAnvills: [{
+                num: 2,
+                mode: 1,
+            }],
+
+        }
+    },
+    {
+        eventObject: 'speedo',
+        number: 2,
+        changeObject: {}
+    },
+    {
+        eventObject: 'button',
+        number: 29,
+        changeObject: {
+            arrSpedometrs: [{
+                speedNumber: 2,
+                endAngle: 270,
+                speed: 120,
+                OnRight: -1,
+            }, ],
+            arrAnvills: [{
+                num: 2,
+                mode: 2,
+            }],
+        }
+    },
+    {
+        eventObject: 'speedo',
+        number: 2,
+        changeObject: {}
+    },
+    {
+        eventObject: 'button',
+        number: 30,
+        changeObject: {
+            arrLamps: [{
+                num:8,
+                mode:1,
+                }
+            ],
+        }
+    },
+    ]
+
+    };
+    var order6 = {
+        elements: settinsForOrders.elements,
+        ListPointsOfMark: [0, 1, 2, 3],
+        PointsForError: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        minusTime:0,
+        startSettings:settinsForOrders.order6,
+        LearningMessege: ['Кнопка 1 Эта кнопка предназначена для...',
+        'Кнопка 2 Эта кнопка предназначена для...',
+    ],
+    queue: [
+    {
+        eventObject: 'button',
+        number: 34,
+        changeObject: {
+            arrLamps:[
+                {num:8,mode:0}
+            ]
+        }
+    },
+    {
+        eventObject: 'button',
+        number: 8,
+        changeObject: {
+            arrSpedometrs: [{
+                speedNumber: 2,
+                endAngle: 155,
+                speed: 20,
+                OnRight: -9.7,
+            }],
+        }
+    },
+    {
+        eventObject: 'speedo',
+        number: 2,
+        changeObject: {
+            arrLamps:[
+            {  num:10,mode:0},
+            ]
+        }
+    },
+]
+    };
 
     //выносим настройки на уровень выше
     window.orders = [
@@ -671,5 +999,7 @@
         order2,
         order3,
         order4,
+        order5,
+        order6,
     ];
 })();

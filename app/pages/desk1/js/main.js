@@ -235,6 +235,33 @@
                     [2,155],
                 ]
             },
+            order5:{ 
+                anvilsArr:[
+                    [1,2],
+                    [2,0],
+                ],
+                lampsArr:[
+                    [10,1]
+                ],
+            },
+            order6:{ 
+                tumbsArr:[
+                    [4,0],
+                    [3,2],
+                ],
+                anvilsArr:[
+                    [1,0],
+                    [2,0],
+                ],
+                lampsArr:[
+                    [3,1],
+                    [10,1],
+                    [8,1],
+                ],
+                speedoArr:[
+                    [2,270],
+                ]
+            },
         };
         window.startSettings = startSettings;
     }

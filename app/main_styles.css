@@ -4,6 +4,11 @@
 }
 body {
     overflow: hidden;
+    background: url(fon.jpg);
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+    cursor: pointer;
 }
 div.menu{
     margin-left: 10%;

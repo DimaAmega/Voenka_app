@@ -49,6 +49,7 @@
                 click: function () {
                     $(this).dialog("close");
                     //редирект на главную 
+                    window.location.href = '/../';
                 }
             }],
             width: 500,
