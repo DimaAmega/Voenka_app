@@ -11,7 +11,10 @@
             D.allLamps[currentLamps[i].num].setMode(currentLamps[i].mode);
         }
     };
-
+    function getPointMistakeForTime(endTime,expectedTime){
+        if (endTime < expectedTime) return 0;
+        return 0.2*(endTime-expectedTime)
+    };
     function setModeForAnvills(D) {
         var currenAnvills = [];
         if (D.queue[D.currentIteration].changeObject.arrAnvills) currenAnvills = D.queue[D.currentIteration].changeObject.arrAnvills;
@@ -22,9 +25,15 @@
     };
 
     function getMessage() {
-    return `Молодцы, ваше время - ${Number((D.timer.stopTimer()-D.minusTime).toFixed(2))} секунды <br> 
+    var time = D.timer.stopTimer() - D.minusTime;
+    console.log('итоговое время - ',time);
+    var numberMistake = D.check.getMistakeCount();
+    D.check.addMistake(getPointMistakeForTime(time,D.expectedTime));
+    console.log('Очки ошибки - ',D.check.getPointMistake());
+    return `Ваше время - ${Number((time).toFixed(2))} сек.<br> 
+    Число ошибок - ${numberMistake} <br> 
     Ваша оценка - ${D.check.getMark()} <br> 
-    Вы совершили - ${D.check.getMistake()} ошибок`;
+    `;
     };
 
     function showVideo(D) {
@@ -107,6 +116,7 @@
             elemWarning: document.getElementById('warning'),
             startSettings:settings.startSettings,
             minusTime:settings.minusTime,
+            expectedTime:settings.expectedTime,
         };
     };
 
@@ -119,6 +129,7 @@
 
     function InspectButton(D) {
         D.allButtons[D.queue[D.currentIteration].number].elem.style.animation = 'clickOnMe 1s infinite ease-in-out';
+        D.allButtons[D.queue[D.currentIteration].number].elem.style.opacity = 1;
         D.allButtons[D.queue[D.prevIteration].number].elem.style.animation = '';
         D.prevIteration = D.currentIteration;
     };
@@ -216,12 +227,6 @@
             if (D.queue[D.currentIteration].number == event.target.number &&
                 D.queue[D.currentIteration].eventObject == event.target.objectName) {
 
-                // setModeForLamps(D);
-                // activateSpeedo(D);
-                // showVideo(D);
-                // setModeForTumbs(D);
-                // setModeForAnvills(D);
-
                 setModeForAllelements(D);
 
                 if (D.currentIteration == 0) D.timer.startTimer();
@@ -230,7 +235,7 @@
                 ++D.currentIteration;
             } else {
                 D.check.addMistake(D.PointsForError[D.currentIteration]);
-                if (D.check.getMark() == 2) showDialog("Завалился");
+                if (D.check.getMark() == 2) showDialog('Вы совершили слишком много ошибок');
             }
         });
 
@@ -256,6 +261,7 @@
         };
 
         D.allButtons[D.queue[0].number].elem.style.animation = 'clickOnMe 1s infinite ease-in-out'; //подсвет первой кнопки 
+        D.allButtons[D.queue[0].number].elem.style.opacity = 1;
         setPositionTooltip(D.allButtons[D.queue[0].number].elem.style.left, D.allButtons[D.queue[0].number].elem.style.top);
 
         ShowToolTip(D);

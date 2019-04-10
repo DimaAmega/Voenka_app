@@ -5,7 +5,7 @@
         //Создание динамических элементов последовательности
         ///////////////////////////////////////////////////////////////
         var speed1 = new Speedo({
-            geometry: "383,78,180,180",
+            geometry: "510.67,104,240,240",
             path: "images/buttons/Pointer.png",
             startAngle: -30,
             number: 0,
@@ -15,7 +15,7 @@
             }
         });
         var speed2 = new Speedo({
-            geometry: "630,80,180,180",
+            geometry: "840,106.66,240,240",
             path: "images/buttons/Pointer1.png",
             startAngle: 152,
             number: 1,
@@ -25,7 +25,7 @@
             }
         });
         var speed3 = new Speedo({
-            geometry: "940,142,122,122",
+            geometry: "1253.33,189.33,162.66,162.66",
             path: "images/buttons/Pointer2.png",
             startAngle: 155,
             number: 2,
@@ -35,6 +35,10 @@
             }
         });
 
+        //////////
+        ///СЖАТИЕ
+        //////////
+        scale = 1 
 
         document.getElementById("speedometers").appendChild(speed1.getElem());
         document.getElementById("speedometers").appendChild(speed2.getElem());
@@ -51,7 +55,7 @@
                 objectName: 'button',
                 className: 'cristal-button',
                 constructor: buttonClass,
-                scale: 0.75,
+                scale: scale,
             },
             coords: coords.cristalButtons,
         });
@@ -68,7 +72,7 @@
                 name: 'Lamp',
                 mode: '0',
                 constructor: lampsWithShadow,
-                scale: 0.75,
+                scale: scale,
             },
             coords: coords.lamps,
         });
@@ -85,7 +89,7 @@
                 name: 'Black',
                 mode: '0',
                 constructor: variationPictureClass,
-                scale: 0.75,
+                scale: scale,
             },
             coords: coords.black,
         });
@@ -102,7 +106,7 @@
                 name: 'Red',
                 mode: '0',
                 constructor: variationPictureClass,
-                scale: 0.75,
+                scale: scale,
             },
             coords: coords.red,
         });
@@ -119,7 +123,7 @@
                 name: 'Tumb',
                 mode: '1',
                 constructor: variationPictureClass,
-                scale: 0.75,
+                scale: scale,
             },
             coords: coords.tumbs,
         });
@@ -136,7 +140,7 @@
                 name: 'Anvil',
                 mode: '0',
                 constructor: variationPictureClass,
-                scale: 0.75,
+                scale: scale,
             },
             coords: coords.anvils,
         });
@@ -196,7 +200,7 @@
                     [2,2],
                 ],
                 anvilsArr:[
-                    [1,2],
+                    [1,1],
                     [2,2],
                 ],
                 speedoArr:[
@@ -208,7 +212,7 @@
             order3:{ 
                 //формат: имя, положение
                 anvilsArr:[
-                    [1,2],
+                    [1,1],
                     [2,0],
                 ],
             },

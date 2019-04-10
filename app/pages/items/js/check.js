@@ -2,30 +2,31 @@
 
 function check(ListPointsOfMark){
     var mistakePoints = 0,
-        MaxPoints,
         ListPointsOfMark = ListPointsOfMark,
-        currentMark = 5;
-
+        currentMark = 5,
+        countMistake = 0;
     ///////////
     ///private
     ///////////
     function getIndexonMark() {
         var i = 0;
-        while(ListPointsOfMark[i]<mistakePoints&&ListPointsOfMark[i+1]<=mistakePoints){
-            i++;
-        }
+        while(ListPointsOfMark[i]<mistakePoints&&ListPointsOfMark[i+1]<=mistakePoints) i++;
         return i;
     }
     ///////////
     ///public
     ///////////
     this.addMistake = function(w){
-        mistakePoints+=w;   
+        mistakePoints+=w; 
+        countMistake++;  
         currentMark = 5 - getIndexonMark();
     };
-    this.getMistake = function() {
-        return mistakePoints;
+    this.getMistakeCount = function() {
+        return countMistake;
     };
+    this.getPointMistake = function() {
+        return mistakePoints;
+    }
     this.getMark = function(){
         return currentMark;
     }

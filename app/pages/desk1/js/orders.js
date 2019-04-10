@@ -10,9 +10,10 @@
 
     var order1 = {
         elements: settinsForOrders.elements,
-        ListPointsOfMark: [0, 1, 2, 3],
-        PointsForError: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-        minusTime:30,
+        ListPointsOfMark: [0, 0, 3, 5],
+        PointsForError: [10, 2, 2, 10, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+        minusTime:40,
+        expectedTime:30,
         startSettings:settinsForOrders.order1,
         LearningMessege: ['Кнопка 1 Эта кнопка предназначена для...',
             'Кнопка 2 Эта кнопка предназначена для...',
@@ -26,133 +27,134 @@
             'Кнопка 10 Эта кнопка предназначена для...',
             'Кнопка 11 Эта кнопка предназначена для...'
         ],
-        queue: [{
-                eventObject: 'button',
-                number: 5,
-                changeObject: {
-                    arrTumbs: [{
-                        num: 4,
-                        mode: 0
-                    }],
-                }
-            },
-            {
-                eventObject: 'button',
-                number: 6,
-                changeObject: {
-                    arrLamps: [{
-                        num: 3,
-                        mode: 1
-                    }],
-                    arrTumbs: [{
-                        num: 3,
-                        mode: 2
-                    }],
-                }
-            },
-            {
-                eventObject: 'button',
-                number: 20,
-                changeObject: {
-                    video: {
-                        options: {
-                            src: 'videos/videoOpen.mp4',
-                            width: 500,
-                            height: 500,
-                        },
-                    },
-                    arrTumbs: [{
-                        num: 7,
-                        mode: 0
-                    }],
-                }
-            },
-            {
-                eventObject: 'video',
-                changeObject: {
-                    arrLamps: [{
-                        num: 4,
-                        mode: 1
-                    }],
-                },
-                number: 0,
-            },
-            {
-                eventObject: 'button',
-                number: 18,
-                changeObject: {
-                    arrLamps: [{
-                        num: 4,
-                        mode: 0
-                    }],
-                    arrTumbs: [{
-                        num: 7,
-                        mode: 2
-                    }],
+        queue: [
+            // {
+            //     eventObject: 'button',
+            //     number: 5,
+            //     changeObject: {
+            //         arrTumbs: [{
+            //             num: 4,
+            //             mode: 0
+            //         }],
+            //     }
+            // },
+            // {
+            //     eventObject: 'button',
+            //     number: 6,
+            //     changeObject: {
+            //         arrLamps: [{
+            //             num: 3,
+            //             mode: 1
+            //         }],
+            //         arrTumbs: [{
+            //             num: 3,
+            //             mode: 2
+            //         }],
+            //     }
+            // },
+            // {
+            //     eventObject: 'button',
+            //     number: 20,
+            //     changeObject: {
+            //         video: {
+            //             options: {
+            //                 src: 'videos/videoOpen.mp4',
+            //                 width: 500,
+            //                 height: 500,
+            //             },
+            //         },
+            //         arrTumbs: [{
+            //             num: 7,
+            //             mode: 0
+            //         }],
+            //     }
+            // },
+            // {
+            //     eventObject: 'video',
+            //     changeObject: {
+            //         arrLamps: [{
+            //             num: 4,
+            //             mode: 1
+            //         }],
+            //     },
+            //     number: 0,
+            // },
+            // {
+            //     eventObject: 'button',
+            //     number: 18,
+            //     changeObject: {
+            //         arrLamps: [{
+            //             num: 4,
+            //             mode: 0
+            //         }],
+            //         arrTumbs: [{
+            //             num: 7,
+            //             mode: 2
+            //         }],
 
-                    video: {
-                        options: {
-                            src: 'videos/videoOpen.mp4',
-                            width: 500,
-                            height: 500,
-                        },
-                    }
+            //         video: {
+            //             options: {
+            //                 src: 'videos/videoOpen.mp4',
+            //                 width: 500,
+            //                 height: 500,
+            //             },
+            //         }
 
-                }
-            },
-            {
-                eventObject: 'video',
-                changeObject: {
-                    arrLamps: [{
-                        num: 2,
-                        mode: 1
-                    }],
+            //     }
+            // },
+            // {
+            //     eventObject: 'video',
+            //     changeObject: {
+            //         arrLamps: [{
+            //             num: 2,
+            //             mode: 1
+            //         }],
 
-                },
-                number: 0,
-            },
-            {
-                eventObject: 'button',
-                number: 17,
-                changeObject: {
-                    arrSpedometrs: [{
-                        speedNumber: 0,
-                        endAngle: 40,
-                        speed: 20,
-                        OnRight: 0.7,
-                    }],
-                    arrTumbs: [{
-                        num: 2,
-                        mode: 0
-                    }],
-                },
-            },
-            {
-                eventObject: 'speedo',
-                number: 0,
-                changeObject: {}
-            },
-            {
-                eventObject: 'button',
-                number: 16,
-                changeObject: {
-                    arrSpedometrs: [{
-                        speedNumber: 0,
-                        endAngle: -30,
-                        speed: 20,
-                        OnRight: -0.7,
-                    }],
-                    arrTumbs: [{
-                        num: 2,
-                        mode: 1
-                    }],
-                },
-            },
-            {
-                eventObject: 'speedo',
-                number: 0,
-                changeObject: {}
-            },
+            //     },
+            //     number: 0,
+            // },
+            // {
+            //     eventObject: 'button',
+            //     number: 17,
+            //     changeObject: {
+            //         arrSpedometrs: [{
+            //             speedNumber: 0,
+            //             endAngle: 40,
+            //             speed: 20,
+            //             OnRight: 0.7,
+            //         }],
+            //         arrTumbs: [{
+            //             num: 2,
+            //             mode: 0
+            //         }],
+            //     },
+            // },
+            // {
+            //     eventObject: 'speedo',
+            //     number: 0,
+            //     changeObject: {}
+            // },
+            // {
+            //     eventObject: 'button',
+            //     number: 16,
+            //     changeObject: {
+            //         arrSpedometrs: [{
+            //             speedNumber: 0,
+            //             endAngle: -30,
+            //             speed: 20,
+            //             OnRight: -0.7,
+            //         }],
+            //         arrTumbs: [{
+            //             num: 2,
+            //             mode: 1
+            //         }],
+            //     },
+            // },
+            // {
+            //     eventObject: 'speedo',
+            //     number: 0,
+            //     changeObject: {}
+            // },
             {
                 eventObject: 'button',
                 number: 15,
@@ -269,9 +271,10 @@
     };
     var order2 = {
         elements: settinsForOrders.elements,
-        ListPointsOfMark: [0, 1, 2, 3],
-        PointsForError: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        ListPointsOfMark: [0, 0, 2.05, 4],
+        PointsForError: [2, 2, 2, 2],
         minusTime:15,
+        expectedTime:18,
         startSettings:settinsForOrders.order2,
         LearningMessege: ['Кнопка 1 Эта кнопка предназначена для...',
         'Кнопка 2 Эта кнопка предназначена для...',
@@ -384,8 +387,8 @@
     };
     var order3 = {
         elements: settinsForOrders.elements,
-        ListPointsOfMark: [0, 1, 2, 3],
-        PointsForError: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        ListPointsOfMark: [0, 0, 3, 5],
+        PointsForError: [2, 2, 2, 2, 2, 2],
         minusTime:0,
         startSettings:settinsForOrders.order3,
         LearningMessege: ['Кнопка 1 Эта кнопка предназначена для...',

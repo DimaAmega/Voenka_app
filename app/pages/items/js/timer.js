@@ -24,6 +24,9 @@
             console.log(res);
             return res;
         };
+        this.getTime = function() {
+            return Number(timer.toFixed(2));
+        }
     }
      window.Timer = timer;
     

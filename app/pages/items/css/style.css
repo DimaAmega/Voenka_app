@@ -1,6 +1,13 @@
 .cristal-button {
+  opacity:0;
   background: rgba(126, 125, 125, 0.359);
   position: absolute;
+  border: 1px solid rgb(155, 155, 155);
+  border-radius: 20%;
+  transition: all 0.1s ease-in-out 0.05s;
+}
+.cristal-button:hover {
+  opacity:1;
 }
 img {
   transition: all 1s ease-out;
