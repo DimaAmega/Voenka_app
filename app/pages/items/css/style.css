@@ -32,6 +32,17 @@ img {
   position: absolute;
   border-radius: 1px solid black;
 }
+
+.table{
+  position: absolute;
+  border-radius:1px solid black;
+}
+
+.buttonZ {
+  position: absolute;
+  border-radius: 1px solid black;
+}
+
 /*# sourceMappingURL=style.css.map */
 
 #warning {
