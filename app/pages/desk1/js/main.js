@@ -1,11 +1,16 @@
 ;
 (
     function () {
+        //////////
+        ///СЖАТИЕ
+        //////////
+        scale = 0.72
         ///////////////////////////////////////////////////////////////
         //Создание динамических элементов последовательности
         ///////////////////////////////////////////////////////////////
         var speed1 = new Speedo({
             geometry: "510.67,104,240,240",
+            scale:scale,
             path: "images/buttons/Pointer.png",
             startAngle: -30,
             number: 0,
@@ -16,6 +21,7 @@
         });
         var speed2 = new Speedo({
             geometry: "840,106.66,240,240",
+            scale:scale,
             path: "images/buttons/Pointer1.png",
             startAngle: 152,
             number: 1,
@@ -26,6 +32,7 @@
         });
         var speed3 = new Speedo({
             geometry: "1253.33,189.33,162.66,162.66",
+            scale:scale,
             path: "images/buttons/Pointer2.png",
             startAngle: 155,
             number: 2,
@@ -35,10 +42,7 @@
             }
         });
 
-        //////////
-        ///СЖАТИЕ
-        //////////
-        scale = 1 
+
 
         document.getElementById("speedometers").appendChild(speed1.getElem());
         document.getElementById("speedometers").appendChild(speed2.getElem());
@@ -191,7 +195,7 @@
                     [1,1],
                     [2,1],
                     [3,1],
-                    [5,1],
+                    [5,3],
                 ],
                 tumbsArr:[
                     [3,2],
@@ -221,7 +225,7 @@
                 lampsArr:[
                     [3,1],
                     [14,1],
-                    [15,1],
+                    [15,3],
                 ],
                 tumbsArr:[
                     [3,2],
@@ -233,11 +237,6 @@
                     [1,2],
                     [2,2],
                 ],
-                speedoArr:[
-                    [0,255],
-                    [1,240],
-                    [2,155],
-                ]
             },
             order5:{ 
                 anvilsArr:[
@@ -260,7 +259,7 @@
                 lampsArr:[
                     [3,1],
                     [10,1],
-                    [8,1],
+                    [8,3],
                 ],
                 speedoArr:[
                     [2,270],

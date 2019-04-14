@@ -117,11 +117,14 @@
                 divShadow.style['box-shadow'] = "rgb(0,0,0,0) 0px 0px 0px 0px, rgb(83, 202, 92) 0px 0px 0px 0px inset";
             }
             if (mode == 1) {
-                divShadow.style['box-shadow'] = "rgb(83, 202, 92) 0px 0px 30px 2px, rgb(83, 202, 92) 0px 0px 54px -7px inset";
+                divShadow.style['box-shadow'] = "rgb(83, 202, 92) 0px 0px 10px 1px, rgb(83, 202, 92) 0px 0px 30px 1px inset";
             }
-            else if(mode == 2){
-                divShadow.style['box-shadow'] = "rgb(202, 83, 92) 0px 0px 30px 2px, rgb(202, 83, 92) 0px 0px 54px -7px inset";
+            if(mode == 2){
+                divShadow.style['box-shadow'] = "rgb(202, 83, 92) 0px 0px 10px 1px, rgb(202, 83, 92) 0px 0px 30px 1px inset";
             }
+            if(mode == 3){
+                divShadow.style['box-shadow'] = "rgb(255, 218, 53) 0px 0px 10px 1px, rgb(255, 218, 53) 0px 0px 30px 1px inset";
+            }                                       
         }
     }
 

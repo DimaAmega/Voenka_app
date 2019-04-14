@@ -130,17 +130,20 @@
     function InspectButton(D) {
         D.allButtons[D.queue[D.currentIteration].number].elem.style.animation = 'clickOnMe 1s infinite ease-in-out';
         D.allButtons[D.queue[D.currentIteration].number].elem.style.opacity = 1;
+        D.allButtons[D.queue[D.prevIteration].number].elem.style.opacity = '';
         D.allButtons[D.queue[D.prevIteration].number].elem.style.animation = '';
         D.prevIteration = D.currentIteration;
     };
 
     function ShowToolTip(D) {
-        D.elemToolTip.style.opacity = 0.75;
+        D.elemToolTip.style.opacity = 0.85;
+        D.elemToolTip.style.height = '100px';
         D.elemToolTip.style.transform = 'translate(0,-120px)';
         D.elemToolTip.innerHTML = D.LearningMessege[D.butCount];
     };
 
     function HideToolTip(D) {
+        setTimeout(()=>{D.elemToolTip.style.height = '0px';},1000)
         D.elemToolTip.style.opacity = 0;
         D.elemToolTip.style.transform = 'translate(0,0px)';
     };

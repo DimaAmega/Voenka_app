@@ -5,6 +5,7 @@
 }
 
 body{ 
+    overflow: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
 }
@@ -38,6 +39,6 @@ body{
     background: linear-gradient()
 }
 #main-img{
-    /* transform: scale(.75, .75); */
+    transform: scale(.72, .72);
     transform-origin: left top;
 }
