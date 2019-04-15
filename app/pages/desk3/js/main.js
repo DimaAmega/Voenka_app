@@ -1,6 +1,10 @@
 ;(function(){
     // var buttons = cteateAndPlantElem({});
 
+    ///////////////////////
+    //SCALE
+    //////////////////////
+    scale = 1
     var lamps = сreateAndPlantElem({
         parentElem: {
             tagName: 'div',
@@ -13,7 +17,7 @@
             name: 'Lamp',
             mode: '3',
             constructor: lampsWithShadow,
-            scale: 1,
+            scale: scale,
         },
         coords: coords.lamps,
     });
@@ -30,7 +34,7 @@
             name:'Anvill',
             mode:'1',
             constructor: variationPictureClass,
-            scale:1,
+            scale:scale,
         },
         coords:coords.anvils,
     });
@@ -48,7 +52,7 @@
             name: 'but',
             mode: '1',
             constructor: variationPictureClass,
-            scale: 1,
+            scale: scale,
         },
         coords: coords.buttons,
     });
@@ -65,12 +69,12 @@
             name: 'tablo',
             mode: '1',
             constructor: variationPictureClass,
-            scale: 1,
+            scale: scale,
         },
         coords: coords.tables,
     });
 
-    var tumblers = сreateAndPlantElem({
+    var tumbs = сreateAndPlantElem({
         parentElem: {
             tagName: 'div',
             idName: 'tumbs',
@@ -82,7 +86,7 @@
             name: 'Tumb',
             mode: '0',
             constructor: variationPictureClass,
-            scale: 1,
+            scale: scale,
         },
         coords: coords.tumblers,
     });
@@ -98,8 +102,21 @@
             objectName: 'button',
             className: 'cristal-button',
             constructor: buttonClass,
-            scale: 1,
+            scale: scale,
         },
         coords: coords.cristalButtons,
     });
+
+    var startSettings = {
+        elements:{
+            buttons: cristalButtons,
+            lamps: lamps,
+            tumbs: tumbs,
+            anvills: anvills,
+        },
+        order1:{ 
+        },
+    };
+
+    window.startSettings = startSettings;
 })();

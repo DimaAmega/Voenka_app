@@ -116,7 +116,7 @@
             if (mode == 0){
                 divShadow.style['box-shadow'] = "rgb(0,0,0,0) 0px 0px 0px 0px, rgb(83, 202, 92) 0px 0px 0px 0px inset";
             }
-            if (mode == 1) {
+            if (mode == 1){
                 divShadow.style['box-shadow'] = "rgb(83, 202, 92) 0px 0px 10px 1px, rgb(83, 202, 92) 0px 0px 30px 1px inset";
             }
             if(mode == 2){
