@@ -17,18 +17,21 @@ body{
 #videos {
     position: relative;
 }
+
 .video {
     z-index: 1;
     position: absolute;
     box-shadow: 10px 10px 300px 110px black;
     border-radius:10px; 
 }
+
 .transition {
     z-index: 1;
     border-radius:10px; 
     position: absolute;
     transition: width 0.5s ease-in-out,top 0.5s ease-in-out,left 0.5s ease-in-out, box-shadow 1s ease-in;
 }
+
 #videos {
     position: absolute;
     top: 0;
@@ -38,6 +41,7 @@ body{
 .wrapper img {
     background: linear-gradient()
 }
+
 #main-img{
     transform: scale(.72, .72);
     transform-origin: left top;
