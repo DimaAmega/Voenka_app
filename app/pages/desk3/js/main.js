@@ -1,5 +1,5 @@
 ;(function(){
-    // var buttons = cteateAndPlantElem({});
+
 
     ///////////////////////
     //SCALE
@@ -14,8 +14,9 @@
         childElem: {
             tagName: 'img',
             className: 'lamp',
+            objectName: 'lamp',
             name: 'Lamp',
-            mode: '3',
+            mode: '0',
             constructor: lampsWithShadow,
             scale: scale,
         },
@@ -32,7 +33,7 @@
             tagName:'img',
             className:'anvill',
             name:'Anvill',
-            mode:'1',
+            mode:'0',
             constructor: variationPictureClass,
             scale:scale,
         },
@@ -40,7 +41,7 @@
     });
     
     //какие то аквамариновые кнопки
-    var buttons = сreateAndPlantElem({
+    var buts = сreateAndPlantElem({
         parentElem: {
             tagName: 'div',
             idName: 'buttonsZ',
@@ -50,13 +51,13 @@
             tagName: 'img',
             className: 'buttonZ',
             name: 'but',
-            mode: '1',
+            mode: '0',
             constructor: variationPictureClass,
             scale: scale,
         },
         coords: coords.buttons,
     });
-    
+
     var table = сreateAndPlantElem({
         parentElem: {
             tagName: 'div',
@@ -67,7 +68,7 @@
             tagName: 'img',
             className: 'table',
             name: 'tablo',
-            mode: '1',
+            mode: '0',
             constructor: variationPictureClass,
             scale: scale,
         },
@@ -113,8 +114,10 @@
             lamps: lamps,
             tumbs: tumbs,
             anvills: anvills,
+            buts:buts,
         },
         order1:{ 
+            tumbsArr:[[0,0]],
         },
     };
 

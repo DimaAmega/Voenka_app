@@ -111,8 +111,10 @@
         //переопределенный setMode
         var parentSetMode = this.setMode;
         this.setMode = function(mode) {
-            //меняем цвет лампы, и меняем подсветку у div
-            parentSetMode.call(this, mode);
+
+            if (mode!=4) parentSetMode.call(this, mode); //меняем цвет лампы
+
+            //меняем подсветку у div
             if (mode == 0){
                 divShadow.style['box-shadow'] = "rgb(0,0,0,0) 0px 0px 0px 0px, rgb(83, 202, 92) 0px 0px 0px 0px inset";
             }
@@ -124,6 +126,14 @@
             }
             if(mode == 3){
                 divShadow.style['box-shadow'] = "rgb(255, 218, 53) 0px 0px 10px 1px, rgb(255, 218, 53) 0px 0px 30px 1px inset";
+            }
+            if(mode == 4){ //специальный режим мигания
+                parentSetMode.call(this, 3);
+                divShadow.style.animation = 'YellowBackLight 0.5s infinite ease';
+                setTimeout(()=>{
+                    divShadow.style.animation = '';
+                    this.elem.dispatchEvent(new Event('myEvent', { 'bubbles': true, cancelable: false }));
+                },2000)
             }                                       
         }
     }

@@ -11,6 +11,16 @@
             D.allLamps[currentLamps[i].num].setMode(currentLamps[i].mode);
         }
     };
+
+    function setModeForButs(D) {
+        var currentButs = [];
+        if (D.queue[D.currentIteration].changeObject.arrButs) currentButs = D.queue[D.currentIteration].changeObject.arrButs;
+
+        for (var i = 0; i < currentButs.length; i++) {
+            D.allButs[currentButs[i].num].setMode(currentButs[i].mode);
+        };
+    };
+
     function getPointMistakeForTime(endTime,expectedTime){
         if (endTime < expectedTime) return 0;
         return 0.2*(endTime-expectedTime)
@@ -92,7 +102,7 @@
 
         for (var i = 0; i < currentTumbs.length; i++) {
             D.allTumblers[currentTumbs[i].num].setMode(currentTumbs[i].mode);
-        }
+        };
     };
 
     function getLocalVariables(settings) {
@@ -101,6 +111,7 @@
             currentIteration: 0,
             allButtons: settings.elements.buttons,
             allTumblers: settings.elements.tumbs,
+            allButs:settings.elements.buts,
             allLamps: settings.elements.lamps,
             allAnvills: settings.elements.anvills,
             queue: settings.queue,
@@ -187,6 +198,7 @@
             var mode = tmpElArr[changeAnvils][1];
             D.allAnvills[number].setMode(mode);
         }
+        // Спидометры
         var tmpElArr = startSettings['speedoArr'];
         if(tmpElArr)
         for (var changespeedo = 0; changespeedo < tmpElArr.length; changespeedo++) {
@@ -203,7 +215,8 @@
         activateSpeedo(D);
         showVideo(D);
         setModeForTumbs(D);
-        setModeForAnvills(D)
+        setModeForAnvills(D);
+        setModeForButs(D);
     };
     ////////////////////////////////////////////////////////// 
     // РЕЖИМ ЭКЗАМЕНА 
@@ -273,15 +286,13 @@
         //Сам обработчик - сердце программы 
         ////////////////////////////////////////////////////////// 
         parentElement.addEventListener('myEvent', function (event) {
+            console.log(event.target.objectName);
+            console.log(event.target.number);
+
 
             if (D.queue[D.currentIteration].number == event.target.number &&
                 D.queue[D.currentIteration].eventObject == event.target.objectName) {
 
-                // setModeForLamps(D);
-                // activateSpeedo(D);
-                // showVideo(D);
-                // setModeForTumbs(D);
-                // setModeForAnvills(D);
                 setModeForAllelements(D);
 
                 if (D.currentIteration == D.queue.length - 1) showDialog('Вы успешно прошли режим обучения!');

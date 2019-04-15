@@ -4,7 +4,7 @@ var settinsForOrders = window.startSettings;
 
 var order1 = {
     elements: settinsForOrders.elements,
-    ListPointsOfMark: [0, 0, 3, 5],
+    ListPointsOfMark: [2, 0, 3, 5],
     PointsForError: [10, 2, 2, 10, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
     minusTime:40,
     expectedTime:30,
@@ -27,9 +27,37 @@ var order1 = {
             eventObject: 'button',
             number: 0,
             changeObject: {
-                arrTumbs: [{
-                    num: 4,
+                arrButs: [{
+                    num: 0,
                     mode: 0
+                }],
+                arrLamps:[{
+                    num:1,
+                    mode:4,
+                }]
+            }
+        },
+        {
+            eventObject: 'lamp',
+            number: 1,
+            changeObject: {
+                arrButs: [{
+                    num: 0,
+                    mode: 1
+                }],
+                arrLamps:[{
+                    num:1,
+                    mode:0,
+                }]
+            }
+        },
+        {
+            eventObject: 'button',
+            number: 0,
+            changeObject: {
+                arrTumbs: [{
+                    num: 0,
+                    mode: 1
                 }],
             }
         },
