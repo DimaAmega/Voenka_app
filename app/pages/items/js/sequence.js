@@ -21,6 +21,15 @@
         };
     };
 
+    function setModeForTables(D) {
+        var currentTables = [];
+        if (D.queue[D.currentIteration].changeObject.arrTables) currentTables = D.queue[D.currentIteration].changeObject.arrTables;
+
+        for (var i = 0; i < currentTables.length; i++) {
+            D.allTables[currentTables[i].num].setMode(currentTables[i].mode);
+        };
+    };
+
     function getPointMistakeForTime(endTime,expectedTime){
         if (endTime < expectedTime) return 0;
         return 0.2*(endTime-expectedTime)
@@ -112,6 +121,7 @@
             allButtons: settings.elements.buttons,
             allTumblers: settings.elements.tumbs,
             allButs:settings.elements.buts,
+            allTables:settings.elements.tables,
             allLamps: settings.elements.lamps,
             allAnvills: settings.elements.anvills,
             queue: settings.queue,
@@ -217,6 +227,7 @@
         setModeForTumbs(D);
         setModeForAnvills(D);
         setModeForButs(D);
+        setModeForTables(D);
     };
     ////////////////////////////////////////////////////////// 
     // РЕЖИМ ЭКЗАМЕНА 

@@ -57,8 +57,8 @@
         },
         coords: coords.buttons,
     });
-
-    var table = сreateAndPlantElem({
+    
+    var tables = сreateAndPlantElem({
         parentElem: {
             tagName: 'div',
             idName: 'tables',
@@ -115,6 +115,7 @@
             tumbs: tumbs,
             anvills: anvills,
             buts:buts,
+            tables:tables,
         },
         order1:{ 
             tumbsArr:[[0,0]],
