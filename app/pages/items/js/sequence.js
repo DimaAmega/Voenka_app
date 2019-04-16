@@ -20,6 +20,24 @@
             D.allButs[currentButs[i].num].setMode(currentButs[i].mode);
         };
     };
+    // arrRedBut
+    function setModeForRedBut(D){
+        var currentRedBut = [];
+        if(D.queue[D.currentIteration].changeObject.arrRedBut)
+        currentRedBut = D.queue[D.currentIteration].changeObject.arrRedBut;
+        for (var i = 0; i < currentRedBut.length; i++) {
+            D.allRedBut[currentRedBut[i].num].setMode(currentRedBut[i].mode);
+        };
+    }
+    // arrBlackBut
+    function setModeForBlackBut(D) {
+        var currentBlackBut = [];
+        if (D.queue[D.currentIteration].changeObject.arrBlackBut)
+            currentBlackBut = D.queue[D.currentIteration].changeObject.arrBlackBut;
+        for (var i = 0; i < currentBlackBut.length; i++) {
+            D.allBlackBut[currentBlackBut[i].num].setMode(currentBlackBut[i].mode);
+        };
+    }
 
     function setModeForTables(D) {
         var currentTables = [];
@@ -122,6 +140,8 @@
             allTumblers: settings.elements.tumbs,
             allButs:settings.elements.buts,
             allTables:settings.elements.tables,
+            allRedBut: settings.elements.redBut,
+            allBlackBut: settings.elements.blackBut,
             allLamps: settings.elements.lamps,
             allAnvills: settings.elements.anvills,
             queue: settings.queue,
@@ -227,7 +247,8 @@
         setModeForTumbs(D);
         setModeForAnvills(D);
         setModeForButs(D);
-        setModeForTables(D);
+        setModeForRedBut(D);
+        setModeForBlackBut(D);
     };
     ////////////////////////////////////////////////////////// 
     // РЕЖИМ ЭКЗАМЕНА 

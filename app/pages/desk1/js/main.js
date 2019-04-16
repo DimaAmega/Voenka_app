@@ -92,7 +92,7 @@
                 className: 'black',
                 name: 'Black',
                 mode: '0',
-                constructor: variationPictureClass,
+                constructor: returnModeClass,
                 scale: scale,
             },
             coords: coords.black,
@@ -109,7 +109,7 @@
                 className: 'red',
                 name: 'Red',
                 mode: '0',
-                constructor: variationPictureClass,
+                constructor: returnModeClass,
                 scale: scale,
             },
             coords: coords.red,
@@ -163,7 +163,6 @@
                         arrSpedometrs:...
         */
 
-
         //////////////////////////////////////////////////
         //НАЧАЛЬНЫЕ ПОЛОЖЕНИЯ ЭЛЛЕМЕНТОВ И САМИ ЭЛЛЕМЕНТЫ/
         //////////////////////////////////////////////////
@@ -178,6 +177,8 @@
                 lamps: lamps,
                 tumbs: tumbs,
                 anvills: anvills,
+                redBut: red_but,
+                blackBut: black_but,
             },
             order1:{ 
                 //формат: имя, положение
