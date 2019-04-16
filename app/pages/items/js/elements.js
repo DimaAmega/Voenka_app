@@ -66,6 +66,31 @@
 
         this.setMode = function(mode) {
             this.elem.setAttribute('src', `images/buttons/${this.name}${this.elem.number}_mode_${mode}.png`);
+
+        };
+    };
+    //кнопки с возвращаемым значением
+    function returnModeClass(settings) {
+        myElement.call(this, settings);
+
+        var parentCreateElement = this.createElement;
+        this.createElement = function(){
+            parentCreateElement.call(this);
+            this.setMode(this.mode);
+        }
+        this.mode = settings.mode;
+
+        this.setMode = function(mode){
+            if(mode == 0 ){
+                this.elem.setAttribute('src', `images/buttons/${this.name}${this.elem.number}_mode_${mode}.png`)
+            }
+            else if(mode == 1){
+                this.elem.setAttribute('src', `images/buttons/${this.name}${this.elem.number}_mode_${mode}.png`)
+                //сменить картинку но через несколько секунд вернуть обратно
+                setTimeout(() => {
+                    this.setMode(0);
+                }, 500);
+            }
         };
     };
 
@@ -161,6 +186,7 @@
     window.buttonClass = buttonClass;
     window.variationPictureClass = variationPictureClass;
     window.lampsWithShadow = lampsWithShadow;
+    window.returnModeClass = returnModeClass;
     //декоратор для создания элементов
     window.сreateAndPlantElem = сreateAndPlantElem;
 

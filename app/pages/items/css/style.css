@@ -1,3 +1,18 @@
+@font-face {
+
+  font-family: 'MyWebFont';
+  src: url(../fonts/armalite.ttf);
+  font-style: normal;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
 .cristal-button {
   opacity:0;
   background: rgba(126, 125, 125, 0.359);
@@ -110,6 +125,7 @@ img {
 
   -webkit-transform: rotate(45deg);
  }
+
  #tooltip::before {
   z-index: 1; /* Накладываем поверх, чтобы скрыть следы тени */
   box-shadow: none; /* Прячем тень */
