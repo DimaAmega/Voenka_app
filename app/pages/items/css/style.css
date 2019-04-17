@@ -154,9 +154,9 @@ img {
 } */
 
 @keyframes clickOnMe {
-  from {box-shadow: 0px 0px 30px 10px white;}
-  50% {box-shadow: 0px 0px 0px 0px white;}
-  to {box-shadow: 0px 0px 30px 10px white;}
+  from {box-shadow: 0px 0px 30px 10px rgb(255, 255, 255);}
+  50% {box-shadow: 0px 0px 0px 0px rgb(255, 255, 255);}
+  to {box-shadow: 0px 0px 30px 10px rgb(255, 255, 255);}
 }
 
 @keyframes YellowBackLight {

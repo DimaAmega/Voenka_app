@@ -80,7 +80,7 @@
                 changeObject: {
                     video: {
                         options: {
-                            src: 'videos/videoOpen.mp4',
+                            src: 'videos/videoClose.mp4',
                             width: 500,
                             height: 500,
                         },
@@ -288,7 +288,11 @@
                 eventObject: 'button',
                 number: 31,
                 changeObject: {
-                    arrLamps:[{num:5,mode:3}]
+                    arrLamps:[{num:5,mode:3}],
+                    arrBlackBut: [{
+                        num: 1,
+                        mode: 1,
+                    }],
                  }
             },
         ],
@@ -314,12 +318,20 @@
                         num: 5,
                         mode: 0,
                     }],
+                    arrRedBut: [{
+                        num:1,
+                        mode:1,
+                    }],
                 }
             },
             {
                 eventObject: 'button',
                 number: 33,
                 changeObject: {
+                    arrRedBut: [{
+                        num:0,
+                        mode:1,
+                    }],
                     arrLamps: [{
                         num: 0,
                         mode: 0,
@@ -379,7 +391,7 @@
                     ],
                     video: {
                         options: {
-                            src: 'videos/videoOpen.mp4',
+                            src: 'videos/videoClose.mp4',
                             width: 500,
                             height: 500,
                         },
@@ -671,12 +683,17 @@
                         num: 15,
                         mode: 0
                     }],
+                    arrRedBut: [{
+                        num:2,
+                        mode:1,
+                    }],
                 }
             },
             {
                 eventObject: 'button',
                 number: 8,
                 changeObject: {
+                    arrTumbs:[{num:3,mode:0}],
                     arrLamps: [{
                         num: 3,
                         mode: 0
@@ -975,6 +992,7 @@
                 mode:3,
                 }
             ],
+            arrBlackBut:[{num:0,mode:1}]
         }
     },
     ]
@@ -996,6 +1014,7 @@
         eventObject: 'button',
         number: 34,
         changeObject: {
+            arrRedBut:[{num:1,mode:1}],
             arrLamps:[
                 {num:8,mode:0}
             ]

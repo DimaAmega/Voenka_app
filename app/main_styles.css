@@ -16,9 +16,10 @@ body {
     font-family: 'MyWebFont';
 
     overflow: hidden;
-    background: url(fon.jpg);
+    background: url(fon.jpg) ;
     background-position: center center;
-    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-size: cover;  */
     overflow: hidden;
     cursor: pointer;
 }

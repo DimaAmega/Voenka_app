@@ -4,10 +4,10 @@ var settinsForOrders = window.startSettings;
 
 var order1 = {
     elements: settinsForOrders.elements,
-    ListPointsOfMark: [2, 0, 3, 5],
-    PointsForError: [10, 2, 2, 10, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
-    minusTime:40,
-    expectedTime:30,
+    ListPointsOfMark: [0, 0, 3, 5],
+    PointsForError: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    minusTime:0,
+    expectedTime:18,
     startSettings:settinsForOrders.order1,
     LearningMessege: [
         // '<p>Установите тумблер выбора вида управления  в положение МЕСТН</p>',
@@ -189,10 +189,10 @@ var order1 = {
 
 var order2 = {
     elements: settinsForOrders.elements,
-    ListPointsOfMark: [2, 0, 3, 5],
-    PointsForError: [10, 2, 2, 10, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
-    minusTime:40,
-    expectedTime:30,
+    ListPointsOfMark: [0, 0, 3, 5],
+    PointsForError: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+    minusTime:0,
+    expectedTime:18,
     startSettings:settinsForOrders.order1,
     LearningMessege: [
         // '<p>Установите тумблер выбора вида управления  в положение МЕСТН</p>',

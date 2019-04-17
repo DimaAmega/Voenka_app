@@ -184,7 +184,10 @@
     };
 
     function HideToolTip(D) {
-        setTimeout(()=>{D.elemToolTip.style.height = '0px';},1000)
+        setTimeout(()=>{
+            if (D.queue[D.currentIteration].eventObject != 'button') 
+            D.elemToolTip.style.height = '0px';
+        },1000)
         D.elemToolTip.style.opacity = 0;
         D.elemToolTip.style.transform = 'translate(0,0px)';
     };
@@ -249,6 +252,7 @@
         setModeForButs(D);
         setModeForRedBut(D);
         setModeForBlackBut(D);
+        setModeForTables(D);
     };
     ////////////////////////////////////////////////////////// 
     // РЕЖИМ ЭКЗАМЕНА 
