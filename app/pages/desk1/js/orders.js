@@ -28,27 +28,6 @@
             '<p>Включите нагрузки, нажав на кнопку ВКЛЮЧЕНИЕ НАГРУЗОК ГАП</p>'
         ],
         queue: [
-            // Проверка красной и черной кнопки
-            /* {
-                eventObject: 'button',
-                number: 33,
-                changeObject: {
-                    arrRedBut: [{
-                        num:0,
-                        mode:1,
-                    }],
-                },
-            },
-            {
-                eventObject: 'button',
-                number: 33,
-                changeObject: {
-                    arrBlackBut: [{
-                        num: 0,
-                        mode: 1,
-                    }],
-                },
-            }, */
             
             {
                 eventObject: 'button',

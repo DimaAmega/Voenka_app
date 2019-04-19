@@ -1,6 +1,4 @@
 var settinsForOrders = window.startSettings;
-// order1 - единственная последовательность
-
 
 var order1 = {
     elements: settinsForOrders.elements,
@@ -28,10 +26,6 @@ var order1 = {
             number: 34,
             changeObject: {
                 arrTumbs:[{num:0,mode:1}],
-                // arrLamps:[{
-                //     num:1,
-                //     mode:4,
-                // }],
                 arrTables:[{
                     num:0,
                     mode:1,
@@ -68,17 +62,28 @@ var order1 = {
                     mode: 1
                 }],
                 arrLamps:[{num:0,mode:0}], 
-                arrTables:[{num:2,mode:1}],                
+                arrTables:[{num:10,mode:1}],                
             }
         },
         {
             eventObject: 'button',
-            number: 21,
+            number: 5,
             changeObject: {
+                arrLamps:[{num:20,mode:4}],
+            }
+        },
+        {
+            eventObject: 'lamp',
+            number: 20,
+            changeObject: {
+                arrLamps:[{num:20,mode:0},
+                    {num:21,mode:3},
+                    {num:22,mode:3}],
+
                 arrButs: [{
-                    num: 1,
+                    num: 10,
                     mode: 1
-                }],
+                }],          
             }
         },
         {
@@ -97,70 +102,99 @@ var order1 = {
                     mode: 1
                 }],
                 arrLamps:[{num:1,mode:0}],
-                arrTables:[{num:3,mode:1},
-                            {num:4,mode:1},
-                            {num:5,mode:1},                
-                            {num:6,mode:1}]
+                arrTables:[{num:12,mode:1},
+                            {num:13,mode:1},
+                            {num:14,mode:1},                
+                            {num:15,mode:1}]
             }
         },
         {
             eventObject: 'button',
+            number: 9,
+            changeObject: {
+                arrLamps:[{num:23,mode:4}]
+            }
+        },
+        {
+            eventObject: 'lamp',
+            number: 23,
+            changeObject: {
+                    arrButs: [{
+                        num: 12,
+                        mode: 1
+                    }],
+                    arrLamps:[{num:23,mode:0},
+                                {num:3,mode:3},
+                                {num:4,mode:3},
+                                {num:5,mode:3},
+                                {num:6,mode:3}],
+            } 
+        },
+        {
+            eventObject: 'button',
+            number: 11,
+            changeObject: {
+                arrLamps:[{num:24,mode:4}]
+            }
+        },
+        {
+            eventObject: 'lamp',
+            number: 24,
+            changeObject: {
+                    arrButs: [{
+                        num: 13,
+                        mode: 1
+                    }],
+                    arrLamps:[{num:24,mode:0},
+                                {num:7,mode:3},
+                                {num:8,mode:3},
+                                {num:9,mode:3},
+                                {num:10,mode:3}],
+            } 
+        },
+        {
+            eventObject: 'button',
+            number: 13,
+            changeObject: {
+                arrLamps:[{num:25,mode:4}]
+            }
+        },
+        {
+            eventObject: 'lamp',
             number: 25,
             changeObject: {
-                arrButs: [{
-                    num: 3,
-                    mode: 1
-                }],
-                arrLamps:[{num:3,mode:3},
-                          {num:4,mode:3},
-                          {num:5,mode:3},
-                          {num:6,mode:3}],
-
-            }
+                    arrButs: [{
+                        num: 14,
+                        mode: 1
+                    }],
+                    arrLamps:[{num:25,mode:0},
+                                {num:11,mode:3},
+                                {num:12,mode:3},
+                                {num:13,mode:3},
+                                {num:14,mode:3}],
+            } 
         },
         {
             eventObject: 'button',
-            number: 27,
+            number: 15,
             changeObject: {
-                arrButs: [{
-                    num: 4,
-                    mode: 1
-                }],
-                arrLamps:[{num:7,mode:3},
-                          {num:8,mode:3},
-                          {num:9,mode:3},
-                          {num:10,mode:3}],
-
+                arrLamps:[{num:26,mode:4}]
             }
         },
         {
-            eventObject: 'button',
-            number: 29,
+            eventObject: 'lamp',
+            number: 26,
             changeObject: {
-                arrButs: [{
-                    num: 5,
-                    mode: 1
-                }],
-                arrLamps:[{num:11,mode:3},
-                          {num:12,mode:3},
-                          {num:13,mode:3},
-                          {num:14,mode:3}],
-            }
-        },
-        {
-            eventObject: 'button',
-            number: 31,
-            changeObject: {
-                arrButs: [{
-                    num: 6,
-                    mode: 1
-                }],
-                arrLamps:[{num:15,mode:3},
-                          {num:16,mode:3},
-                          {num:17,mode:3},
-                          {num:18,mode:3}],
-                arrTables:[{num:11,mode:1}],
-            }
+                    arrButs: [{
+                        num: 15,
+                        mode: 1
+                    }],
+                    arrLamps:[{num:26,mode:0},
+                                {num:15,mode:3},
+                                {num:16,mode:3},
+                                {num:17,mode:3},
+                                {num:18,mode:3}],
+            } 
         },
         {
             eventObject: 'button',
@@ -260,17 +294,25 @@ var order2 = {
             eventObject: 'button',
             number: 21,
             changeObject: {
-                arrButs: [{
-                    num: 1,
-                    mode: 1
-                }],
+                arrLamps:[{num:20,mode:4}]
             }
+        },
+        {
+          eventObject:'lamp',
+          number:20,
+          changeObject:{
+            arrButs: [{
+                num: 1,
+                mode: 1
+            }],
+            arrLamps:[{num:22,mode:3},{num:21,mode:3}],
+          }  
         },
         {
             eventObject: 'button',
             number: 17,
             changeObject: {  
-                arrLamps:[{num:1,mode:4}],
+                arrLamps:[{num:1,mode:4},{num:20,mode:0}],
               }
         },
         {
@@ -292,60 +334,89 @@ var order2 = {
             eventObject: 'button',
             number: 25,
             changeObject: {
-                arrButs: [{
-                    num: 3,
-                    mode: 1
-                }],
-                arrLamps:[{num:3,mode:3},
-                          {num:4,mode:3},
-                          {num:5,mode:3},
-                          {num:6,mode:3}],
-
+                arrLamps:[{num:23,mode:4}]
             }
+        },
+        {
+            eventObject: 'lamp',
+            number: 23,
+            changeObject: {
+                    arrButs: [{
+                        num: 3,
+                        mode: 1
+                    }],
+                    arrLamps:[{num:23,mode:0},
+                                {num:3,mode:3},
+                                {num:4,mode:3},
+                                {num:5,mode:3},
+                                {num:6,mode:3}],
+            } 
         },
         {
             eventObject: 'button',
             number: 27,
             changeObject: {
-                arrButs: [{
-                    num: 4,
-                    mode: 1
-                }],
-                arrLamps:[{num:7,mode:3},
-                          {num:8,mode:3},
-                          {num:9,mode:3},
-                          {num:10,mode:3}],
-
+                arrLamps:[{num:24,mode:4}]
             }
+        },
+        {
+            eventObject: 'lamp',
+            number: 24,
+            changeObject: {
+                    arrButs: [{
+                        num: 4,
+                        mode: 1
+                    }],
+                    arrLamps:[{num:24,mode:0},
+                                {num:7,mode:3},
+                                {num:8,mode:3},
+                                {num:9,mode:3},
+                                {num:10,mode:3}],
+            } 
         },
         {
             eventObject: 'button',
             number: 29,
             changeObject: {
-                arrButs: [{
-                    num: 5,
-                    mode: 1
-                }],
-                arrLamps:[{num:11,mode:3},
-                          {num:12,mode:3},
-                          {num:13,mode:3},
-                          {num:14,mode:3}],
+                arrLamps:[{num:25,mode:4}]
             }
+        },
+        {
+            eventObject: 'lamp',
+            number: 25,
+            changeObject: {
+                    arrButs: [{
+                        num: 5,
+                        mode: 1
+                    }],
+                    arrLamps:[{num:25,mode:0},
+                                {num:11,mode:3},
+                                {num:12,mode:3},
+                                {num:13,mode:3},
+                                {num:14,mode:3}],
+            } 
         },
         {
             eventObject: 'button',
             number: 31,
             changeObject: {
-                arrButs: [{
-                    num: 6,
-                    mode: 1
-                }],
-                arrLamps:[{num:15,mode:3},
-                          {num:16,mode:3},
-                          {num:17,mode:3},
-                          {num:18,mode:3}],
-                arrTables:[{num:11,mode:1}],
+                arrLamps:[{num:26,mode:4}]
             }
+        },
+        {
+            eventObject: 'lamp',
+            number: 26,
+            changeObject: {
+                    arrButs: [{
+                        num: 6,
+                        mode: 1
+                    }],
+                    arrLamps:[{num:26,mode:0},
+                                {num:15,mode:3},
+                                {num:16,mode:3},
+                                {num:17,mode:3},
+                                {num:18,mode:3}],
+            } 
         },
         {
             eventObject: 'button',
