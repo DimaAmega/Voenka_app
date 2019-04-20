@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{ 
+    /* overflow: hidden; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+
+    background: url(../fon.jpg) ;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.wrapper {
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+#videos {
+    position: relative;
+}
+
+.video {
+    z-index: 1;
+    position: absolute;
+    box-shadow: 10px 10px 300px 110px black;
+    border-radius:10px; 
+}
+
+.transition {
+    z-index: 1;
+    border-radius:10px; 
+    position: absolute;
+    transition: width 0.5s ease-in-out,top 0.5s ease-in-out,left 0.5s ease-in-out, box-shadow 1s ease-in;
+}
+
+#videos {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.wrapper img {
+    background: linear-gradient()
+}
+
+#main-img{
+    transform: scale(.39, .39);
+    transform-origin: left top;
+}

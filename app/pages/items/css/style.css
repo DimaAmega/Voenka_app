@@ -10,9 +10,6 @@
   margin: 0;
 }
 
-
-
-
 .cristal-button {
   opacity:0;
   background: rgba(126, 125, 125, 0.359);
@@ -96,11 +93,10 @@ img {
   font-size: 15px;
 
   display: none;
-    justify-content: center; /*Центрирование по горизонтали*/
-    align-items: center;     /*Центрирование по вертикали */
+  justify-content: center; /*Центрирование по горизонтали*/
+  align-items: center;     /*Центрирование по вертикали */
 
-  min-width: 30%;
-  max-width: 40%;
+  width:400px;
   border: 1px solid rgba(0, 0, 0, 1);
   border-radius: 10px;
 
@@ -117,8 +113,8 @@ img {
  #tooltip::after, .block::before {
   content: '';
   position: absolute;
-  background: rgba(0, 0, 0,1);;
-  left: 17px; bottom: -11px;
+  background: rgba(0, 0, 0,1);
+  left: 50%; bottom: -11px;
   width: 20px; height: 20px;
   box-shadow: 0 0 7px #000; /* Добавляем тень для уголка */
   z-index: 2; /* Прячем за основным блоком */

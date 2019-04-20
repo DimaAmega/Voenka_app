@@ -162,8 +162,8 @@
     };
 
     function setPositionTooltip(x, y) {
-        D.elemToolTip.style.left = x;
-        // elemToolTip.style.top = `${Number(y.slice(0,-2))-100}px`; 
+        console.log(D.elemToolTip.style);
+        D.elemToolTip.style.left = `${Number(x.slice(0,-2))-190}px`; 
         D.elemToolTip.style.top = y;
 
     };
