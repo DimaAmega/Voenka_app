@@ -29,7 +29,7 @@
         ],
         queue: [
             // Проверка красной и черной кнопки
-            /* {
+            /*{ 
                 eventObject: 'button',
                 number: 33,
                 changeObject: {

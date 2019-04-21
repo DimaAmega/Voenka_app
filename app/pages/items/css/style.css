@@ -10,9 +10,6 @@
   margin: 0;
 }
 
-
-
-
 .cristal-button {
   opacity:0;
   background: rgba(126, 125, 125, 0.359);
@@ -24,9 +21,7 @@
 .cristal-button:hover {
   opacity:1;
 }
-img {
-  transition: all 1s ease-out;
-}
+
 .buttons {
   position: relative;
   z-index: 100;

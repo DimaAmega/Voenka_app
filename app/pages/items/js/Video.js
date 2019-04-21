@@ -10,7 +10,7 @@
         this.setPosition = function() { //устанавливает видео на середину окна
             var cw = document.documentElement.clientWidth,
                 ch = document.documentElement.clientHeight;
-
+            
             elem.style.top = `${ch/2 - settings.height/2}px`;
             elem.style.left = `${cw/2 - settings.width/2}px`;      
             elem.setAttribute('width',`${settings.width}px`);

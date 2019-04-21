@@ -9,14 +9,11 @@
     var type = Number(getAllUrlParams().type);
     //первый пульт
 
-    console.log(deskNumber);
-    console.log(mode);
-    console.log(type);
     // deskNumber - номер пульта
     // mode - последовательность
     // type - режим -  обучение или экзамен
     var orders = window.orders;
-    console.log(orders);
+
     var types = [
         window.Training,
         window.Exam,
