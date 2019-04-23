@@ -2,6 +2,7 @@
 
     function Video(settings) {
         var elem;
+        var sourseElem;
 
         this.getElem = function() {
             if (!elem) elem = createElem(settings);
@@ -18,8 +19,19 @@
         };
 
         this.play = function() { // воспроизводит видео и добавление события на отключение
-            elem.play();
 
+            // var media = document.getElementsByClassName("video")[0];
+            // const playPromise = media.play();
+
+            // if (playPromise !== null){
+            // playPromise.catch(() => {
+            //     console.log(media);
+            //      media.pause();
+            //      media.play();})
+            // };
+
+
+            elem.play();
             elem.addEventListener('ended',function(e){ 
                 this.dissapire();
                 this.getElem().dispatchEvent(new Event('myEvent', { 'bubbles': true, cancelable: false }));
@@ -35,9 +47,10 @@
             elem.setAttribute('class',`transition`);
             elem.setAttribute('width',`0`);
 
+
             setTimeout(function(){
                 elem.remove();
-            },5000)
+            },600)
         }
 
         function createElem(settings) {
@@ -48,8 +61,7 @@
             elem.objectName = 'video';
             elem.number = 0;
             elem.style.top = `0`;
-            elem.style.left = `0`; 
-
+            elem.style.left = `0`;
             return elem;
         }
 

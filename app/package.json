@@ -1,14 +1,14 @@
+
 {
-  "name": "helloworld",
+  "name": "nw-demo",
   "main": "index.html",
-  "version": 1.0,
-  "fullscreen":true,
-  "show_in_taskbar":true,
   "window": {
     "title": "node-webkit demo",
-    "icon": "link.png",
-    "width": 1200,
-    "height": 800
+    "icon": "icon.png",
+    "toolbar": true,
+    "frame": true,
+    "kiosk": true,
+    "show_in_taskbar":true,
+    "resizable":true
   }
-  
 }

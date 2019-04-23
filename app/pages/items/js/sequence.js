@@ -95,7 +95,7 @@
                 click: function () {
                     $(this).dialog("close");
                     //редирект на главную 
-                    window.location.href = '/../';
+                    window.location.href = '../../index.html';
                 }
             }],
             width: 500,

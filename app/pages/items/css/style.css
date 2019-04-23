@@ -66,8 +66,25 @@
 
 /*# sourceMappingURL=style.css.map */
 
+#exit {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 100px;
+  height: 25px;
+  border: 0px;
+  color: white;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(49, 49, 48, 0.795));
+  transition: backgroung 3s ease, color 0.2s ease;
+}
+
+#exit :hover {
+  background: white;
+  color:rgb(2, 0, 0);
+}
+
 #warning {
-  width: 50%;
+  min-width:600px;
   height: 100px;
   padding: 20px;
   font-size: 25px;
@@ -80,11 +97,10 @@
   border-radius: 20px;
   box-shadow: 0 0 7px #000; /* Добавляем тень для блока */
   transition: top 1s cubic-bezier(0.71,-1.15, 0.35, 2.18), opacity 1s ease-out;
-
+  
   display: flex;
   justify-content: center; /*Центрирование по горизонтали*/
   align-items: center;  
-
 } 
 #tooltip {
   height: 100px;
@@ -170,7 +186,7 @@
 }
 
 #filter1 {
-  background: url(/app/SMoke.png);
+  background: url(/SMoke.png);
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -181,7 +197,7 @@
 }
 
 #filter2 {
-  background: url(/app/Vignette.png) no-repeat center center;
+  background: url(/Vignette.png) no-repeat center center;
   position: absolute;
   height: 100vh;
   top: 0;
@@ -200,7 +216,7 @@
 }
 
 body {
-  background: url(/app/background.png) no-repeat center;
+  background: url(/background.png) no-repeat center;
   color: white;
   padding: 0px;
   margin: 0px;
