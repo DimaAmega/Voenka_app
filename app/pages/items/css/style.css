@@ -21,9 +21,7 @@
 .cristal-button:hover {
   opacity:1;
 }
-img {
-  transition: all 1s ease-out;
-}
+
 .buttons {
   position: relative;
   z-index: 100;
@@ -159,4 +157,183 @@ img {
   from {box-shadow: 0px 0px 30px 10px rgb(255, 218, 53) ;}
   50% {box-shadow: 0px 0px 0px 0px rgb(255, 218, 53);}
   to {box-shadow: 0px 0px 30px 10px rgb(255, 218, 53);}
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#filter1 {
+  background: url(/app/SMoke.png);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+#filter2 {
+  background: url(/app/Vignette.png) no-repeat center center;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  width: 100vw;
+  /* left: -200px; */
+  z-index: -2;
+}
+
+.menu-img {
+  transform: scale(0.75);
+  position: absolute;
+  top: -100px;
+  left: 1400px;
+  z-index: -3;
+  transition: left 1s ease 0.3s;
+}
+
+body {
+  background: url(/app/background.png) no-repeat center;
+  color: white;
+  padding: 0px;
+  margin: 0px;
+      height: 100vh;
+  overflow: hidden;
+}
+
+p {
+  text-align: right;
+}
+
+.desks {
+
+  z-index: 100;
+  width: 400px;
+}
+.containter  {
+  padding-top: 20%;
+}
+
+.desk {
+  z-index: 100;
+  cursor: pointer;
+  margin: 10px;
+  overflow: hidden;
+  height: 56px;
+  transition: height 1s ease 0.3s;
+}
+
+#desk1 {
+  /* margin-top: 60%; */
+}
+
+/* .desk:hover{
+    height: 292px;
+} */
+
+#desk1:hover {
+  height: 360px;
+}
+
+#desk2:hover,
+#desk3:hover {
+  height: 205px;
+}
+
+
+
+.desk>p {
+  font-size: 40px;
+  padding-bottom: 5px;
+  padding-right: 50px;
+
+  /* background: rgb(147, 142, 142); */
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(70, 70, 68, 0.591));
+  color: rgb(225, 220, 220);
+}
+
+.hidden-part {
+  overflow: hidden;
+  transition: height 1s ease 0.5s, overflow 1s ease 0s;
+  margin-bottom: 5px;
+}
+
+.hidden-mode>p {
+  padding: 6px 20px 6px 6px;
+  font-size: 17px;
+  margin: 6px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(70, 70, 68, 0.591));
+}
+
+.hidden-mode {
+  height: 40px;
+  overflow: hidden;
+  transition: height 0.5s ease 0.2s;
+}
+
+.hidden-type a {
+  text-align: center;
+  margin: 4px;
+  display: block;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(70, 70, 68, 0.591));
+  text-align: right;
+  padding: 3px 30px 3px 3px;
+  transition: padding 0.5s ease;
+}
+
+.hidden-type a:hover {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(112, 112, 109, 0.591));
+  /* margin:0px -20px 0px 0px; */
+  padding: 3px 10px 3px 3px;
+
+
+
+}
+
+.hidden-mode:hover {
+  height: 94px;
+}
+
+
+
+#desk1:hover~#desk-img-1 {
+  left: -400px;
+}
+
+#desk1:hover~#desk-img-1 {
+  left: -200px;
+}
+
+#desk2:hover~#desk-img-2 {
+  left: -300px;
+}
+
+#desk3:hover~#desk-img-3 {
+  left: -200px;
+}
+
+
+
+/* частицы
+ */
+.is_overlay {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#trailer {
+  z-index: -1;
+  background: rgb(0, 0, 0, 0);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
 }

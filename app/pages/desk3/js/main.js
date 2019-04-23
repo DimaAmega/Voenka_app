@@ -4,7 +4,8 @@
     ///////////////////////
     //SCALE
     //////////////////////
-    scale = 1
+    // scale = document.globalScale;
+    scale = 1;
     var lamps = сreateAndPlantElem({
         parentElem: {
             tagName: 'div',
