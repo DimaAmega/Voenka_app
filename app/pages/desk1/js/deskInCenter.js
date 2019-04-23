@@ -13,11 +13,9 @@
     
         var imgCompStyle = getComputedStyle(img);
     
-        var newHeight = Number(imgCompStyle.height.slice(0, -2));
-        var newWidth = Number(imgCompStyle.width.slice(0, -2));
+        var newHeight = 979;
+        var newWidth = 1438;
     
-        newHeight = newHeight > 0 ? newHeight : 700;
-        newHeight = newWidth > 0 ? newWidth : 1200;
 
         wrapper.style.height = newHeight * window.globalScale + 'px';
         wrapper.style.width = newWidth * window.globalScale + 'px';
