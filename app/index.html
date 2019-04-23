@@ -1,98 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/app/pages/items/css/style.css">
     <title>Document</title>
-    <link rel="stylesheet" href="main_styles.css">
-
 </head>
+
 <body>
-    <div class='menu' id ='menu'>
-        <div class="field" id='field1'>
-            <div class="blur">
-                <!-- <img src="/pages/desk1/images/desk.jpg" alt=""> -->
-                <img src="pages/desk1/images/desk_menu.png" alt="">
+    <div id="filter1">
+    </div>
+    <div id="filter2">
+    </div>
+    <div id="trailer" class="is_overlay">
+    </div>
+    <div class="containter">
+
+        <div class="desks">
+            <div class="desk" id='desk1'>
                 <p>ПУ-111</p>
+                <div class="hidden-part">
+                    <div class="hidden-mode" id="mode1">
+                        <p>
+                            Работа от ГАП. Включение
+                        </p>
+                        <div class="hidden-type">
+                            <a href="/app/pages/desk1/desk1.html?mode=0&type=1">Экзамен</a>
+                            <a href="/app/pages/desk1/desk1.html?mode=0&type=0">Обучение</a>
+                        </div>
+                    </div>
+                    <div class="hidden-mode" id="mode2">
+                        <p>
+                            Работа от ГАП. Выключение
+                        </p>
+                        <div class="hidden-type">
+                            <a href="/app/pages/desk1/desk1.html?mode=1&type=1">Экзамен</a>
+                            <a href="/app/pages/desk1/desk1.html?mode=1&type=0">Обучение</a>
+                        </div>
+                    </div>
+                    <div class="hidden-mode" id="mode3">
+                        <p>
+                            Работа от ГОМ. Включение
+                        </p>
+                        <div class="hidden-type">
+                            <a href="/app/pages/desk1/desk1.html?mode=2&type=1">Экзамен</a>
+                            <a href="/app/pages/desk1/desk1.html?mode=2&type=0">Обучение</a>
+                        </div>
+                    </div>
+                    <div class="hidden-mode" id="mode4">
+                        <p>
+                            Работа от ГОМ. Выключение
+                        </p>
+                        <div class="hidden-type">
+                            <a href="/app/pages/desk1/desk1.html?mode=3&type=1">Экзамен</a>
+                            <a href="/app/pages/desk1/desk1.html?mode=3&type=0">Обучение</a>
+                        </div>
+                    </div>
+                    <div class="hidden-mode" id="mode5">
+                        <p>
+                            Работа от СВЭП. Включение
+                        </p>
+                        <div class="hidden-type">
+                            <a href="/app/pages/desk1/desk1.html?mode=4&type=1">Экзамен</a>
+                            <a href="/app/pages/desk1/desk1.html?mode=4&type=0">Обучение</a>
+                        </div>
+                    </div>
+                    <div class="hidden-mode" id="mode6">
+                        <p>
+                            Работа от СВЭП. Выключение
+                        </p>
+                        <div class="hidden-type">
+                            <a href="/app/pages/desk1/desk1.html?mode=5&type=1">Экзамен</a>
+                            <a href="/app/pages/desk1/desk1.html?mode=5&type=0">Обучение</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="content">
-                <form action="pages/desk1/desk1.html" method="get">
-                    <p class='skewX25'>ПУ-111</p>
-                    <span class='skewX25'>Выберите режим</span>
-                    <select name="mode" id="" class='skewX25'>
-                        <option value="0">Работа от ГАП. Включение</option>
-                        <option value="1">Работа от ГАП. Выключение</option>
-                        <option value="2">Работа от ГОМ. Включение</option>
-                        <option value="3">Работа от ГОМ. Выключение</option>
-                        <option value="4">Работа от СВЭП. Включение</option>
-                        <option value="5">Работа от СВЭП. Выключение</option>
-                    </select>
-                    <br>
-                    <input type="text" value='0' name="desk" hidden>
-                    <span class='skewX25'>Обучение</span>
-                    <input type="radio" name="type" value='0' id="" class='skewX25' checked>
-                    <br>
-                    <span class='skewX25'>Экзамен</span>
-                    <input type="radio" name="type" value='1'class='skewX25'>
-                    <br>
-                    <button type="submit" class='skewX25'>Начать выполение</button>
-                </form>
-            </div>
-        </div>
-
-        <div class="field" id='field2'>
-            <div class="blur">
-                <img src="pages/desk2/images/desk_menu.png" alt="">
+            <img src="desk1.png" alt="" class="menu-img" id='desk-img-1'>
+            <div class="desk" id='desk2'>
                 <p>ПУ-101</p>
+                <div class="hidden-part">
+                    <div class="hidden-mode" id="mode1">
+                        <p>
+                            Включение
+                        </p>
+                        <div class="hidden-type">
+                            <a href="/app/pages/desk2/desk2.html?mode=0&type=1">Экзамен</a>
+                            <a href="/app/pages/desk2/desk2.html?mode=0&type=0">Обучение</a>
+                        </div>
+                    </div>
+                    <div class="hidden-mode" id="mode2">
+                        <p>
+                            Выключение
+                        </p>
+                        <div class="hidden-type">
+                            <a href="/app/pages/desk2/desk2.html?mode=1&type=1">Экзамен</a>
+                            <a href="/app/pages/desk2/desk2.html?mode=1&type=0">Обучение</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="content">
-                <form action="pages/desk2/desk2.html" method="get">
-                    <p class='skewX25'>ПУ-101</p>
-                    <span class='skewX25'>Выберите режим</span>
-                    <select name="mode" id="" class='skewX25'>
-                        <option value="0">Включение</option>
-                        <option value="1">Выключение</option>
-                    </select>
-                    <br>
-                    <input type="text" value='1' name="deskNumber" hidden>
-                    <span class='skewX25'>Обучение</span>
-                    <input type="radio" name="type" value="0" id="" class='skewX25'>
-                    <br>
-                    <span class='skewX25'>Экзамен</span>
-                    <input type="radio" name="type" value="1" id="" class='skewX25'>
-                    <br>
-                    <button type="submit" class='skewX25'>Начать выполение</button>
-                </form>
+            <img src="desk2.png" alt="" class="menu-img" id='desk-img-2'>
+            <div class="desk" id='desk3'>
+                <p>ФБ2Б-1С</p>
+                <div class="hidden-part">
+                    <div class="hidden-mode" id="mode1">
+                        <p>
+                            Выдача электропитания от ДЭС
+                        </p>
+                        <div class="hidden-type">
+                            <a href="/app/pages/desk3/desk3.html?mode=0&type=1">Экзамен</a>
+                            <a href="/app/pages/desk3/desk3.html?mode=0&type=0">Обучение</a>
+                        </div>
+                    </div>
+                    <div class="hidden-mode" id="mode2">
+                        <p>
+                            Выдача электропитания от СВЭП
+                        </p>
+                        <div class="hidden-type">
+                            <a href="/app/pages/desk3/desk3.html?mode=1&type=1">Экзамен</a>
+                            <a href="/app/pages/desk3/desk3.html?mode=1&type=0">Обучение</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="field" id='field3'>
-            <div class="blur">
-                <img src="pages/desk3/images/desk_menu.png" alt="">
-                <p>ФБ2Б-1</p>  
-            </div>
-            <div class="content">
-                <form action="pages/desk3/desk3.html" method="get">
-                    <p class='skewX25'>ФБ2Б-1С</p>
-                    <span class='skewX25'>Выберите Режим</span>
-                    <select name="mode" id="" class='skewX25'>
-                        <option value="0">Выдача электропитания от ДЭС</option>
-                        <option value="1">Выдача электропитания от сети</option>
-                    </select>
-                    <br>
-                    <input type="text" value='2' name="desk" hidden>
-                    <span class='skewX25'>Обучение</span>
-                    <input type="radio" name="type" value='0' id="" class='skewX25'>
-                    <br>
-                    <span class='skewX25'>Экзамен</span>
-                    <input type="radio" name="type" id="" value='1' class='skewX25'>
-                    <br>
-                    <button type="submit" class='skewX25'>Начать выполение</button>
-                </form>
-            </div>
+            <img src="desk3.png" alt="" class="menu-img" id='desk-img-3'>
         </div>
     </div>
-    <script src="pages/items/js/menu.js"></script>
+
+
+
+    <script src="/app/pages/items/js/pixLib.js"></script>
+
+    <script>
+        var Container = PIXI.Container,
+            // autoDetectRenderer = PIXI.autoDetectRenderer,
+            loader = new PIXI.loaders.Loader(),
+            // TextureCache = PIXI.utils.TextureCache,
+            // Texture = PIXI.Texture,
+            // Rectangle = PIXI.Rectangle,
+            MovieClip = PIXI.extras.MovieClip;
+            var windowHeight;
+            var windowWidth;
+
+
+        function createApp(parentId) {
+             windowHeight = document.documentElement.clientHeight;
+             windowWidth = document.documentElement.clientWidth;
+             console.log(windowWidth)
+             console.log(windowHeight)
+
+            // document.getElementById('stage').style.height = windowHeight + 'px';
+            // document.getElementById('stage').style.width = windowWidth + 'px';
+            var parent = document.getElementById(parentId);
+            var app = new PIXI.Application({
+                transparent: true,
+                width: parent.offsetWidth,
+                height: parent.offsetHeight
+            });
+            parent.appendChild(app.view);
+            return app;
+        };
+
+
+        var MovieTextureArr = [];
+        var app = createApp('trailer');
+        var COUNT = 164;
+        for (var i = 0; i < COUNT; i++) loader.add(`_${i}`, `/app/VAR3/${i}.png`);
+        loader.load((loader, resources) => {
+            var size = new PIXI.Rectangle(0,0,windowHeight,windowHeight);
+            console.log(resources['_1'].texture);
+            var keys = Object.keys(resources);
+            for (var i = 0; i < keys.length; i++) {    
+                MovieTextureArr.push(resources[keys[i]].texture);
+            };
+            console.log(resources['_1'].texture.baseTexture);
+            // for (var
+            //         i = keys.length - 1; i > 0; i--) MovieTextureArr.push(resources[keys[i]].texture);
+
+            var M = new MovieClip(MovieTextureArr);
+            M.play(); // Start the animation
+            M.animationSpeed = 0.8;
+
+            app.stage.addChild(M);
+
+        });
+    </script>
 </body>
+
 </html>
