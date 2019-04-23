@@ -9,13 +9,13 @@ body{
     font-size: 20px;
 
     background: url(../fon.jpg);
-    background-size: 200%;
+    /* background-size: 200%; */
     background-position: center center;
     /* background-repeat: no-repeat; */
 }
 
-.wrapper{
-    margin: auto;
-    position: relative;
-    /* overflow: hidden; */
+.wrapper {
+    margin: 0px 40px 0px 40px;
+    position: relative;    
 }
+

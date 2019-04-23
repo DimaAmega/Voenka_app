@@ -34,6 +34,7 @@
 						width:${geometry[2]*scale}px;
 						height:${geometry[3]*scale}px;
 						border-radius:50%;
+						transition: box-shadow 0.5s ease-in-out;
 						box-shadow: 0px 0px 0px red, inset -0px -0px 0px red;
 			`;
 			if (options.parametrsOfMoving) this.setParametrsOfMoving(options.parametrsOfMoving);

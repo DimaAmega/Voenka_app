@@ -13,11 +13,7 @@ body{
     background-position: center center;
     background-repeat: no-repeat;
 }
-.wrapper {
-    margin: auto;
-    position: relative;
-    overflow: hidden;
-}
+
 #videos {
     position: relative;
 }
@@ -37,6 +33,7 @@ body{
 }
 
 #videos {
+    transition: box-shadow 1s ease 0.2s;
     position: absolute;
     top: 0;
     left: 0;

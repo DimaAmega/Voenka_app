@@ -10,6 +10,10 @@
   margin: 0;
 }
 
+.wrapper {
+  margin: auto;
+  position: relative;
+}
 .cristal-button {
   opacity:0;
   background: rgba(126, 125, 125, 0.359);
@@ -201,7 +205,7 @@ body {
   padding: 0px;
   margin: 0px;
       height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 p {
