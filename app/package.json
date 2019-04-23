@@ -2,6 +2,7 @@
 {
   "name": "nw-demo",
   "main": "index.html",
+  "version":"1.0",
   "window": {
     "title": "node-webkit demo",
     "icon": "icon.png",
