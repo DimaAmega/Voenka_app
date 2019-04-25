@@ -1,5 +1,13 @@
 ;
 (function () {
+
+
+    window.onload = ()=>{
+        var preloader = document.getElementById('cube-loader');
+        preloader.style.opacity = '0';
+        setTimeout(()=>{preloader.style.display = 'none';},2500)
+    };
+    
     /////////////////////////////////////////////////////////////// 
     //Служебные функции для обработки очереди в последовательности 
     /////////////////////////////////////////////////////////////// 

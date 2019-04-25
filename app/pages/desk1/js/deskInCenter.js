@@ -1,9 +1,6 @@
 ;(function () {
 
-        // window.onload = function(){
     
-        
-        
             var img  = document.getElementById('main-img');
             var wrapper  = img.parentNode;
         

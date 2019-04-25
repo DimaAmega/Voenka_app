@@ -12,17 +12,27 @@
 <body>
     <style>
         body{
+            /* background: black; */
             overflow: hidden;
+            height: 100%;
         };
     </style>
 
-    
+<div id="cube-loader">
+        <div class="caption">
+          <div class="cube-loader">
+            <div class="cube loader-1"></div>
+            <div class="cube loader-2"></div>
+            <div class="cube loader-4"></div>
+            <div class="cube loader-3"></div>
+          </div>
+        </div>
+      </div>    
+
     <button id="exit" >ВЫХОД</button>
     <div id="filter1">
     </div>
     <div id="filter2">
-    </div>
-    <div id="trailer" class="is_overlay">
     </div>
     <div class="containter">
 
@@ -138,80 +148,47 @@
         </div>
     </div>
 
+    <!-- <div id="trailer" class="is_overlay">
+            <canvas id="canvas" ></canvas>
+        </div> -->
 
-
-    <script src="/pages/items/js/pixLib.js"></script>
+    <!-- <script src="/pages/items/js/pixLib.js"></script> -->
 
     <script>
+        
         /////FULLSCREAN//////
         var ngui = require('nw.gui');
         document.getElementById('exit').addEventListener('click',(e)=>{
             ngui.App.quit();
-        })
-        // ngui.App.quit();
-        // var nwin = ngui.Window.get();
-        // nwin.enterFullscreen();
-
-        var Container = PIXI.Container,
-            // autoDetectRenderer = PIXI.autoDetectRenderer,
-            loader = new PIXI.loaders.Loader(),
-            // TextureCache = PIXI.utils.TextureCache,
-            // Texture = PIXI.Texture,
-            // Rectangle = PIXI.Rectangle,
-            MovieClip = PIXI.extras.MovieClip;
-            var windowHeight;
-            var windowWidth;
-
-
-        function createApp(parentId) {
-             windowHeight = document.documentElement.clientHeight;
-             windowWidth = document.documentElement.clientWidth;
-             console.log(windowWidth)
-             console.log(windowHeight)
-
-            // document.getElementById('stage').style.height = windowHeight + 'px';
-            // document.getElementById('stage').style.width = windowWidth + 'px';
-            var parent = document.getElementById(parentId);
-            var app = new PIXI.Application({
-                transparent: true,
-                width: parent.offsetWidth,
-                height: parent.offsetHeight
-            });
-            parent.appendChild(app.view);
-            return app;
-        };
-
-
-        var MovieTextureArr = [];
-        var app = createApp('trailer');
-        var COUNT = 164;
-
-
-        for (var i = 0; i < COUNT; i++) loader.add(`_${i}`, `/VAR3/${i}.png`);
-        loader.load((loader, resources) => {
-            // resources['_1'].data.width =
-            
-            // console.log(windowHeight);
-
-            
-            var keys = Object.keys(resources);
-            for (var i = 0; i < keys.length; i++) {    
-
-                resources[keys[i]].texture.width = windowWidth;
-                resources[keys[i]].texture.heigth = windowHeight;
-                MovieTextureArr.push(resources[keys[i]].texture);
-            };
-            console.log(resources['_1'].texture.width);
-            // for (var
-            //         i = keys.length - 1; i > 0; i--) MovieTextureArr.push(resources[keys[i]].texture);
-
-            var M = new MovieClip(MovieTextureArr);
-            M.play(); // Start the animation
-            M.animationSpeed = 0.8;
-
-            app.stage.addChild(M);
-
         });
+
+        window.onload = ()=>{
+            var preloader = document.getElementById('cube-loader');
+            preloader.style.opacity = '0';
+            setTimeout(()=>{preloader.style.display = 'none';},2500)
+        }
+
+        // var i = 0;
+        // var c = document.getElementById('canvas');
+        // c.width = document.documentElement.clientWidth;
+        // c.height = document.documentElement.clientHeight;
+        // // console.log(document.documentElement.clientHeight +'px');
+        // var ctx = c.getContext('2d');
+
+    
+
+        // setInterval(()=>{
+        //     var img = new Image();   // Создает новый элемент изображения
+        //     img.onload = ()=>{
+        //         ctx.clearRect(0,0,document.documentElement.clientWidth,document.documentElement.clientHeight);
+        //         ctx.drawImage(img,0,0,img.width,img.height,0,0,document.documentElement.clientWidth,document.documentElement.clientHeight);
+        //         img.src = '';
+        //     } 
+        //     img.src =`VAR3/${i%301}.png`;
+        //     i++;
+        //     // png_img.setAttribute('src',`VAR3/${i%155}.png`);
+        //     // i++;
+        // },20);
     </script>
 </body>
 
