@@ -7,7 +7,7 @@ var order1 = {
     ListPointsOfMark: [0, 0, 3, 5],
     PointsForError: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
     minusTime:0,
-    expectedTime:18,
+    expectedTime:27,
     startSettings:settinsForOrders.order1,
     LearningMessege: [
         '<p>Установите тумблер в положение  <br> ПИТ ЦЕПЕЙ УПР</p>',
@@ -227,7 +227,7 @@ var order2 = {
     ListPointsOfMark: [0, 0, 3, 5],
     PointsForError: [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
     minusTime:0,
-    expectedTime:18,
+    expectedTime:27,
     startSettings:settinsForOrders.order1,
     LearningMessege: [
         '<p>Установите тумблер в положение  <br> ПИТ ЦЕПЕЙ УПР</p>',

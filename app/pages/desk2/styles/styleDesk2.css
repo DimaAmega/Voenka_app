@@ -11,7 +11,7 @@ body{
 
     background: url(../fon.jpg);
     background-position: center center;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
 }
 
 #videos {

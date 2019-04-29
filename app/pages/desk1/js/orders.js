@@ -10,12 +10,14 @@
     var order1 = {
         elements: settinsForOrders.elements,
         ListPointsOfMark: [0, 0, 3, 5],
-        PointsForError: [10, 2, 2, 10, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+        PointsForError: [10, 2, 2, 2,10, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
         minusTime:40,
-        expectedTime:30,
+        expectedTime:40,
         startSettings:settinsForOrders.order1,
         LearningMessege: [
             '<p>Установите тумблер выбора вида управления  в положение МЕСТН</p>',
+            '<p>Проведите контроль сигнальных ламп</p>',
+            '<p>Отключите контроль сигнальных ламп</p>',
             '<p>Переведите тумблер ПИТ УПР в положение ВКЛ</p>',
             '<p>Закройте люки</p>',
             '<p>Откройте люки</p>',
@@ -37,6 +39,186 @@
                         num: 4,
                         mode: 0
                     }],
+                }
+            },
+            {
+                eventObject: 'button',
+                number: 23,
+                changeObject: {
+                    arrAnvills: [{
+                        num: 0,
+                        mode: 2,
+                    }],
+                    arrLamps: [
+                        {
+                            num: 3,
+                            mode: 1
+                        },
+                        {
+                            num: 4,
+                            mode: 2
+                        },
+                        {
+                            num: 5,
+                            mode: 3
+                        },
+                        {
+                            num: 6,
+                            mode: 2
+                        },
+                        {
+                            num: 7,
+                            mode: 2
+                        },
+                        {
+                            num: 0,
+                            mode: 1
+                        },
+                        {
+                            num: 1,
+                            mode: 1
+                        },
+                        {
+                            num: 8,
+                            mode: 3
+                        },
+                        {
+                            num: 9,
+                            mode: 3
+                        },
+                        {
+                            num: 14,
+                            mode: 1
+                        },
+                        {
+                            num: 2,
+                            mode: 1
+                        },
+                        {
+                            num: 15,
+                            mode: 3
+                        },
+                        {
+                            num: 16,
+                            mode: 3
+                        },
+                        {
+                            num: 17,
+                            mode: 3
+                        },
+                        {
+                            num: 18,
+                            mode: 2
+                        },
+                        {
+                            num: 10,
+                            mode: 1
+                        },
+                        {
+                            num: 11,
+                            mode: 2
+                        },
+                        {
+                            num: 12,
+                            mode: 1
+                        },
+                        {
+                            num: 13,
+                            mode: 2
+                        },
+                    ],
+                }
+            },
+            {
+                eventObject: 'button',
+                number: 21,
+                changeObject: {
+                    arrAnvills: [{
+                        num: 0,
+                        mode: 0,
+                    }],
+                    arrLamps: [
+                        {
+                            num: 3,
+                            mode: 0
+                        },
+                        {
+                            num: 4,
+                            mode: 0
+                        },
+                        {
+                            num: 5,
+                            mode: 0
+                        },
+                        {
+                            num: 6,
+                            mode: 0
+                        },
+                        {
+                            num: 7,
+                            mode: 0
+                        },
+                        {
+                            num: 0,
+                            mode: 0
+                        },
+                        {
+                            num: 1,
+                            mode: 0
+                        },
+                        {
+                            num: 8,
+                            mode: 0
+                        },
+                        {
+                            num: 9,
+                            mode: 0
+                        },
+                        {
+                            num: 14,
+                            mode: 0
+                        },
+                        {
+                            num: 15,
+                            mode: 0
+                        },
+                        {
+                            num: 2,
+                            mode: 0
+                        },
+                        {
+                            num: 15,
+                            mode: 0
+                        },
+                        {
+                            num: 16,
+                            mode: 0
+                        },
+                        {
+                            num: 17,
+                            mode: 0
+                        },
+                        {
+                            num: 18,
+                            mode: 0
+                        },
+                        {
+                            num: 10,
+                            mode: 0
+                        },
+                        {
+                            num: 11,
+                            mode: 0
+                        },
+                        {
+                            num: 12,
+                            mode: 0
+                        },
+                        {
+                            num: 13,
+                            mode: 0
+                        },
+                    ],
                 }
             },
             {
@@ -278,10 +460,10 @@
     };
     var order2 = {
         elements: settinsForOrders.elements,
-        ListPointsOfMark: [0, 0, 2.05, 4],
+        ListPointsOfMark: [0, 0, 2.05, 4.2],
         PointsForError: [2, 2, 2, 2],
         minusTime:15,
-        expectedTime:18,
+        expectedTime:20,
         startSettings:settinsForOrders.order2,
         LearningMessege: [
         '<p>Отключите нагрузку ГАП </p>',
@@ -410,7 +592,7 @@
         ListPointsOfMark: [0, 0, 3, 5],
         PointsForError: [2, 2, 2, 2, 2, 2],
         minusTime:0,
-        expectedTime:4.5,
+        expectedTime:6,
         startSettings:settinsForOrders.order3,
         LearningMessege: [             
         '<p>Установите тумблер выбора вида управления  в положение МЕСТН</p>',
@@ -649,7 +831,7 @@
         ListPointsOfMark: [0, 0, 0.1, 0.2],
         PointsForError: [3, 3],
         minusTime:0,
-        expectedTime:1,
+        expectedTime:1.5,
         startSettings:settinsForOrders.order4,
         LearningMessege: ['Кнопка 1 Эта кнопка предназначена для...',
         'Кнопка 2 Эта кнопка предназначена для...',
@@ -691,7 +873,7 @@
         ListPointsOfMark: [0, 0, 2, 3],
         PointsForError: [1, 1, 1, 1, 1, 1, 1, 1],
         minusTime:0,
-        expectedTime:9,
+        expectedTime:12,
         startSettings:settinsForOrders.order5,
         LearningMessege: [
         '<p>Установите тумблер выбора вида управления  в положение МЕСТН</p>',

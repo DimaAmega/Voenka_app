@@ -24,6 +24,7 @@
 }
 .cristal-button:hover {
   opacity:1;
+  cursor: pointer;
 }
 
 .buttons {
@@ -116,6 +117,7 @@ button :hover {
   top: 0;
   left: 0;
   font-size: 15px;
+  cursor: default;
 
   display: none;
   justify-content: center; /*Центрирование по горизонтали*/
